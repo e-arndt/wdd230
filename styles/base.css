@@ -17,6 +17,7 @@ body {
     font-family: 'Varela Round', sans-serif;
     color: var(--text-color-dark); /* Default text color */
     background-color: var(--background-color-light); /* Default background color */
+    margin: 0; /* Remove the default margin */
 }
 
 header {
@@ -128,8 +129,15 @@ nav .active {
     padding: 20px; /* Padding for the card content */
 }
 
+.card-content p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
 .main {
     padding: 0 60px; /* Padding on left and right */
+    margin-bottom: 40px;
 }
 
 main h1 {
@@ -139,6 +147,35 @@ main h1 {
     padding-bottom: 10px; /* Add some space between the text and the border */
     width: calc(100% - 20px); /* Full width minus the margins */
 }
+
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid var(--border-color); /* Optional: Add a top border to the footer */
+}
+
+footer p {
+    color: var(--text-color-light); /* Adjust text color if needed */
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 10px; /* Space between text and image */
+}
+
+footer img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* This ensures the height adjusts proportionally */
+    margin-left: 10px; /* Optional: Add space between text and image */
+}
+
+.last-modified {
+    text-align: center;
+    margin-top: 10px; /* Space above the last modified line */
+}
+
 
 
 /* Flexbox and grid layout for larger screens */
@@ -167,7 +204,26 @@ main h1 {
         font-size: 1.25rem;
         margin-left: 50px;
     }
+
+    footer p {
+        color: var(--text-color-light); /* Adjust text color if needed */
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 10px; /* Space between text and image */
+    }
+    
+    footer img {
+        width: 75px; /* Adjust the width as needed */
+        height: auto; /* This ensures the height adjusts proportionally */
+        margin-left: 10px; /* Optional: Add space between text and image */
+    }
 }
+
+
+
 
 @media (min-width: 800px) {
     .header-title span {
@@ -202,6 +258,22 @@ main h1 {
         font-size: 1.2rem; /* Adjust as needed */
         margin: 20px 10px 20px 10px;
         width: calc(100% - 20px); /* Full width minus the margins */
+    }
+
+    footer p {
+        color: var(--text-color-light); /* Adjust text color if needed */
+        font-size: .7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 10px; /* Space between text and image */
+    }
+    
+    footer img {
+        width: 40px; /* Adjust the width as needed */
+        height: auto; /* This ensures the height adjusts proportionally */
+        margin-left: 10px; /* Optional: Add space between text and image */
     }
 }
 

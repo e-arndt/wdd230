@@ -49,6 +49,22 @@ header img {
     .card {
         margin-bottom: 0;
     }
+
+    footer p {
+        color: var(--text-color-light); /* Adjust text color if needed */
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 10px; /* Space between text and image */
+    }
+    
+    footer img {
+        width: 100px; /* Adjust the width as needed */
+        height: auto; /* This ensures the height adjusts proportionally */
+        margin-left: 10px; /* Optional: Add space between text and image */
+    }
 }
 
 
