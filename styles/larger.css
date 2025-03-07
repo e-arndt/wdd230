@@ -9,6 +9,7 @@
     --active-background-color: rgba(0,0,0, 0.2);
     --border-color: steelblue;
     --shadow-color: gray;
+    --dark-border-color: black;
 }
 
 /* Flex to display header contents horizontally as in a row, side by side */
