@@ -1,0 +1,55 @@
+/* Define color variables */
+:root {
+    --primary-color: #26516A;
+    --accent-color: rgba(248, 106, 54, 1);
+    --text-color-light: ghostwhite;
+    --text-color-dark: #333333;
+    --background-color-light: #f4f4f4;
+    --hover-background-color: rgba(255,255,255, 0.2);
+    --active-background-color: rgba(0,0,0, 0.2);
+    --border-color: steelblue;
+    --shadow-color: gray;
+}
+
+/* Example styles using the defined variables */
+header {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+header img {
+    width: 225px; 
+    height: auto;
+    border: 3px solid var(--border-color); 
+    box-shadow: 0 0 45px var(--shadow-color);
+    margin-right: 2rem;
+}
+
+
+@media (min-width: 1100px) {
+    .main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        padding: 0 60px; /* Padding on left and right */
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+        margin-left: 75px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid var(--border-color); /* Add bottom border */
+        padding-bottom: 10px; /* Add some space between the text and the border */
+        width: calc(100% - 120px); /* Adjust width to match the padding in .main */
+    }
+
+    .card {
+        margin-bottom: 0;
+    }
+}
+
+
+
