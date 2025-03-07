@@ -7,19 +7,22 @@
     --text-color-light: ghostwhite;
     --text-color-dark: #333333;
     --background-color-light: #f4f4f4;
-    --hover-background-color: rgba(255,255,255, 0.2); /* Updated opacity */
-    --active-background-color: rgba(0,0,0, 0.2); /* Updated opacity */
+    --hover-background-color: rgba(255,255,255, 0.2); 
+    --active-background-color: rgba(0,0,0, 0.2); 
     --border-color: steelblue;
     --shadow-color: gray;
+    --dark-border-color: black;
 }
 
+/* Set default font, color, background and margin */
 body {
     font-family: 'Varela Round', sans-serif;
-    color: var(--text-color-dark); /* Default text color */
-    background-color: var(--background-color-light); /* Default background color */
+    color: var(--text-color-dark); 
+    background-color: var(--background-color-light); 
     margin: 0; /* Remove the default margin */
 }
 
+/* Define header. Use flex and flex-direction to display stacked when in small or mobile display  */
 header {
     color: var(--text-color-light);
     background-color: var(--primary-color);
@@ -29,6 +32,7 @@ header {
     padding: 1rem;
 }
 
+/* Apply border, shadow, width, ect to the profile image */
 header img {
     width: 225px; 
     height: auto;
@@ -37,17 +41,20 @@ header img {
     margin-bottom: 1rem;
 }
 
+/* Apply atributes to the name in the span */
 .header-title span {
-    font-size: 2rem; /* Adjust to the size you used for h1 */
-    font-weight: bold; /* Match the weight of h1 if needed */
+    font-size: 2rem; 
+    font-weight: bold;
     color: var(--text-color-light);
     margin: 0;
 }
 
+/* Apply a background color to the nav bar */
 nav {
     background-color: var(--accent-color); /* Same background color as the header */
 }
 
+/* Apply flex and flex column to the nav bar just like the header when in mobile mode */
 nav ul {
     display: flex;
     flex-direction: column; /* Stack links vertically */
@@ -60,57 +67,61 @@ nav ul li {
     flex: 1; /* Make each link take equal space */
 }
 
+/* Use block disply for the nav items. Set font color, size, center text and remove underline */
 nav ul li a {
     display: block;
     padding: 1rem;
-    color: var(--text-color-light);
+    color: var(--text-color-dark);
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
 }
 
+/* When hovering over nav items, change background color and make text bold */
 nav ul li a:hover {
-    background-color: var(--hover-background-color); /* Change background color on hover */
+    background-color: var(--hover-background-color);
+    border: 2px solid var(--dark-border-color);
+    font-weight: bold;
 }
 
+/* Change the color of the active nav link */
 nav .active {
     background-color: var(--active-background-color);
 }
 
-
+/* Set style of card ul items */
 .card ul {
     list-style-type: none; /* Remove bullet points */
     padding-left: 1rem;
 }
 
+/* Font size and weight for card title */
 .card span {
     font-weight: bold;
     font-size: 1.25rem;
 }
 
+/* Put space between list items */
 .card li {
     padding-bottom: .75rem;
 }
 
+/* Set font size of the links */
 .card a {
     font-size: 1.2rem;
 }
 
-
-.card {
-    display: block;
-    margin-bottom: 20px;
-}
-
+/* Set the cards attributes */
 .card {
     display: block;
     margin-bottom: 20px;
     border: 2px solid var(--border-color); /* Add border */
     padding: 0; 
-    border-radius: 10px; /* Optional: Add border radius for rounded corners */
-    box-shadow: 0 0 35px var(--shadow-color); /* Optional: Add shadow for depth */
-    overflow: hidden; /* Ensure child elements don't overflow the rounded corners */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+    overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
 }
+
 
 .card-header {
     background-color: var(--primary-color); /* Background color for the header */
@@ -121,14 +132,15 @@ nav .active {
 
 .card-header h2 {
     margin: 0; /* Remove default margin */
-    color: var(--text-color-light); /* Adjust text color if needed */
-    font-size: 1.8rem; /* Adjust font size as needed */
+    color: var(--text-color-light); /* Set text color */
+    font-size: 1.8rem; /* Set font size */
 }
 
 .card-content {
     padding: 20px; /* Padding for the card content */
 }
 
+/* Set attributes for the paragraphs. These will change once they become dynamic */
 .card-content p {
     font-size: 1.5rem;
     text-align: center;
@@ -140,6 +152,7 @@ nav .active {
     margin-bottom: 40px;
 }
 
+/* Attributes for the h1 in the main, make the border bottom dynamic */
 main h1 {
     font-size: 2.5rem;
     margin: 20px 10px 20px 10px; /* Add margin-bottom for spacing */
@@ -148,15 +161,16 @@ main h1 {
     width: calc(100% - 20px); /* Full width minus the margins */
 }
 
+/* Set default attributes for the footer */
 footer {
     background-color: var(--primary-color);
     text-align: center;
     padding: 20px;
-    border-top: 2px solid var(--border-color); /* Optional: Add a top border to the footer */
 }
 
+/* Set flex so <p> and <img> show inline */
 footer p {
-    color: var(--text-color-light); /* Adjust text color if needed */
+    color: var(--text-color-light); /* Set text color for <p> */
     font-size: 1.4rem;
     display: flex;
     justify-content: center;
@@ -166,11 +180,12 @@ footer p {
 }
 
 footer img {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* This ensures the height adjusts proportionally */
-    margin-left: 10px; /* Optional: Add space between text and image */
+    width: 100px; /* Set the width of the img */
+    height: auto; /* Ensures the height adjusts proportionally */
+    margin-left: 10px; /* Set space between text and image */
 }
 
+/* Displays below, but centered */
 .last-modified {
     text-align: center;
     margin-top: 10px; /* Space above the last modified line */
@@ -192,7 +207,7 @@ footer img {
     }
 
     .header-title span {
-        font-size: 2.5rem; /* Adjust as needed */
+        font-size: 2.5rem; /* Adjust size as screen size changes */
     }
 
     nav ul {
@@ -200,13 +215,15 @@ footer img {
         justify-content: space-around; /* Distribute the links evenly */
     }
 
+    /* Adjust size as screen size changes */
     main h1 {
         font-size: 1.25rem;
         margin-left: 50px;
     }
 
+    /* Adjust size as screen size changes */
     footer p {
-        color: var(--text-color-light); /* Adjust text color if needed */
+        color: var(--text-color-light);
         font-size: 1.2rem;
         display: flex;
         justify-content: center;
@@ -215,6 +232,7 @@ footer img {
         gap: 10px; /* Space between text and image */
     }
     
+    /* Adjust size as screen size changes */
     footer img {
         width: 75px; /* Adjust the width as needed */
         height: auto; /* This ensures the height adjusts proportionally */
@@ -224,7 +242,7 @@ footer img {
 
 
 
-
+/* Adjust size as screen size changes */
 @media (min-width: 800px) {
     .header-title span {
         font-size: 2.5rem; 
@@ -236,6 +254,7 @@ footer img {
     }
 }
 
+/* Adjust size as screen size changes */
 @media (min-width: 900px) {
     .header-title span {
         font-size: 4rem; 
@@ -251,17 +270,17 @@ footer img {
 /* Media query for screens smaller than 700px */
 @media (max-width: 700px) {
     .header-title span {
-        font-size: 1.5rem; /* Adjust as needed */
+        font-size: 1.5rem; /* Adjusts size as needed */
     }
 
     main h1 {
-        font-size: 1.2rem; /* Adjust as needed */
+        font-size: 1.2rem; /* Adjusts size as needed */
         margin: 20px 10px 20px 10px;
         width: calc(100% - 20px); /* Full width minus the margins */
     }
 
     footer p {
-        color: var(--text-color-light); /* Adjust text color if needed */
+        color: var(--text-color-light);
         font-size: .7rem;
         display: flex;
         justify-content: center;
@@ -271,9 +290,9 @@ footer img {
     }
     
     footer img {
-        width: 40px; /* Adjust the width as needed */
-        height: auto; /* This ensures the height adjusts proportionally */
-        margin-left: 10px; /* Optional: Add space between text and image */
+        width: 40px; /* Adjust the width as needed as screen size changes */
+        height: auto; /* Ensures the height adjusts proportionally */
+        margin-left: 10px; /* Set space between text and image */
     }
 }
 

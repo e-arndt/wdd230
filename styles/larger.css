@@ -11,7 +11,7 @@
     --shadow-color: gray;
 }
 
-/* Example styles using the defined variables */
+/* Flex to display header contents horizontally as in a row, side by side */
 header {
     color: var(--text-color-light);
     background-color: var(--primary-color);
@@ -20,6 +20,7 @@ header {
     padding: 1rem 2rem;
 }
 
+/* Set profile image size when in large or wide screen mode and other attributes */
 header img {
     width: 225px; 
     height: auto;
@@ -28,7 +29,8 @@ header img {
     margin-right: 2rem;
 }
 
-
+/* Large screen mode sets the cards in the main to display in grid mode with cards side by side
+first card twice the size of the second card */
 @media (min-width: 1100px) {
     .main {
         display: grid;
@@ -37,6 +39,7 @@ header img {
         padding: 0 60px; /* Padding on left and right */
     }
 
+    /* Set the size and attributes of the h1 when in large mode */
     main h1 {
         font-size: 2.5rem;
         margin-left: 75px;
@@ -50,8 +53,9 @@ header img {
         margin-bottom: 0;
     }
 
+    /* Set the size and attributes of the p footer when in large mode */
     footer p {
-        color: var(--text-color-light); /* Adjust text color if needed */
+        color: var(--text-color-light); /* Set text color */
         font-size: 1.4rem;
         display: flex;
         justify-content: center;
@@ -60,6 +64,7 @@ header img {
         gap: 10px; /* Space between text and image */
     }
     
+    /* Change or set the footer image (USA flag) when in large mode */
     footer img {
         width: 100px; /* Adjust the width as needed */
         height: auto; /* This ensures the height adjusts proportionally */
