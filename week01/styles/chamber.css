@@ -111,3 +111,7 @@ nav a:hover {
   .offred {
     background-color: var(--accent2-color);
   }
+
+  footer p {
+    padding: 0px;
+  }
