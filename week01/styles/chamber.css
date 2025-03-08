@@ -1,0 +1,113 @@
+
+.font1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font2 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+:root {
+    --primary-color: #97C6EC;
+    --secondary-color: #3981FE;
+    --tertiary-color: #001959;
+    --accent1-color: #FEFD13;
+    --accent2-color: #F60201;
+
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Varela Round', sans-serif;
+
+    --nav-background-color: #3981FE;
+    --nav-link-color: #22DEFA;
+    --nav-hover-link-color: #001959;
+    --nav-hover-background-color: #FEFD13;
+
+    --light-text-color: ghostwhite;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--tertiary-color);
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+.callout {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: var(--light-text-color);
+    background-color: var(--tertiary-color);
+    border: 5px solid var(--secondary-color);
+}
+
+.callout p {
+    padding: 0 0 0 20px
+}
+  
+  
+
+header {
+    padding: 20px;
+    background-color: var(--primary-color);
+}
+
+p {
+    padding: 25px;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--light-text-color);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: var(--light-text-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.box {
+    height: 30px;
+    width: 140px;
+    margin-bottom: 4px;
+    border: 2px solid black;
+  }
+  
+  .skyblue {
+    background-color: var(--primary-color);
+  }
+  
+  .azure {
+    background-color: var(--secondary-color);
+  }
+  
+  .pennblue {
+    background-color: var(--tertiary-color);
+  }
+
+  .yellow {
+    background-color: var(--accent1-color);
+  }
+
+  .offred {
+    background-color: var(--accent2-color);
+  }
