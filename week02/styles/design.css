@@ -31,7 +31,7 @@ main {
 h2 {
     grid-column: span 2;
 	color: navy;
-	text-align: center;
+	text-align: left;
 }
 
 article p {
