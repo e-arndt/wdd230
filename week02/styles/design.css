@@ -1,0 +1,53 @@
+body {
+	font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+div.banner {
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: rgb(230, 243, 254);
+    font-weight: 700;
+       word-break: break-word;
+      text-align: center;
+  }
+
+h1 {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+h2 {
+    grid-column: span 2;
+	color: navy;
+	text-align: center;
+}
+
+article p {
+	text-align: justify;
+}
+
+.callout {
+    grid-column: span 2;
+	color: ghostwhite;
+	background-color: #702963;
+    padding-left: 1rem;
+}
+
+footer {
+	margin-top: 1rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: smaller;
+	text-align: left;
+}
