@@ -1,12 +1,12 @@
 /* Define color variables */
 :root {
     --primary-color: #26516A;
-    --accent-color: rgba(248, 106, 54, 1);
+    --accent-color: rgb(249, 108, 57);
     --text-color-light: ghostwhite;
-    --text-color-dark: #333333;
+    --text-color-dark: black;
     --background-color-light: #f4f4f4;
-    --hover-background-color: rgba(255,255,255, 0.2);
-    --active-background-color: rgba(0,0,0, 0.2);
+    --hover-background-color: rgba(255,255,255, 0.2); 
+    --active-background-color: rgb(250, 78, 15); 
     --border-color: steelblue;
     --shadow-color: gray;
     --dark-border-color: black;
