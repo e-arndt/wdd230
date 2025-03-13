@@ -218,7 +218,7 @@ footer {
 /* Set flex so <p> and <img> show inline */
 footer p {
     color: var(--text-color-light); /* Set text color for <p> */
-    font-size: 1.4rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,7 +227,7 @@ footer p {
 }
 
 footer img {
-    width: 100px; /* Set the width of the img */
+    width: 75px; /* Set the width of the img */
     height: auto; /* Ensures the height adjusts proportionally */
     margin-left: 10px; /* Set space between text and image */
 }
@@ -262,6 +262,22 @@ footer img {
 
     .card a {
         font-size: .8rem;
+    }
+
+    footer p {
+        color: var(--text-color-light);
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 10px; /* Space between text and image */
+    }
+    
+    footer img {
+        width: 75px; /* Adjust the width as needed as screen size changes */
+        height: auto; /* Ensures the height adjusts proportionally */
+        margin-left: 10px; /* Set space between text and image */
     }
     
 }
