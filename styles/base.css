@@ -22,6 +22,53 @@ body {
     margin: 0; /* Remove the default margin */
 }
 
+/* Mobile View Hamburger Menu */
+#menu {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: var(--primary-color); /* Matches primary color */
+    color: var(--text-color-light); /* Matches text color light */
+    border: 2px solid var(--dark-border-color);
+    border-radius: 15px;
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+}
+
+#menu::before {
+    content: "≡";
+    color: var(--text-color-light); /* Matches text color light */
+}
+
+/* .active::before {
+    content: "▶ ";
+    color: var(--text-color-light);
+} */
+
+.show li {
+    display: block;
+    width: auto;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Hide navigation by default */
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block; /* Show when the 'show' class is added */
+}
+
+
+
+
 /* Define header. Use flex and flex-direction to display stacked when in small or mobile display  */
 header {
     color: var(--text-color-light);
@@ -98,7 +145,7 @@ nav .active {
 /* Font size and weight for card title */
 .card span {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 /* Put space between list items */
@@ -108,7 +155,7 @@ nav .active {
 
 /* Set font size of the links */
 .card a {
-    font-size: 1.2rem;
+    font-size: .85rem;
 }
 
 /* Set the cards attributes */
@@ -154,7 +201,7 @@ nav .active {
 
 /* Attributes for the h1 in the main, make the border bottom dynamic */
 main h1 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     margin: 20px 10px 20px 10px; /* Add margin-bottom for spacing */
     border-bottom: 1px solid var(--border-color); /* Add bottom border */
     padding-bottom: 10px; /* Add some space between the text and the border */
@@ -193,52 +240,7 @@ footer img {
 
 
 
-/* Flexbox and grid layout for larger screens */
-@media (min-width: 700px) {
-    header {
-        flex-direction: row;
-        justify-content: center;
-        padding: 1rem 2rem;
-    }
 
-    header img {
-        margin-bottom: 0;
-        margin-right: 3rem;
-    }
-
-    .header-title span {
-        font-size: 2.5rem; /* Adjust size as screen size changes */
-    }
-
-    nav ul {
-        flex-direction: row; /* Arrange links horizontally for larger screens */
-        justify-content: space-around; /* Distribute the links evenly */
-    }
-
-    /* Adjust size as screen size changes */
-    main h1 {
-        font-size: 1.25rem;
-        margin-left: 50px;
-    }
-
-    /* Adjust size as screen size changes */
-    footer p {
-        color: var(--text-color-light);
-        font-size: 1.2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        gap: 10px; /* Space between text and image */
-    }
-    
-    /* Adjust size as screen size changes */
-    footer img {
-        width: 75px; /* Adjust the width as needed */
-        height: auto; /* This ensures the height adjusts proportionally */
-        margin-left: 10px; /* Optional: Add space between text and image */
-    }
-}
 
 
 
@@ -252,25 +254,25 @@ footer img {
         font-size: 1.5rem;
         margin-left: 50px;
     }
-}
 
-/* Adjust size as screen size changes */
-@media (min-width: 900px) {
-    .header-title span {
-        font-size: 4rem; 
+    .card span {
+        font-weight: bold;
+        font-size: .9rem;
     }
 
-    main h1 {
-        font-size: 2rem; /* Adjust as needed */
-        margin-left: 50px; /* Adjust as needed */
-        width: calc(100% - 20px); /* Adjust width based on margin-left */
+    .card a {
+        font-size: .8rem;
     }
+    
 }
+
+
 
 /* Media query for screens smaller than 700px */
 @media (max-width: 700px) {
     .header-title span {
         font-size: 1.5rem; /* Adjusts size as needed */
+        padding-right: 1rem;
     }
 
     main h1 {
@@ -293,6 +295,28 @@ footer img {
         width: 40px; /* Adjust the width as needed as screen size changes */
         height: auto; /* Ensures the height adjusts proportionally */
         margin-left: 10px; /* Set space between text and image */
+    }
+
+    .head-wrapper {
+        color: var(--text-color-light);
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 2rem;
+    }
+
+    .card span {
+        font-weight: bold;
+        font-size: .75rem;
+    }
+
+    .card a {
+        font-size: .7rem;
+    }
+
+    .card p {
+        font-size: 1rem;
     }
 }
 

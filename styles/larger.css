@@ -17,7 +17,8 @@ header {
     color: var(--text-color-light);
     background-color: var(--primary-color);
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     padding: 1rem 2rem;
 }
 
@@ -30,47 +31,102 @@ header img {
     margin-right: 2rem;
 }
 
-/* Large screen mode sets the cards in the main to display in grid mode with cards side by side
-first card twice the size of the second card */
+/* Adjust size as screen size changes */
+/* Media query for screens larger than 900px */
+@media (min-width: 900px) {
+    .head-wrapper {
+        display: flex;
+        align-items: center; /* Center items vertically */
+    }
+
+    .header-title {
+        display: flex; /* Display title inline */
+        align-items: center; /* Align text vertically with the image */
+        margin-left: 20px; /* Add space between the image and the title */
+    }
+
+    .header-title span {
+        font-size: 4rem; 
+        color: var(--text-color-light);
+    }
+
+    main h1 {
+        font-size: 2rem; /* Adjust as needed */
+        margin-left: 50px; /* Adjust as needed */
+        width: calc(100% - 20px); /* Adjust width based on margin-left */
+    }
+
+    .card span {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .card a {
+        font-size: 1.2rem;
+    }
+    
+}
+
 @media (min-width: 1100px) {
+    #menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    
     .main {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 20px;
-        padding: 0 60px; /* Padding on left and right */
+        padding: 0 60px;
     }
 
-    /* Set the size and attributes of the h1 when in large mode */
-    main h1 {
-        font-size: 2.5rem;
-        margin-left: 75px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid var(--border-color); /* Add bottom border */
-        padding-bottom: 10px; /* Add some space between the text and the border */
-        width: calc(100% - 120px); /* Adjust width to match the padding in .main */
-    }
-
-    .card {
-        margin-bottom: 0;
-    }
-
-    /* Set the size and attributes of the p footer when in large mode */
-    footer p {
-        color: var(--text-color-light); /* Set text color */
-        font-size: 1.4rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .navigation {
+        display: flex; /* Show navigation */
+        justify-content: center; /* Center the ul within the nav */
+        padding: 0;
         margin: 0;
-        gap: 10px; /* Space between text and image */
+        list-style: none;
+        width: 100%; /* Ensure the navigation spans the full width */
     }
+
     
-    /* Change or set the footer image (USA flag) when in large mode */
-    footer img {
-        width: 100px; /* Adjust the width as needed */
-        height: auto; /* This ensures the height adjusts proportionally */
-        margin-left: 10px; /* Optional: Add space between text and image */
+
+    nav ul {
+        display: flex; /* Make ul a flex container */
+        flex-direction: row; /* Arrange links horizontally */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure ul spans the full width of the navigation */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
     }
+
+    nav ul li {
+        flex: 1; /* Ensure equal spacing between list items */
+        text-align: center; /* Center align text */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: var(--text-color-dark);
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+    }
+
+@media (max-width: 1450px) {
+    .card span {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .card a {
+        font-size: .75rem;
+    }
+}
+
 }
 
 
