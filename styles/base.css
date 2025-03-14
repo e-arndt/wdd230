@@ -1,17 +1,26 @@
 /* base.css */
-
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 /* Define color variables */
 :root {
     --primary-color: #26516A;
-    --accent-color: rgb(249, 108, 57);
+    --accent-color: rgb(255, 138, 70);
     --text-color-light: ghostwhite;
     --text-color-dark: black;
     --background-color-light: #f4f4f4;
     --hover-background-color: rgba(255,255,255, 0.2); 
-    --active-background-color: rgb(250, 78, 15); 
+    --active-background-color: rgb(255, 156, 85); 
     --border-color: steelblue;
     --shadow-color: gray;
     --dark-border-color: black;
+    --darkMode-color: rgb(30, 30, 30);
+    --darkMode-shadow: rgb(62, 62, 62);
+    --darkMode-hover: #ff7749;
+    --darkMode-visited: rgb(133, 200, 254);
+    --darkMode-noVisit: rgb(100, 237, 161);
 }
 
 /* Set default font, color, background and margin */
@@ -22,12 +31,14 @@ body {
     margin: 0; /* Remove the default margin */
 }
 
+
+
 /* Mobile View Hamburger Menu */
 #menu {
     font-size: 1.2rem;
     position: absolute;
-    top: 2px;
-    right: 15px;
+    top: 1rem;
+    right: 1rem;
     font-weight: 700;
     text-decoration: none;
     padding: .5rem .75rem;
@@ -43,14 +54,12 @@ body {
     color: var(--text-color-light); /* Matches text color light */
 }
 
-/* .active::before {
-    content: "▶ ";
-    color: var(--text-color-light);
-} */
+
 
 .show li {
     display: block;
     width: auto;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 #menu.show::before {
@@ -60,10 +69,12 @@ body {
 /* Hide navigation by default */
 .navigation {
     display: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 .navigation.show {
     display: block; /* Show when the 'show' class is added */
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 
@@ -77,12 +88,14 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    position: relative;
 }
 
 /* Apply border, shadow, width, ect to the profile image */
 header img {
     width: 225px; 
     height: auto;
+    margin-left: 2rem;
     border: 3px solid var(--border-color); 
     box-shadow: 0 0 45px var(--shadow-color);
     margin-bottom: 1rem;
@@ -94,11 +107,60 @@ header img {
     font-weight: bold;
     color: var(--text-color-light);
     margin: 0;
+    transition: font-size 0.5s ease;
+}
+
+#dMode {
+    position: absolute;
+	top: 1rem;
+	left: 1px;
+	cursor: pointer;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#dMode img {
+    width: 48px; 
+    height: auto;
+    border: 2px solid var(--border-color); 
+    box-shadow: none;
+}
+
+#dMode span {
+    font-size: .7rem;
+    margin-top: -.6rem;
+    color: white;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: var(--darkMode-color);
+    color: var(--text-color-light);
+}
+
+.dark-mode .card a {
+    color: var(--darkMode-noVisit); /* Example color for links in dark mode (adjust as needed) */
+    
+}
+
+.dark-mode .card a:visited {
+    color: var(--darkMode-visited); /* Visited link color */
+}
+
+.dark-mode .card a:hover {
+    color: var(--darkMode-hover); /* Example hover color for links in dark mode (adjust as needed) */
+}
+
+.dark-mode .card {
+    box-shadow: 0 0 35px var(--darkMode-shadow);
 }
 
 /* Apply a background color to the nav bar */
 nav {
     background-color: var(--accent-color); /* Same background color as the header */
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 /* Apply flex and flex column to the nav bar just like the header when in mobile mode */
@@ -108,10 +170,12 @@ nav ul {
     padding: 0;
     margin: 0;
     list-style: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 nav ul li {
     flex: 1; /* Make each link take equal space */
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 /* Use block disply for the nav items. Set font color, size, center text and remove underline */
@@ -122,6 +186,7 @@ nav ul li a {
     font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
 }
 
 /* When hovering over nav items, change background color and make text bold */
@@ -156,6 +221,16 @@ nav .active {
 /* Set font size of the links */
 .card a {
     font-size: .85rem;
+    transition: font-size .5s ease;
+}
+
+.card a:visited {
+    font-size: .85rem;
+    color: rgb(136, 8, 136);
+}
+
+.card a:hover {
+    color: #d55118; /* Hover color */
 }
 
 /* Set the cards attributes */
@@ -192,20 +267,23 @@ nav .active {
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
+    transition: font-size 0.5s ease;
 }
 
 .main {
     padding: 0 60px; /* Padding on left and right */
-    margin-bottom: 40px;
+    
 }
 
 /* Attributes for the h1 in the main, make the border bottom dynamic */
 main h1 {
     font-size: 1.2rem;
-    margin: 20px 10px 20px 10px; /* Add margin-bottom for spacing */
+    margin: 0 10px 20px 10px; /* Add margin-bottom for spacing */
     border-bottom: 1px solid var(--border-color); /* Add bottom border */
     padding-bottom: 10px; /* Add some space between the text and the border */
     width: calc(100% - 20px); /* Full width minus the margins */
+    padding-top: 10px;
+    transition: font-size 0.5s ease;
 }
 
 /* Set default attributes for the footer */
@@ -224,12 +302,14 @@ footer p {
     align-items: center;
     margin: 0;
     gap: 10px; /* Space between text and image */
+    transition: font-size 0.5s ease;
 }
 
 footer img {
     width: 75px; /* Set the width of the img */
     height: auto; /* Ensures the height adjusts proportionally */
     margin-left: 10px; /* Set space between text and image */
+    transition: width 0.5s ease;
 }
 
 /* Displays below, but centered */
@@ -237,11 +317,6 @@ footer img {
     text-align: center;
     margin-top: 10px; /* Space above the last modified line */
 }
-
-
-
-
-
 
 
 /* Adjust size as screen size changes */
@@ -272,6 +347,7 @@ footer img {
         align-items: center;
         margin: 0;
         gap: 10px; /* Space between text and image */
+        transition: font-size 0.5s ease;
     }
     
     footer img {
@@ -288,12 +364,12 @@ footer img {
 @media (max-width: 700px) {
     .header-title span {
         font-size: 1.5rem; /* Adjusts size as needed */
-        padding-right: 1rem;
+        padding-right: .2rem;
     }
 
     main h1 {
         font-size: 1.2rem; /* Adjusts size as needed */
-        margin: 20px 10px 20px 10px;
+        margin: 0 10px 20px 10px;
         width: calc(100% - 20px); /* Full width minus the margins */
     }
 

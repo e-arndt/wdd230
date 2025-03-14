@@ -1,15 +1,20 @@
 /* Define color variables */
 :root {
     --primary-color: #26516A;
-    --accent-color: rgb(249, 108, 57);
+    --accent-color: rgb(255, 138, 70);
     --text-color-light: ghostwhite;
     --text-color-dark: black;
     --background-color-light: #f4f4f4;
     --hover-background-color: rgba(255,255,255, 0.2); 
-    --active-background-color: rgb(250, 78, 15); 
+    --active-background-color: rgb(255, 156, 85); 
     --border-color: steelblue;
     --shadow-color: gray;
     --dark-border-color: black;
+    --darkMode-color: rgb(30, 30, 30);
+    --darkMode-shadow: rgb(62, 62, 62);
+    --darkMode-hover: #ff7749;
+    --darkMode-visited: rgb(133, 200, 254);
+    --darkMode-noVisit: rgb(100, 237, 161);
 }
 
 /* Flex to display header contents horizontally as in a row, side by side */
@@ -87,6 +92,7 @@ header img {
         margin: 0;
         list-style: none;
         width: 100%; /* Ensure the navigation spans the full width */
+        transition: opacity 0.5s ease, height 0.5s ease;
     }
 
     
@@ -100,11 +106,13 @@ header img {
         padding: 0;
         margin: 0;
         list-style: none; /* Remove default list styling */
+        transition: opacity 0.5s ease, height 0.5s ease;
     }
 
     nav ul li {
         flex: 1; /* Ensure equal spacing between list items */
         text-align: center; /* Center align text */
+        transition: opacity 0.5s ease, height 0.5s ease;
     }
 
     nav ul li a {
@@ -114,6 +122,7 @@ header img {
         font-size: 1.5rem;
         text-align: center;
         text-decoration: none;
+        transition: opacity 0.5s ease, height 0.5s ease;
     }
 
 @media (max-width: 1450px) {
