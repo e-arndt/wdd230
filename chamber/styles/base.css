@@ -1,0 +1,263 @@
+/* base.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define color variables */
+:root {
+    --primary-color: #97C6EC;
+    --secondary-color: #3981FE;
+    --tertiary-color: #001959;
+    --accent-color1: #FEFD13;
+    --accent-color2: #F60201;
+    --text-color-light: ghostwhite;
+    --text-color-dark: #001959;
+    --background-color-light: #f4f4f4;
+    --hover-background-color: rgba(255,255,255, 0.5); 
+    --active-background-color: rgb(255, 156, 85); 
+    --border-color: steelblue;
+    --shadow-color: gray;
+    --dark-border-color: black;
+    --darkMode-color: rgb(30, 30, 30);
+    --darkMode-shadow: rgb(62, 62, 62);
+    --darkMode-hover: #ff7749;
+    --darkMode-visited: rgb(133, 200, 254);
+    --darkMode-noVisit: rgb(100, 237, 161);
+}
+
+/* Set default font, color, background and margin */
+body {
+    font-family: 'Varela Round', sans-serif;
+    color: var(--text-color-dark); 
+     
+    margin: 0; /* Remove the default margin */
+}
+
+
+
+/* Mobile View Hamburger Menu */
+#menu {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: var(--primary-color); /* Matches primary color */
+    color: var(--text-color-light); /* Matches text color light */
+    border: 2px solid var(--dark-border-color);
+    border-radius: 15px;
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+}
+
+#menu::before {
+    content: "≡";
+    color: var(--text-color-light); /* Matches text color light */
+}
+
+
+
+.show li {
+    display: block;
+    width: auto;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Hide navigation by default */
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block; /* Show when the 'show' class is added */
+    
+}
+
+/* Define header. Use flex and flex-direction to display stacked when in small or mobile display  */
+header {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Apply border, shadow, width, ect to the profile image */
+header img {
+    width: 125px; 
+    height: auto;
+    margin-right: 2rem;
+    border: 3px solid var(--border-color); 
+    box-shadow: 0 0 45px var(--shadow-color);
+    margin-bottom: 1rem;
+}
+
+/* Styles for the .header-title container */
+.header-title {
+    display: flex;
+    flex-direction: column; /* Stack spans vertically */
+    align-items: center;    /* Center align the spans horizontally */
+    text-align: center;     /* Center the text inside the spans */
+    transition: flex-direction 0.5s ease;
+}
+
+/* Apply atributes to the name in the span */
+.header-title span {
+    font-size: 1.5rem; 
+    font-weight: bold;
+    color: var(--text-color-dark);
+    margin: 0;
+    transition: font-size 0.5s ease;
+}
+
+nav {
+    background-color: var(--secondary-color); /* Same background color as the header */
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* Apply flex and flex column to the nav bar just like the header when in mobile mode */
+nav ul {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+nav ul li {
+    flex: 1; /* Make each link take equal space */
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* Use block disply for the nav items. Set font color, size, center text and remove underline */
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-color-light);
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* When hovering over nav items, change background color and make text bold */
+nav ul li a:hover {
+    background-color: var(--accent-color1);
+    border: 2px solid var(--dark-border-color);
+    color: var(--text-color-dark);
+    font-weight: bold;
+}
+
+/* Change the color of the active nav link */
+nav .active {
+    background-color: var(--tertiary-color);
+}
+
+/* Set style of card ul items */
+.card ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 1rem;
+}
+
+/* Font size and weight for card title */
+.card span {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Put space between list items */
+.card li {
+    padding-bottom: .75rem;
+}
+
+/* Set font size of the links */
+.card a {
+    font-size: .85rem;
+    transition: font-size .5s ease;
+}
+
+.card a:visited {
+    font-size: .85rem;
+    color: rgb(136, 8, 136);
+}
+
+.card a:hover {
+    color: #d55118; /* Hover color */
+}
+
+/* Set the cards attributes */
+.card  {
+    display: block;
+    border: 2px solid var(--border-color); /* Add border */
+    padding: 0px;
+    margin: 15px 15px;
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+    overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
+}
+
+
+
+.card-header {
+    background-color: var(--secondary-color); /* Background color for the header */
+    padding: 20px; /* Padding inside the header */
+    text-align: center; /* Center align the heading */
+    border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+}
+
+.card-header h2 {
+    margin: 0; /* Remove default margin */
+    color: var(--text-color-light); /* Set text color */
+    font-size: 1.8rem; /* Set font size */
+}
+
+.card-content {
+    padding: 20px; /* Padding for the card content */
+    background-color: var(--background-color-light);
+}
+
+/* Set attributes for the paragraphs. These will change once they become dynamic */
+.card-content p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    transition: font-size 0.5s ease;
+}
+
+
+/* Media query for screens smaller than 700px */
+@media (max-width: 700px) {
+    .header-title span {
+        font-size: 1.25rem; /* Adjusts size as needed */
+        padding-right: .2rem;
+        transition: font-size 0.5s ease;
+    }
+
+    .head-wrapper {
+        color: var(--text-color-light);
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 2rem;
+        transition: flex-direction 0.5s ease;
+    }
+
+    header img {
+        width: 120px; 
+        height: auto;
+        border: 3px solid var(--border-color); 
+        box-shadow: 0 0 45px var(--shadow-color);
+        margin-right: 1rem;
+    }
+}

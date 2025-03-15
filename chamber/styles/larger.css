@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Define color variables */
+:root {
+    --primary-color: #97C6EC;
+    --accent-color: rgb(255, 138, 70);
+    --text-color-light: ghostwhite;
+    --text-color-dark: #001959;
+    --background-color-light: #f4f4f4;
+    --hover-background-color: rgba(255,255,255, 0.2); 
+    --active-background-color: rgb(255, 156, 85); 
+    --border-color: steelblue;
+    --shadow-color: gray;
+    --dark-border-color: black;
+    --darkMode-color: rgb(30, 30, 30);
+    --darkMode-shadow: rgb(62, 62, 62);
+    --darkMode-hover: #ff7749;
+    --darkMode-visited: rgb(133, 200, 254);
+    --darkMode-noVisit: rgb(100, 237, 161);
+}
+
+/* Flex to display header contents horizontally as in a row, side by side */
+header {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+
+.hero {
+    display: block; /* Ensures proper centering */
+    margin: 0 auto; /* Horizontally centers the image */
+    width: 100%; /* Makes the image fill the full width */
+    height: auto; /* Keeps the aspect ratio intact */
+
+}
+
+
+
+
+
+/* Adjust size as screen size changes */
+/* Media query for screens larger than 900px */
+@media (min-width: 825px) {
+    #menu {
+        display: none; /* Hide hamburger menu */
+    }
+    
+    .head-wrapper {
+        display: flex;
+        align-items: center; /* Center items vertically */
+    }
+
+    .header-title {
+        display: flex; /* Display title inline */
+        align-items: center; /* Align text vertically with the image */
+        margin-left: 20px; /* Add space between the image and the title */
+    }
+
+    .header-title span {
+        font-size: 2rem; 
+        color: var(--text-color-dark);
+        transition: font-size 0.5s ease;
+    }
+
+    header img {
+        width: 150px; 
+        height: auto;
+        border: 3px solid var(--border-color); 
+        box-shadow: 0 0 45px var(--shadow-color);
+        margin-right: 2rem;
+        transition: width 0.5s ease;
+    }
+
+    main h1 {
+        font-size: 2rem; /* Adjust as needed */
+        margin-left: 50px; /* Adjust as needed */
+        width: calc(100% - 20px); /* Adjust width based on margin-left */
+    }
+
+    .main {
+        display: flex; /* Use flexbox for easy layout control */
+        flex-direction: column; /* Stack rows vertically */
+        
+        padding: 0 60px; /* Keep your horizontal padding */
+        position: relative; /* Makes sure all rows are positioned inside */
+        overflow: hidden;
+        background-color: var(--primary-color);
+    }
+
+    .row1 {
+        display: flex; /* Arrange cards horizontally */
+        
+        justify-content: space-evenly; /* Spread out cards evenly */
+        padding: 5px; /* Optional padding */
+    }
+
+    .row1 .card:first-child {
+        flex-grow: 2; /* Make the first card grow twice as much */
+    }
+    
+    .row1 .card:nth-child(2) {
+        flex-grow: 1; /* Make the second card grow normally */
+    }
+    
+    .row2 {
+        display: flex; /* Arrange cards horizontally */
+        gap: 5px; /* Different spacing for this row */
+        justify-content: center; /* Center the cards */
+        padding: 5px; /* Optional padding */
+        width: 100%; /* Ensure row2 spans the full container */
+        background-color: inherit;
+    }
+
+    .row2 .card {
+        flex: 1;
+    }
+
+    .navigation {
+        display: flex; /* Show navigation */
+        justify-content: center; /* Center the ul within the nav */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%; /* Ensure the navigation spans the full width */
+        
+    }
+
+    
+
+    nav ul {
+        display: flex; /* Make ul a flex container */
+        flex-direction: row; /* Arrange links horizontally */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure ul spans the full width of the navigation */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
+        
+    }
+
+    nav ul li {
+        flex: 1; /* Ensure equal spacing between list items */
+        text-align: center; /* Center align text */
+        
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: var(--text-color-light);
+        font-size: .9rem;
+        text-align: center;
+        text-decoration: none;
+        transition: width 0.5s ease;
+    }
+
+
+
+    /* Set style of card ul items */
+    .card ul {
+        list-style-type: none; /* Remove bullet points */
+        padding-left: 1rem;
+    }
+
+    /* Font size and weight for card title */
+    .card span {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    /* Put space between list items */
+    .card li {
+        padding-bottom: .75rem;
+    }
+
+    /* Set font size of the links */
+    .card a {
+        font-size: .85rem;
+        transition: font-size .5s ease;
+    }
+
+    .card a:visited {
+        font-size: .85rem;
+        color: rgb(136, 8, 136);
+    }
+
+    .card a:hover {
+        color: #d55118; /* Hover color */
+    }
+
+    /* Set the cards attributes */
+    .card  {
+        display: block;
+        border: 2px solid var(--border-color); /* Add border */
+        padding: 0; 
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
+    }
+
+
+
+    .card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 20px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+    }
+
+    .card-header h2 {
+        margin: 0; /* Remove default margin */
+        color: var(--text-color-light); /* Set text color */
+        font-size: 1.8rem; /* Set font size */
+    }
+
+    .card-content {
+        padding: 20px; /* Padding for the card content */
+        background-color: var(--background-color-light);
+    }
+
+    /* Set attributes for the paragraphs. These will change once they become dynamic */
+    .card-content p {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: bold;
+        transition: font-size 0.5s ease;
+    }
+    
+}
+
+@media (min-width: 1000px) {
+    #menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: var(--text-color-light);
+        font-size: 1.1rem;
+        text-align: center;
+        text-decoration: none;
+        transition: width 0.5s ease;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    #menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    .header-title span {
+        font-size: 3rem; 
+        color: var(--text-color-dark);
+    }
+
+    header img {
+        width: 225px; 
+        height: auto;
+        border: 3px solid var(--border-color); 
+        box-shadow: 0 0 45px var(--shadow-color);
+        margin-right: 2rem;
+        transition: width 0.5s ease;
+    }
+
+    
+    .main {
+        display: flex; /* Use flexbox for easy layout control */
+        flex-direction: column; /* Stack rows vertically */
+        
+        padding: 0 5px; /* Keep your horizontal padding */
+        position: relative; /* Makes sure all rows are positioned inside */
+        overflow: hidden;
+    }
+
+    .row1 {
+        display: flex; /* Arrange cards horizontally */
+        gap: 5px; /* Add spacing between cards */
+        
+        justify-content: space-evenly; /* Spread out cards evenly */
+    }
+
+    .row1 .card:first-child {
+        flex-grow: 2; /* Make the first card grow twice as much */
+    }
+    
+    .row1 .card:nth-child(2) {
+        flex-grow: 1; /* Make the second card grow normally */
+    }
+    
+    .row2 {
+        display: flex; /* Arrange cards horizontally */
+        gap: 5px; /* Different spacing for this row */
+        justify-content: center; /* Center the cards */
+        width: 100%; /* Ensure row2 spans the full container */
+        background-color: inherit;
+        
+    }
+
+    
+
+    .navigation {
+        display: flex; /* Show navigation */
+        justify-content: center; /* Center the ul within the nav */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%; /* Ensure the navigation spans the full width */
+        
+    }
+
+    
+
+    nav ul {
+        display: flex; /* Make ul a flex container */
+        flex-direction: row; /* Arrange links horizontally */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure ul spans the full width of the navigation */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
+        
+    }
+
+    nav ul li {
+        flex: 1; /* Ensure equal spacing between list items */
+        text-align: center; /* Center align text */
+        
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: var(--text-color-light);
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        transition: width 0.5s ease;
+    }
+
+    .card-content p {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: bold;
+        transition: font-size 0.5s ease;
+    }
+
+@media (max-width: 1450px) {
+    
+    
+    .card span {
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    .card a {
+        font-size: .75rem;
+    }
+}
+
+}
