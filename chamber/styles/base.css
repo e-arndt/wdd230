@@ -31,8 +31,9 @@
 body {
     font-family: 'Varela Round', sans-serif;
     color: var(--text-color-dark); 
-     
     margin: 0; /* Remove the default margin */
+    padding-bottom: 7rem;
+    background-color: var(--primary-color);
 }
 
 
