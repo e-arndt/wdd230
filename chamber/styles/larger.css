@@ -272,6 +272,17 @@ header {
         transition: font-size 0.5s ease;
     }
 
+    footer p {
+        color: var(--dark-border-color); /* Set text color for <p> */
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        gap: 10px; /* Space between text and image */
+        transition: font-size 0.5s ease;
+    }
+
     
     
 }

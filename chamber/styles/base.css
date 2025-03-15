@@ -279,7 +279,7 @@ footer {
 /* Set flex so <p> and <img> show inline */
 footer p {
     color: var(--dark-border-color); /* Set text color for <p> */
-    font-size: 1rem;
+    font-size: .8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,7 +296,7 @@ footer img {
 }
 
 .f_name p {
-    font-size: .1.2rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 5px;
     transition: font-size 0.5s ease;
@@ -311,7 +311,7 @@ footer img {
 
 
 /* Media query for screens smaller than 700px */
-@media (max-width: 700px) {
+@media (max-width: 725px) {
     .header-title span {
         font-size: 1.25rem; /* Adjusts size as needed */
         padding-right: .2rem;
