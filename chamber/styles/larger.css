@@ -42,6 +42,37 @@ header {
 
 }
 
+.footer-content .f_logo,
+.footer-content .f_name {
+    display: inline-flex; /* Makes these elements align horizontally */
+    align-items: center; /* Vertically aligns the image with the name text */
+}
+
+.footer-content .f_name {
+    margin-left: 15px; /* Adds spacing between the name and the logo */
+    text-align: left; /* Ensures proper alignment for text */
+}
+
+.footer-content .f_logo img {
+    max-width: 75px; /* Adjusts the size of the logo */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.footer-content .f_address {
+    font-size: .9rem;
+    padding: 10px;
+}
+
+.footer-content .f_ph_email {
+    font-size: .9rem;
+    border-bottom: 2px solid var(--dark-border-color);
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+
 
 
 
@@ -233,6 +264,15 @@ header {
         font-weight: bold;
         transition: font-size 0.5s ease;
     }
+
+    .f_name p {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        transition: font-size 0.5s ease;
+    }
+
+    
     
 }
 

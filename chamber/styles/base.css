@@ -32,7 +32,7 @@ body {
     font-family: 'Varela Round', sans-serif;
     color: var(--text-color-dark); 
     margin: 0; /* Remove the default margin */
-    padding-bottom: 7rem;
+    padding-bottom: 1rem;
     background-color: var(--primary-color);
 }
 
@@ -240,6 +240,75 @@ nav .active {
     transition: font-size 0.5s ease;
 }
 
+.footer-content .f_logo,
+.footer-content .f_name {
+    display: inline-flex; /* Makes these elements align horizontally */
+    align-items: center; /* Vertically aligns the image with the name text */
+}
+
+.footer-content .f_name {
+    margin-left: 15px; /* Adds spacing between the name and the logo */
+    text-align: left; /* Ensures proper alignment for text */
+}
+
+.footer-content .f_logo img {
+    max-width: 75px; /* Adjusts the size of the logo */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.footer-content .f_address {
+    font-size: .9rem;
+    padding: 10px;
+}
+
+.footer-content .f_ph_email {
+    font-size: .9rem;
+    padding: 10px;
+}
+
+
+
+
+/* Set default attributes for the footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Set flex so <p> and <img> show inline */
+footer p {
+    color: var(--dark-border-color); /* Set text color for <p> */
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 10px; /* Space between text and image */
+    transition: font-size 0.5s ease;
+}
+
+footer img {
+    width: 75px; /* Set the width of the img */
+    height: auto; /* Ensures the height adjusts proportionally */
+    margin-left: 10px; /* Set space between text and image */
+    transition: width 0.5s ease;
+}
+
+.f_name p {
+    font-size: .1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: font-size 0.5s ease;
+}
+
+
+/* Displays below, but centered */
+.last-modified {
+    text-align: center;
+    margin-top: 10px; /* Space above the last modified line */
+}
+
 
 /* Media query for screens smaller than 700px */
 @media (max-width: 700px) {
@@ -265,5 +334,22 @@ nav .active {
         border: 3px solid var(--border-color); 
         box-shadow: 0 0 45px var(--shadow-color);
         margin-right: 1rem;
+    }
+
+    footer p {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Adjust alignment for stacked elements */
+    }
+
+    footer img {
+        margin-left: 0; /* Remove margin for better stacking */
+    }
+
+    .f_name p {
+        font-size: .9rem;
+        
+        font-weight: bold;
+        margin-bottom: 5px;
+        transition: font-size 0.5s ease;
     }
 }

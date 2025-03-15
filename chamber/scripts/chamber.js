@@ -1,9 +1,9 @@
-// document.getElementById("lastModified").innerHTML = document.lastModified;
+document.getElementById("lastModified").innerHTML = document.lastModified;
 
-// const currentDate = new Date();
-// const yearSpan = document.querySelector('#currentYear');
+const currentDate = new Date();
+const yearSpan = document.querySelector('#currentYear');
 
-// yearSpan.innerText = currentDate.getFullYear();
+yearSpan.innerText = currentDate.getFullYear();
 
 // Store the selected elements that we are going to use. 
 const mainnav = document.querySelector('.navigation')
