@@ -102,12 +102,17 @@ header img {
 }
 
 /* Styles for the .header-title container */
-.header-title {
+.header-title h1 {
     display: flex;
     flex-direction: column; /* Stack spans vertically */
     align-items: center;    /* Center align the spans horizontally */
     text-align: center;     /* Center the text inside the spans */
     transition: flex-direction 0.5s ease;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: -5px;
 }
 
 /* Apply atributes to the name in the span */
