@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Demo</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Lazy Load Demo ">
+    <meta name="author" content="Eric Arndt">
+    <link href="styles/lazyload.css" rel="stylesheet">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Lazy Load Demo</h1></header>
+    <main>
+        <picture>
+            <img src="images/lh1.jpg" alt="Placerholder Lighthouse Image" loading="lazy" width="400" height="600"> 
+        </picture>
+        <picture>
+            <img src="images/lh2.jpg" alt="Placerholder Lighthouse Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/wr1.jpg" alt="Placerholder Wave Runner Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/wr2.jpg" alt="Placerholder Wave Runner Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/ss1.jpg" alt="Placerholder Sunset Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/ss2.jpg" alt="Placerholder Sunset Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/fd1.jpg" alt="Placerholder Fire Dancer Image" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/fd2.webp" alt="Placerholder Fire Dancer  Image" loading="lazy" width="400" height="600">
+        </picture>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> 🌲 Eric E. Arndt 🌲 Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
+        </div>
+        <p class="last-modified"> Last Modified on: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
