@@ -1,49 +1,36 @@
-body {
-    background-color: rgb(100, 55, 0);
+main {
+    text-align: center;
 }
 
 h1 {
+    background-color: rgb(3, 87, 142);
+    color: ghostwhite;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 5px rgb(189, 189, 189);
+    font-size: 1.7rem;
+    text-shadow: 3px 3px 4px black;
+    padding: 20px;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+main img {
+    border-radius: 5px;
+    border: 3px solid rgb(3, 87, 142); 
+    background-color: black;
+    box-shadow: -1px 1px 2px 3px rgb(53, 118, 171);
 }
 
 main {
-    margin: 5px auto;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding-bottom: 10px;
 }
 
-img {
-    width: 100%;
-    border-radius: 5px;
-    border: 3px solid blue; 
-    background-color: black;
-    box-shadow: -1px 1px 2px 3px rgb(53, 118, 171);
-    
-    
-    animation: fade 3s;
-}
-
-picture {
-    margin: 5px 0;
-}
-
-@keyframes fade {
-    0% {
-        opacity: 0
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 /* Set default attributes for the footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: rgb(3, 87, 142);
     text-align: center;
     padding: 20px;
 }
@@ -51,7 +38,7 @@ footer {
 /* Set flex so <p> and <img> show inline */
 footer p {
     color: ghostwhite; /* Set text color for <p> */
-    text-shadow: 3px 3px 4px rgb(189, 189, 189);
+    text-shadow: 3px 3px 4px black;
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -67,7 +54,7 @@ footer img {
     margin-left: 10px; /* Set space between text and image */
     border: none;
     border-radius: 0px;
-    box-shadow: none;
+    box-shadow: 3px 3px 4px black;
     transition: width 0.5s ease;
 }
 
@@ -79,7 +66,7 @@ footer img {
 }
 
 footer a {
-    color: rgb(108, 236, 240); /* Set text color for <p> */
+    color: rgb(66, 249, 69); /* Set text color for <p> */
     text-shadow: 3px 3px 4px rgb(40, 39, 39);
     font-size: 1rem;
 }

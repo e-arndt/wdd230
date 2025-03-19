@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images Demo</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Responsive Images with Lazy Load Demo ">
+    <meta name="author" content="Eric Arndt">
+    <link href="styles/responsive-images.css" rel="stylesheet">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Responsive Images Demo</h1></header>
+    <main>
+        <div class="hero"></div>
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 700px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 850px)">
+                <img src="images/hero-large.webp" alt="table setting" width="800" height="1280">
+            </picture>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> 🌲 Eric E. Arndt 🌲 Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
+        </div>
+        <p class="last-modified"> Last Modified on: <span id="lastModified"></span></p>
+        <a href="../index.html">Back To Home Page</a>
+    </footer>
+</body>
+</html>
