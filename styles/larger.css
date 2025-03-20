@@ -36,6 +36,8 @@ header img {
     margin-right: 2rem;
 }
 
+
+
 /* Adjust size as screen size changes */
 /* Media query for screens larger than 900px */
 @media (min-width: 900px) {
@@ -61,6 +63,43 @@ header img {
         width: calc(100% - 20px); /* Adjust width based on margin-left */
     }
 
+    .hero {
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .herolabel {
+        position: absolute;
+        top: 50px;
+        left: 5%;
+        
+        background: radial-gradient(ghostwhite, rgb(49, 113, 186));
+        border: 1px solid black;
+        padding: .75rem;
+        box-shadow: 0 0 4rem white;
+        opacity: 0.85;
+    }
+    
+    .herolabel p {
+        margin: 0;
+        padding: .25rem;
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #f8da5f;
+        font-family:"Varela Round", serif;
+        text-shadow: 4px 4px 4px black; 
+    }
+    
+    .hero picture {
+        width: 100%;
+    }
+    
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
     .card span {
         font-weight: bold;
         font-size: 1.2rem;
@@ -83,6 +122,45 @@ header img {
         grid-template-columns: 2fr 1fr;
         gap: 20px;
         padding: 0 60px;
+    }
+
+
+
+    .hero {
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .herolabel {
+        position: absolute;
+        top: 50px;
+        left: 2%;
+        
+        background: radial-gradient(ghostwhite, rgb(49, 113, 186));
+        border: 1px solid black;
+        padding: .75rem;
+        box-shadow: 0 0 4rem white;
+        opacity: 0.85;
+    }
+    
+    .herolabel p {
+        margin: 0;
+        padding: .25rem;
+        font-weight: 500;
+        font-size: 2rem;
+        color: #f8da5f;
+        font-family:"Varela Round", serif;
+        text-shadow: 4px 4px 4px black; 
+    }
+    
+    .hero picture {
+        width: 100%;
+    }
+    
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .navigation {
@@ -119,11 +197,26 @@ header img {
         display: block;
         padding: 1rem;
         color: var(--text-color-dark);
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
         text-decoration: none;
         transition: opacity 0.5s ease, height 0.5s ease;
     }
+
+
+
+    .map {
+        width: 100%; /* Full width */
+        padding: 0 60px; /* Match <main> padding, if needed */
+        min-height: 400px; /* Ensure it’s at least 400px tall */
+        height: auto; /* Allow it to scale as needed */
+    }
+    
+    .map iframe {
+        width: 100%;
+        height: 400; 
+    }
+
 
 @media (max-width: 1450px) {
     .card span {
@@ -134,6 +227,11 @@ header img {
     .card a {
         font-size: .75rem;
     }
+
+    .herolabel p {
+        font-size: 1.75rem;
+    }
+
 }
 
 }

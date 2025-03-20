@@ -157,6 +157,15 @@ header img {
     box-shadow: 0 0 35px var(--darkMode-shadow);
 }
 
+.hero picture {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
 /* Apply a background color to the nav bar */
 nav {
     background-color: var(--accent-color); /* Same background color as the header */
@@ -286,6 +295,56 @@ main h1 {
     transition: font-size 0.5s ease;
 }
 
+.hero {
+    margin: 0 auto;
+    position: relative;
+}
+
+.herolabel {
+    position: absolute;
+    top: 50px;
+    left: 2%;
+    
+    background: radial-gradient(ghostwhite, rgb(49, 113, 186));
+    border: 1px solid black;
+    padding: .75rem;
+    box-shadow: 0 0 4rem white;
+    opacity: 0.85;
+}
+
+.herolabel p {
+    margin: 0;
+    padding: .25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #f8da5f;
+    font-family:"Varela Round", serif;
+    text-shadow: 4px 4px 4px black; 
+}
+
+.hero picture {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map {
+    width: 100%; /* Full width */
+    padding: 0 60px; /* Match <main> padding, if needed */
+    min-height: 400px; /* Ensure it’s at least 400px tall */
+    height: auto; /* Allow it to scale as needed */
+}
+
+.map iframe {
+    width: 100%;
+    height: 400; 
+}
+
+
 /* Set default attributes for the footer */
 footer {
     background-color: var(--primary-color);
@@ -328,6 +387,43 @@ footer img {
     main h1 {
         font-size: 1.5rem;
         margin-left: 50px;
+    }
+
+    .hero {
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .herolabel {
+        position: absolute;
+        top: 50px;
+        left: 5%;
+        
+        background: radial-gradient(ghostwhite, rgb(49, 113, 186));
+        border: 1px solid black;
+        padding: .75rem;
+        box-shadow: 0 0 4rem white;
+        opacity: 0.85;
+    }
+    
+    .herolabel p {
+        margin: 0;
+        padding: .25rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #f8da5f;
+        font-family:"Varela Round", serif;
+        text-shadow: 4px 4px 4px black; 
+    }
+    
+    .hero picture {
+        width: 100%;
+    }
+    
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .card span {
@@ -373,6 +469,7 @@ footer img {
         width: calc(100% - 20px); /* Full width minus the margins */
     }
 
+
     footer p {
         color: var(--text-color-light);
         font-size: .7rem;
@@ -396,6 +493,43 @@ footer img {
         flex-direction: column;
         justify-content: center;
         padding: 1rem 2rem;
+    }
+
+    .hero {
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .herolabel {
+        position: absolute;
+        top: 10px;
+        left: 2%;
+        
+        background: radial-gradient(ghostwhite, rgb(49, 113, 186));
+        border: 1px solid black;
+        padding: .5rem;
+        box-shadow: 0 0 4rem white;
+        opacity: 0.85;
+    }
+    
+    .herolabel p {
+        margin: 0;
+        padding: .25rem;
+        font-weight: 500;
+        font-size: 1rem;
+        color: #f8da5f;
+        font-family:"Varela Round", serif;
+        text-shadow: 4px 4px 4px black; 
+    }
+    
+    .hero picture {
+        width: 100%;
+    }
+    
+    .hero img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .card span {
