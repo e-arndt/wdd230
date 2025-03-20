@@ -1,6 +1,6 @@
 // Declare the array, try to get list data from function, if first visit or
 // if no localStorage, return empty array
-const chaptersArray = getChapterList() || []
+let chaptersArray = getChapterList() || []
 
 
 
@@ -12,29 +12,53 @@ message.id = 'message';
 document.querySelector('main').appendChild(message); // Append message to main
 
 button.addEventListener('click', () => {
-    const chapter = input.value;
+    const chapter = input.value.trim(); // Trim whitespace around input
     if (chapter !== '') {
-        // Call the displayList function with the chapter
-        displayList(chapter);
-        chaptersArray.push(chapter);
+        // Check if the chapter already exists in the array
+        if (!chaptersArray.includes(chapter)) {
+            // Call the displayList function with the chapter
+            displayList(chapter);
+            chaptersArray.push(chapter);
 
-        // Push the chapter into the chaptersArray
-        chaptersArray.push(chapter);
+            // Update localStorage with the new array
+            setChapterList();
+        } else {
+            // Show error message
+            message.textContent = 'This chapter is already in your list.';
+            
+            // Delay clearing the error message
+            setTimeout(() => {
+                message.textContent = '';
+            }, 3000); // Clear after 3 seconds
+        }
 
         // Clear the input field and reset focus
         input.value = '';
         input.focus();
-        message.textContent = ''; // Clear the message
     } else {
-        message.textContent = 'Please enter a book and chapter.'; // Display the message
+        // Display the message if input is empty
+        message.textContent = 'Please enter a book and chapter.';
+        
+        // Delay clearing the error message
+        setTimeout(() => {
+            message.textContent = '';
+        }, 3000); // Clear after 3 seconds
     }
 });
 
+
+
 function deleteChapter(chapter) {
-    chapter = chapter.slice(0, chapter.length - 1);
-    chaptersArray = chaptersArray.filter(item => item !== chapter);
+    // Remove the ❌ and trim any extra whitespace
+    const trimmedChapter = chapter.replace('❌', '').trim();
+
+    // Remove the chapter from chaptersArray
+    chaptersArray = chaptersArray.filter(item => item !== trimmedChapter);
+
+    // Update localStorage
     setChapterList();
 }
+
 
 function getChapterList() {
     return JSON.parse(localStorage.getItem('favBOMchapters'));
@@ -51,7 +75,9 @@ function displayList(item) {
 
     // Create the delete button 
     const deleteButton = document.createElement('button'); 
-    deleteButton.textContent = '❌'; 
+    deleteButton.textContent = '❌';
+    deleteButton.setAttribute('aria-label', `Delete ${item}`);
+
 
     deleteButton.addEventListener('click', () => {
     list.removeChild(listItem);
@@ -66,7 +92,12 @@ function displayList(item) {
     // Append the list item to the list
     list.appendChild(listItem); 
 
-    input.value = '';
-    input.focus();
-    message.textContent = '';
 }
+
+
+// Ensure chapters from localStorage are displayed on page load
+document.addEventListener("DOMContentLoaded", () => {
+    // Load chapters from localStorage and display them
+    const chapters = getChapterList();
+    chapters.forEach(chapter => displayList(chapter)); // Display each chapter from localStorage
+});
