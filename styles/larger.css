@@ -75,7 +75,7 @@ header img {
         top: 50px;
         left: 5%;
         
-        background: radial-gradient(ghostwhite, rgb(49, 113, 186));
+        background: radial-gradient(rgb(128, 128, 129), #06489e);
         border: 1px solid black;
         padding: .75rem;
         box-shadow: 0 0 4rem white;
@@ -87,7 +87,7 @@ header img {
         padding: .25rem;
         font-weight: 500;
         font-size: 1.4rem;
-        color: #f8da5f;
+        color: rgb(255, 255, 255);
         font-family:"Varela Round", serif;
         text-shadow: 4px 4px 4px black; 
     }
