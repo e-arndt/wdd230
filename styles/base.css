@@ -400,7 +400,6 @@ footer img {
         position: absolute;
         top: 50px;
         left: 5%;
-        
         background: radial-gradient(ghostwhite, rgb(49, 113, 186));
         border: 1px solid black;
         padding: .75rem;
@@ -505,20 +504,22 @@ footer img {
     .herolabel {
         position: absolute;
         top: 10px;
-        left: 2%;
-        
+        left: 50%; /* Start from the horizontal center */
+        transform: translate(-50%, -10%);
+        width: 350px;
         background: radial-gradient(ghostwhite, rgb(49, 113, 186));
         border: 1px solid black;
-        padding: .5rem;
+        padding: .25rem;
         box-shadow: 0 0 4rem white;
         opacity: 0.85;
+        text-align: center;
+        white-space: nowrap;
     }
     
     .herolabel p {
         margin: 0;
-        padding: .25rem;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #f8da5f;
         font-family:"Varela Round", serif;
         text-shadow: 4px 4px 4px black; 
