@@ -30,10 +30,20 @@ button.addEventListener('click', () => {
     }
 });
 
+function deleteChapter(chapter) {
+    chapter = chapter.slice(0, chapter.length - 1);
+    chaptersArray = chaptersArray.filter(item => item !== chapter);
+    setChapterList();
+}
+
+function getChapterList() {
+    return JSON.parse(localStorage.getItem('favBOMchapters'));
+}
+
 
 function setChapterList() {
     // Convert chaptersArray to a JSON string and save it in localStorage
-    localStorage.setItem('chapters', JSON.stringify(chaptersArray));
+    localStorage.setItem('favBOMchapters', JSON.stringify(chaptersArray));
 }
 
 function displayList(item) {
