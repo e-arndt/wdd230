@@ -273,11 +273,13 @@ nav .active {
 
 /* Set attributes for the paragraphs. These will change once they become dynamic */
 .card-content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     font-weight: bold;
     transition: font-size 0.5s ease;
 }
+
+
 
 .main {
     padding: 0 60px; /* Padding on left and right */

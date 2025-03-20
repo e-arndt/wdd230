@@ -5,6 +5,20 @@ const yearSpan = document.querySelector('#currentYear');
 
 yearSpan.innerText = currentDate.getFullYear();
 
+const displayVisits = document.querySelector(".visits");
+
+let numVisits = Number(window.localStorage.getItem("storedVisits")) || 0;
+
+if (numVisits !== 0) {
+	displayVisits.textContent = numVisits;
+} else {
+	displayVisits.textContent = `🥳 First Visit`;
+}
+
+numVisits++;
+
+localStorage.setItem("storedVisits", numVisits);
+
 // Store the selected elements that we are going to use. 
 const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu');
