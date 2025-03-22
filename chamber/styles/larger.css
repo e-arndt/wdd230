@@ -397,7 +397,7 @@ header {
 
     .discover-main {
         display: grid;
-        grid-template-columns: 1fr 2fr; /* Sidebar: 1fr, Pics: 2fr */
+        grid-template-columns: 1fr 1.75fr; /* Sidebar: 1fr, Pics: 2fr */
         grid-gap: 20px; /* Spacing between columns */
         padding: 20px; /* Padding around the grid container */
     }
@@ -447,9 +447,8 @@ header {
 
     .fw-pic1 {
         border: 2px solid var(--border-color); /* Add border */
-        background-color: var(--background-color-light);
+        background-color: var(--secondary-color);
         padding: 0;
-        
         border-radius: 10px; /* Add border radius for rounded corners */
         box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
         overflow: hidden;
@@ -457,10 +456,10 @@ header {
 
 
     .fw-pic1 figcaption {
-        background-color: var(--secondary-color);
-        color: var(--text-color-light);
+        background-color: var(--background-color-light);
+        color: var(--text-color-dark);
         padding: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.75rem;
         text-align: center;
     }
 
