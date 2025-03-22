@@ -470,7 +470,57 @@ header {
       }
       
     
-        
+    .events-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    h3 {
+    font-size: 1.5rem;
+    }
+
+    .attract-card-content h3 {
+    padding-bottom: 1rem;
+    }
+    
+    .event-p {
+    display: grid; /* Use Grid for column layout */
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    column-gap: 20px; /* Adds spacing between the columns */
+    text-align: center; /* Centers text within each column */
+    padding: 20px;
+    font-size: 1.2rem;
+    }
+
+
+    .attract-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .stats-card-content {
+        padding: 20px;
+    }
+
+    .stats-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .stats-card-content p {
+        text-align: left;
+        margin-left: 20px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
     
 
     .navigation {
