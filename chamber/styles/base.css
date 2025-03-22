@@ -421,6 +421,8 @@ padding: 30px; /* Adds some space inside the container */
     padding: 20px 0;
 }
 
+
+
 .footer-content .f_logo,
 .footer-content .f_name {
     display: inline-flex; /* Makes these elements align horizontally */
@@ -587,6 +589,20 @@ footer img {
         background-color: var(--secondary-color);
         padding: 0;
         border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Normal shadow for smaller screens */
+        overflow: hidden;
+      }
+    
+      .fw-pic1:hover {
+        box-shadow: 0 0 35px var(--shadow-color); /* Matches the normal shadow */
+        transform: none; /* Disables any scaling or other transforms */
+      }
+
+    .fw-pic1 {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--secondary-color);
+        padding: 0;
+        border-radius: 10px; /* Add border radius for rounded corners */
         box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
         overflow: hidden;
     }
@@ -702,6 +718,8 @@ footer img {
         font-size: 1.25rem;
         padding: 20px 0;
     }
+
+    
 
     footer p {
         flex-direction: column; /* Stack elements vertically */

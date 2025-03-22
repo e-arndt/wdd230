@@ -42,6 +42,12 @@ header {
 
 }
 
+
+  
+  
+
+  
+
 .footer-content .f_logo,
 .footer-content .f_name {
     display: inline-flex; /* Makes these elements align horizontally */
@@ -300,6 +306,8 @@ header {
         background-color: var(--background-color-light);
     }
 
+
+
     .fw-pic1 {
         border: 2px solid var(--border-color); /* Add border */
         background-color: var(--secondary-color);
@@ -323,6 +331,9 @@ header {
         display: block; /* Prevents inline spacing issues */
         margin: auto;   /* Centers the image horizontally and vertically inside its container */
       }
+
+    
+    
       
     
     .events-card-content {
@@ -551,6 +562,14 @@ header {
     .discover-card-content {
         padding: 20px; /* Padding for the card content */
         background-color: var(--background-color-light);
+    }
+
+    .fw-pic1 {
+        transition: box-shadow 0.3s ease; /* Smooth transition for the effect */
+      }
+      
+    .fw-pic1:hover {
+    box-shadow: 0 0 18px 8px rgba(255, 165, 0, .8); /* Orange glow effect */
     }
 
     .fw-pic1 {
