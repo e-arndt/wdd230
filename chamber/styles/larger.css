@@ -237,15 +237,188 @@ header {
         overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
     }
 
+    .discover-pics img {
+        max-width: 100%; /* Prevents the images from overflowing their container */
+        height: auto; /* Maintains the image's aspect ratio while scaling */
+        display: block; /* Eliminates any unwanted space below the images */
+    }
+
+    .discover-sidebar img {
+        max-width: 100%; /* Prevents the images from overflowing their container */
+        height: auto; /* Maintains the image's aspect ratio while scaling */
+        display: block; /* Eliminates any unwanted space below the images */
+    }
+
+    .discover-main {
+        grid-template-columns: 1fr; /* Switch to a single-column layout */
+        grid-gap: 15px; /* Reduce gap between rows */
+    }
+    
+    /* Sidebar styling */
+    .discover-sidebar {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Space between sidebar items */
+        flex: 2; /* Allow the sidebar to shrink or grow as needed */
+         /* Restrict its maximum width for larger screens */
+    }
+    
+    /* Main content/pictures styling */
+    .discover-pics {
+        display: flex;
+        flex-direction: column; /* Stack pictures or content vertically */
+        gap: 15px; /* Space between items in this column */
+    }
+
+    
+    /* Shared card styling */
     .discover-card {
-        display: block;
         border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--background-color-light);
         padding: 0; 
         border-radius: 10px; /* Add border radius for rounded corners */
         box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
-        overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
+        overflow: hidden;
     }
 
+    .discover-card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 10px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+    }
+
+
+    .discover-card-header h2 {
+        margin: 0; /* Remove default margin */
+        color: var(--text-color-light); /* Set text color */
+        font-size: 1.8rem; /* Set font size */
+    }
+
+    .discover-card-content {
+        padding: 20px; /* Padding for the card content */
+        background-color: var(--background-color-light);
+    }
+
+    .fw-pic1 {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--secondary-color);
+        padding: 0;
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+
+    .fw-pic1 figcaption {
+        background-color: var(--background-color-light);
+        color: var(--text-color-dark);
+        padding: .5rem;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+
+    .fw-pic1 img {
+        display: block; /* Prevents inline spacing issues */
+        margin: auto;   /* Centers the image horizontally and vertically inside its container */
+      }
+      
+    
+    .events-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .events-card-content h3 {
+    font-size: 1.5rem;
+    }
+
+    .byu {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .attract-card-content h3 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    }
+    
+    .event-p {
+    display: grid; /* Use Grid for column layout */
+    grid-template-columns: 1fr; /* Creates two equal-width columns */
+    
+    text-align: center; /* Centers text within each column */
+    padding: 20px;
+    font-size: 1.2rem;
+    }
+
+    .events-card-content p {
+        font-size: 1.1rem;
+    }
+
+    .attract-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .attract-card-content p {
+        font-size: 1.2rem;
+    }
+
+    .stats-card-content {
+        padding: 20px;
+    }
+
+    .stats-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .stats-card-content p {
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .demo-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .demo-card-content {
+        padding: 20px;
+    }
+
+    .demo-card-content p {
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 10px;
+        font-size: 1.25rem;
+    }
+
+    .calendar-card-content {
+        margin-bottom: 30px;
+    }
+    
+    .welcome-card-content h3 {
+        text-align: center;
+        font-size: 1.25rem;
+        padding: 20px 0;
+    }
+
+    
 
 
     .card-header {
@@ -255,35 +428,19 @@ header {
         border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
     }
 
-    .discover-card-header {
-        background-color: var(--secondary-color); /* Background color for the header */
-        padding: 20px; /* Padding inside the header */
-        text-align: center; /* Center align the heading */
-        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
-    }
-
+    
     .card-header h2 {
         margin: 0; /* Remove default margin */
         color: var(--text-color-light); /* Set text color */
         font-size: 1.8rem; /* Set font size */
     }
 
-    .discover-card-header h2 {
-        margin: 0; /* Remove default margin */
-        color: var(--text-color-light); /* Set text color */
-        font-size: 1.8rem; /* Set font size */
-    }
-
+    
     .card-content {
         padding: 20px; /* Padding for the card content */
         background-color: var(--background-color-light);
     }
 
-
-    .discover-card-content {
-        padding: 20px; /* Padding for the card content */
-        background-color: var(--background-color-light);
-    }
 
     /* Set attributes for the paragraphs. These will change once they become dynamic */
     .card-content p {
@@ -294,13 +451,6 @@ header {
     }
 
 
-    .discover-card-content p {
-        font-size: 1.2rem;
-        text-align: center;
-        font-weight: bold;
-        transition: font-size 0.5s ease;
-    }
-
     .f_name p {
         font-size: 1.25rem;
         font-weight: bold;
@@ -309,7 +459,7 @@ header {
     }
 
     footer p {
-        color: var(--dark-border-color); /* Set text color for <p> */
+        color: black; /* Set text color for <p> */
         font-size: 1rem;
         display: flex;
         justify-content: center;
@@ -336,6 +486,182 @@ header {
         text-align: center;
         text-decoration: none;
         transition: width 0.5s ease;
+    }
+
+    .discover-pics img {
+        max-width: 100%; /* Prevents the images from overflowing their container */
+        height: auto; /* Maintains the image's aspect ratio while scaling */
+        display: block; /* Eliminates any unwanted space below the images */
+    }
+
+    .discover-sidebar img {
+        max-width: 100%; /* Prevents the images from overflowing their container */
+        height: auto; /* Maintains the image's aspect ratio while scaling */
+        display: block; /* Eliminates any unwanted space below the images */
+    }
+
+    .discover-main {
+        display: grid;
+        grid-template-columns: 1fr 1.75fr; /* Sidebar: 1fr, Pics: 2fr */
+        grid-gap: 20px; /* Spacing between columns */
+        padding: 20px; /* Padding around the grid container */
+    }
+    
+    /* Sidebar styling */
+    .discover-sidebar {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Space between sidebar items */
+        flex: 2; /* Allow the sidebar to shrink or grow as needed */
+         /* Restrict its maximum width for larger screens */
+    }
+    
+    /* Main content/pictures styling */
+    .discover-pics {
+        display: flex;
+        flex-direction: column; /* Stack pictures or content vertically */
+        gap: 15px; /* Space between items in this column */
+    }
+
+    
+    /* Shared card styling */
+    .discover-card {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--background-color-light);
+        padding: 0; 
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+    .discover-card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 10px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+    }
+
+
+    .discover-card-header h2 {
+        margin: 0; /* Remove default margin */
+        color: var(--text-color-light); /* Set text color */
+        font-size: 1.8rem; /* Set font size */
+    }
+
+    .discover-card-content {
+        padding: 20px; /* Padding for the card content */
+        background-color: var(--background-color-light);
+    }
+
+    .fw-pic1 {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--secondary-color);
+        padding: 0;
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+
+    .fw-pic1 figcaption {
+        background-color: var(--background-color-light);
+        color: var(--text-color-dark);
+        padding: .5rem;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+
+    .fw-pic1 img {
+        display: block; /* Prevents inline spacing issues */
+        margin: auto;   /* Centers the image horizontally and vertically inside its container */
+      }
+      
+    
+    .events-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .events-card-content h3 {
+    font-size: 1rem;
+    }
+
+    .byu {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .attract-card-content h3 {
+    padding-bottom: 1rem;
+    }
+    
+    .event-p {
+    display: grid; /* Use Grid for column layout */
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    column-gap: 20px; /* Adds spacing between the columns */
+    text-align: center; /* Centers text within each column */
+    padding: 20px;
+    font-size: .75rem;
+    }
+
+    .events-card-content p {
+        font-size: .75rem;
+    }
+
+    .attract-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .attract-card-content p {
+        font-size: .75rem;
+    }
+
+    .stats-card-content {
+        padding: 20px;
+    }
+
+    .stats-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .stats-card-content p {
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 10px;
+        font-size: .75rem;
+    }
+
+    .demo-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .demo-card-content {
+        padding: 20px;
+    }
+
+    .demo-card-content p {
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 10px;
+        font-size: .75rem;
+    }
+    
+    .welcome-card-content h3 {
+        text-align: center;
+        font-size: .9rem;
+        padding: 20px 0;
     }
 
 }
@@ -480,7 +806,11 @@ header {
     }
 
     .events-card-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    }
+
+    .events-card-content p {
+        font-size: .9rem;
     }
 
     .byu {
@@ -490,6 +820,7 @@ header {
 
     .attract-card-content h3 {
     padding-bottom: 1rem;
+    font-size: 1.1rem;
     }
     
     .event-p {
@@ -498,7 +829,7 @@ header {
     column-gap: 20px; /* Adds spacing between the columns */
     text-align: center; /* Centers text within each column */
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: .9rem;
     }
 
 
@@ -511,6 +842,10 @@ header {
     padding: 30px; /* Adds some space inside the container */
     }
 
+    .attract-card-content p {
+        font-size: .9rem;
+    }
+
     .stats-card-content {
         padding: 20px;
     }
@@ -518,18 +853,20 @@ header {
     .stats-card-content h3 {
         text-align: center;
         padding-bottom: 10px;
+        font-size: 1.1rem;
     }
 
     .stats-card-content p {
         text-align: left;
         margin-left: 30px;
         padding-bottom: 10px;
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
 
     .demo-card-content h3 {
         text-align: center;
         padding-bottom: 10px;
+        font-size: 1.1rem;
     }
 
     .demo-card-content {
@@ -540,12 +877,12 @@ header {
         text-align: left;
         margin-left: 30px;
         padding-bottom: 10px;
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
     
     .welcome-card-content h3 {
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1rem;
         padding: 20px 0;
     }
 
@@ -609,4 +946,164 @@ header {
     }
 }
 
+}
+
+@media (min-width: 1750px) {
+    .discover-main {
+        display: grid;
+        grid-template-columns: 1fr 1.75fr; /* Sidebar: 1fr, Pics: 2fr */
+        grid-gap: 20px; /* Spacing between columns */
+        padding: 20px; /* Padding around the grid container */
+    }
+    
+    /* Sidebar styling */
+    .discover-sidebar {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Space between sidebar items */
+    }
+    
+    /* Main content/pictures styling */
+    .discover-pics {
+        display: flex;
+        flex-direction: column; /* Stack pictures or content vertically */
+        gap: 15px; /* Space between items in this column */
+    }
+
+    
+    /* Shared card styling */
+    .discover-card {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--background-color-light);
+        padding: 0; 
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+    .discover-card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 10px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+    }
+
+
+    .discover-card-header h2 {
+        margin: 0; /* Remove default margin */
+        color: var(--text-color-light); /* Set text color */
+        font-size: 1.8rem; /* Set font size */
+    }
+
+    .discover-card-content {
+        padding: 20px; /* Padding for the card content */
+        background-color: var(--background-color-light);
+    }
+
+    .fw-pic1 {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--secondary-color);
+        padding: 0;
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+
+    .fw-pic1 figcaption {
+        background-color: var(--background-color-light);
+        color: var(--text-color-dark);
+        padding: .5rem;
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+
+    .fw-pic1 img {
+        display: block; /* Prevents inline spacing issues */
+        margin: auto;   /* Centers the image horizontally and vertically inside its container */
+      }
+      
+    
+    .events-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .events-card-content h3 {
+    font-size: 1.5rem;
+    }
+
+    .byu {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .attract-card-content h3 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    }
+    
+    .event-p {
+    display: grid; /* Use Grid for column layout */
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    column-gap: 20px; /* Adds spacing between the columns */
+    text-align: center; /* Centers text within each column */
+    padding: 20px;
+    font-size: 1.2rem;
+    }
+
+
+    .attract-card-content {
+    display: flex; /* Enables Flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Horizontally centers items */
+    justify-content: center; /* Vertically centers items (if height is specified) */
+    text-align: center; /* Ensures text within <h3> and <p> is centered */
+    padding: 30px; /* Adds some space inside the container */
+    }
+
+    .stats-card-content {
+        padding: 20px;
+    }
+
+    .stats-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .stats-card-content p {
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .demo-card-content h3 {
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .demo-card-content {
+        padding: 20px;
+    }
+
+    .demo-card-content p {
+        text-align: left;
+        margin-left: 30px;
+        padding-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    
+    .welcome-card-content h3 {
+        text-align: center;
+        font-size: 1.25rem;
+        padding: 20px 0;
+    }
 }
