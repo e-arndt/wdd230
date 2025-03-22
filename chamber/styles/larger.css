@@ -237,9 +237,25 @@ header {
         overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
     }
 
+    .discover-card {
+        display: block;
+        border: 2px solid var(--border-color); /* Add border */
+        padding: 0; 
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
+    }
+
 
 
     .card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 20px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+    }
+
+    .discover-card-header {
         background-color: var(--secondary-color); /* Background color for the header */
         padding: 20px; /* Padding inside the header */
         text-align: center; /* Center align the heading */
@@ -252,13 +268,33 @@ header {
         font-size: 1.8rem; /* Set font size */
     }
 
+    .discover-card-header h2 {
+        margin: 0; /* Remove default margin */
+        color: var(--text-color-light); /* Set text color */
+        font-size: 1.8rem; /* Set font size */
+    }
+
     .card-content {
+        padding: 20px; /* Padding for the card content */
+        background-color: var(--background-color-light);
+    }
+
+
+    .discover-card-content {
         padding: 20px; /* Padding for the card content */
         background-color: var(--background-color-light);
     }
 
     /* Set attributes for the paragraphs. These will change once they become dynamic */
     .card-content p {
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: bold;
+        transition: font-size 0.5s ease;
+    }
+
+
+    .discover-card-content p {
         font-size: 1.2rem;
         text-align: center;
         font-weight: bold;
@@ -357,6 +393,85 @@ header {
         
     }
 
+
+
+    .discover-main {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Sidebar: 1fr, Pics: 2fr */
+        grid-gap: 20px; /* Spacing between columns */
+        padding: 20px; /* Padding around the grid container */
+    }
+    
+    /* Sidebar styling */
+    .discover-sidebar {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Space between sidebar items */
+    }
+    
+    /* Main content/pictures styling */
+    .discover-pics {
+        display: flex;
+        flex-direction: column; /* Stack pictures or content vertically */
+        gap: 15px; /* Space between items in this column */
+    }
+    
+    /* Shared card styling */
+    .discover-card {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--background-color-light);
+        padding: 0; 
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+    .discover-card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 10px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+    }
+
+
+    .discover-card-header h2 {
+        margin: 0; /* Remove default margin */
+        color: var(--text-color-light); /* Set text color */
+        font-size: 1.8rem; /* Set font size */
+    }
+
+    .discover-card-content {
+        padding: 20px; /* Padding for the card content */
+        background-color: var(--background-color-light);
+    }
+
+    .fw-pic1 {
+        border: 2px solid var(--border-color); /* Add border */
+        background-color: var(--background-color-light);
+        padding: 0;
+        
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
+        overflow: hidden;
+    }
+
+
+    .fw-pic1 figcaption {
+        background-color: var(--secondary-color);
+        color: var(--text-color-light);
+        padding: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+
+    .fw-pic1 img {
+        display: block; /* Prevents inline spacing issues */
+        margin: auto;   /* Centers the image horizontally and vertically inside its container */
+      }
+      
+    
+        
     
 
     .navigation {
