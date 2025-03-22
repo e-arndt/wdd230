@@ -5,7 +5,36 @@ const yearSpan = document.querySelector('#currentYear');
 
 yearSpan.innerText = currentDate.getFullYear();
 
-// Store the selected elements that we are going to use. 
+const msToDays = 86400000;
+const currentVisitTime = currentDate.getTime();
+
+const visitMsg = document.querySelector(".visit-msg"); // Target the <span> element
+const lastVisitTime = localStorage.getItem("lastVisit"); // Retrieve the last visit from localStorage
+
+if (!lastVisitTime) {
+	// First visit
+    visitMsg.textContent = "Welcome! Let us know if you have any questions.";
+} else {
+    const timeDifference = currentVisitTime - lastVisitTime; // Difference in milliseconds
+    const daysDifference = Math.floor(timeDifference / msToDays); // Convert to days
+
+    if (timeDifference < msToDays) {
+        // Less than a day
+        visitMsg.textContent = "Back so soon! Awesome!";
+    } else if (daysDifference === 1) {
+        // Exactly 1 day
+        visitMsg.textContent = "You last visited 1 day ago.";
+    } else {
+        // More than 1 day
+        visitMsg.textContent = `You last visited ${daysDifference} days ago.`;
+    }
+}
+
+// Store the current visit date in localStorage
+localStorage.setItem("lastVisit", currentVisitTime);
+
+
+// Store the selected elements that are going to be used. 
 const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu');
 
@@ -20,16 +49,3 @@ hambutton.addEventListener('click', () => {
 	hambutton.classList.toggle('show');
 });
 
-// modeButton.addEventListener("click", () => {
-// 	if (modeIcon.getAttribute("src") === "images/dark-reader-icon.png") {
-//         // Switch to Light Mode
-//         main.classList.add("dark-mode"); // Add a class for dark mode CSS to main only
-//         modeIcon.setAttribute("src", "images/bright.png"); // Change the image to the light mode icon
-//         modeText.textContent = "Go Light"; // Change the span text to Light Mode
-//     } else {
-//         // Switch back to Dark Mode
-//         main.classList.remove("dark-mode"); // Remove the dark mode class from main only
-//         modeIcon.setAttribute("src", "images/dark-reader-icon.png"); // Change the image back to the dark mode icon
-//         modeText.textContent = "Go Dark"; // Change the span text back to Dark Mode
-//     }
-// });
