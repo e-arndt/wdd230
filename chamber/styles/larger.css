@@ -173,7 +173,7 @@ header {
         display: flex; /* Define a new flex container */
         flex-direction: column; /* Stack Card 2 and Card 3 vertically */
         gap: 10px; /* Add spacing between Card 2 and Card 3 */
-        width: calc(33.33% - 10px); /* Occupy the remaining one-third of the row */
+        width: calc(45% - 10px); /* Occupy the remaining one-third of the row */
         padding: 10px;
         box-sizing: border-box;
     }
@@ -809,7 +809,7 @@ header {
         display: flex; /* Define a new flex container */
         flex-direction: column; /* Stack Card 2 and Card 3 vertically */
         gap: 10px; /* Add spacing between Card 2 and Card 3 */
-        width: calc(33.33% - 10px); /* Occupy the remaining one-third of the row */
+        width: calc(45% - 10px); /* Occupy the remaining one-third of the row */
         padding: 10px;
         box-sizing: border-box;
     }
