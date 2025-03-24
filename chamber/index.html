@@ -23,6 +23,7 @@
     
     <link rel="icon" href="images/favicon_chamber.png" type="image/x-icon">
     <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/fw-wx.js" defer></script>
 </head>
 <body>
     <header class="head-wrapper">
@@ -48,23 +49,51 @@
                     <h2>Events</h2>
                 </div>
                 <div class="card-content">
-                    <p>Federal Way, Washington</p>
-                    <p>☀️ 56°F - Sunny</p>
-                    <p>Page Visits: 7</p>
-                </div>
+                    <div class="home-events">
+                        <img src="images/talent-poster.webp" alt="ad poster for Federal Way Got Talent" loading="lazy" width="395" height="500">
+                        <div home-events-p>
+                            <div class="date-info">
+                                <p>Date and Time</p>
+                                <p>Saturday May 3, 2025</p>
+                                <p>12:00 PM - 1:00 PM</p>
+                            </div>
+                            <div class="location-info">
+                                <p>Location</p>
+                                <p>Commons Mall 1701 S. 320th Street</p>
+                            </div>
+                        </div>
+                    </div>
             </section>
-            <section class="card">
-                <div class="card-header">
-                    <h2>Weather</h2>
-                </div>
-                <div class="card-content">
-                    <p>Federal Way, Washington</p>
-                    <p>☀️ 56°F - Sunny</p>
-                    <p>Page Visits: 7</p>
-                </div>
-            </section>
+            <div class="card-column">
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Weather</h2>
+                    </div>
+                    <div class="card-content">
+                        <div id="weather-info">
+                            <p>Live Weather</p>
+                            <p>Federal Way, Washington</p>
+                            <p>Temperature: <span id="temperature">--</span> °F</p>
+                            <p>Condition: <span id="current-condition">--</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section class="card">
+                    <div class="card-header">
+                        <h2>Weather</h2>
+                    </div>
+                    <div class="card-content">
+                        <div id="weather-info">
+                            <p>Live Weather</p>
+                            <p>Federal Way, Washington</p>
+                            <p>Temperature: <span>99</span> °F</p>
+                            <p>Condition: <span>Hot Ya'll</span></p>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div class="row2">
+        </div>
+        <div class="row2">
             <section class="card">
                 <div class="card-header">
                     <h2>Member Spotlight</h2>

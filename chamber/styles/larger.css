@@ -42,11 +42,24 @@ header {
 
 }
 
+.date-info {
+    margin-bottom: 20px; /* Adds space between date and location info */
+}
 
-  
-  
 
-  
+
+.home-events img {
+    max-width: 100%; /* Allows the image to scale down as needed */
+    height: auto; /* Maintains aspect ratio */
+    flex: 1; /* Gives the image flexible space */
+    transition: width 0.5s ease, max-width 0.5s ease;
+}
+
+
+
+#weather-info p {
+    margin-bottom: 10px;
+}
 
 .footer-content .f_logo,
 .footer-content .f_name {
@@ -131,20 +144,55 @@ header {
         background-color: var(--primary-color);
     }
 
-    .row1 {
-        display: flex; /* Arrange cards horizontally */
-        
-        justify-content: space-evenly; /* Spread out cards evenly */
-        padding: 5px; /* Optional padding */
+    .card .card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 20px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+        width: 100%; /* Ensure the header spans the full width of the card */
+        border-top-left-radius: inherit; /* Add this if the card has rounded corners */
+        border-top-right-radius: inherit;
     }
 
-    .row1 .card:first-child {
-        flex-grow: 2; /* Make the first card grow twice as much */
+    .row1 {
+        display: flex; /* Arrange cards horizontally */
+        justify-content: flex-start; /* Align items starting from the left */
+        align-items: flex-start; /* Align cards to the top */
+        padding: 5px;
+        gap: 10px; 
     }
     
-    .row1 .card:nth-child(2) {
-        flex-grow: 1; /* Make the second card grow normally */
+    .row1 .card:first-child {
+        flex-grow: 2; /* Allow Card 1 to take up more space */
+        width: 100%;
+        
+        box-sizing: border-box;
     }
+    
+    .card-column {
+        display: flex; /* Define a new flex container */
+        flex-direction: column; /* Stack Card 2 and Card 3 vertically */
+        gap: 10px; /* Add spacing between Card 2 and Card 3 */
+        width: calc(33.33% - 10px); /* Occupy the remaining one-third of the row */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .card-column .card {
+        flex-grow: 0; /* Prevent these cards from expanding */
+        width: 100%; /* Ensure they fill the column width */
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .card-column .card .card-header {
+        margin: -10px 0 0 -10px;
+        width: calc(100% + 20px);
+        box-sizing: border-box; /* Make sure padding doesn’t overflow */
+    }
+    
+    
     
     .row2 {
         display: flex; /* Arrange cards horizontally */
@@ -199,7 +247,15 @@ header {
         transition: width 0.5s ease;
     }
 
+    #weather-info span {
+        font-size: 1rem;
+    }
 
+
+    .home-events img {
+        max-width: 90%; /* Allows the image to scale down as needed */
+        max-width: 300px;
+    }
 
     /* Set style of card ul items */
     .card ul {
@@ -241,6 +297,7 @@ header {
         border-radius: 10px; /* Add border radius for rounded corners */
         box-shadow: 0 0 35px var(--shadow-color); /* Add shadow to cards */
         overflow: hidden; /* Ensure child elements don't overflow the rounded corners as shown in lesson video */
+        background-color: var(--background-color-light);
     }
 
     .discover-pics img {
@@ -455,7 +512,7 @@ header {
 
     /* Set attributes for the paragraphs. These will change once they become dynamic */
     .card-content p {
-        font-size: 1.2rem;
+        font-size: .9rem;
         text-align: center;
         font-weight: bold;
         transition: font-size 0.5s ease;
@@ -498,6 +555,8 @@ header {
         text-decoration: none;
         transition: width 0.5s ease;
     }
+
+    
 
     .discover-pics img {
         max-width: 100%; /* Prevents the images from overflowing their container */
@@ -683,6 +742,13 @@ header {
         padding: 20px 0;
     }
 
+    .card-content p {
+        font-size: .9rem;
+        text-align: center;
+        font-weight: bold;
+        transition: font-size 0.5s ease;
+    }
+
 }
 
 @media (min-width: 1300px) {
@@ -714,20 +780,54 @@ header {
         overflow: hidden;
     }
 
-    .row1 {
-        display: flex; /* Arrange cards horizontally */
-        gap: 5px; /* Add spacing between cards */
-        
-        justify-content: space-evenly; /* Spread out cards evenly */
+    .card .card-header {
+        background-color: var(--secondary-color); /* Background color for the header */
+        padding: 20px; /* Padding inside the header */
+        text-align: center; /* Center align the heading */
+        border-bottom: 1px solid var(--border-color); /* Add bottom border to the header */
+        width: 100%; /* Ensure the header spans the full width of the card */
+        border-top-left-radius: inherit; /* Add this if the card has rounded corners */
+        border-top-right-radius: inherit;
     }
 
-    .row1 .card:first-child {
-        flex-grow: 2; /* Make the first card grow twice as much */
+    .row1 {
+        display: flex; /* Arrange cards horizontally */
+        justify-content: flex-start; /* Align items starting from the left */
+        align-items: flex-start; /* Align cards to the top */
+        padding: 5px;
+        gap: 10px; 
     }
     
-    .row1 .card:nth-child(2) {
-        flex-grow: 1; /* Make the second card grow normally */
+    .row1 .card:first-child {
+        flex-grow: 2; /* Allow Card 1 to take up more space */
+        width: 100%;
+        
+        box-sizing: border-box;
     }
+    
+    .card-column {
+        display: flex; /* Define a new flex container */
+        flex-direction: column; /* Stack Card 2 and Card 3 vertically */
+        gap: 10px; /* Add spacing between Card 2 and Card 3 */
+        width: calc(33.33% - 10px); /* Occupy the remaining one-third of the row */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+    .card-column .card {
+        flex-grow: 0; /* Prevent these cards from expanding */
+        width: 100%; /* Ensure they fill the column width */
+        margin: 0 auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .card-column .card .card-header {
+        margin: -10px 0 0 -10px;
+        width: calc(100% + 20px);
+        box-sizing: border-box; /* Make sure padding doesn’t overflow */
+    }
+    
     
     .row2 {
         display: flex; /* Arrange cards horizontally */
@@ -738,7 +838,15 @@ header {
         
     }
 
-
+    .home-events img {
+        width: 100%; /* Scales image to the full container width */
+        max-width: 1800px; /* Ensures it doesn't exceed 1800px */
+        height: auto; /* Maintains the aspect ratio */
+    }
+    
+    #weather-info span {
+        font-size: 1.5rem;
+    }
 
     .discover-main {
         display: grid;

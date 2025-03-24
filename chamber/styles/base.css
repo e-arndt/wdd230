@@ -229,6 +229,12 @@ nav .active {
 .card-content {
     padding: 20px; /* Padding for the card content */
     background-color: var(--background-color-light);
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks elements vertically */
+    align-items: center; /* Centers child elements horizontally */
+    justify-content: center; /* Centers child elements vertically if needed */
+    width: 100%; /* Ensures full-width behavior */
+    text-align: center; /* Ensures text alignment within the container */
 }
 
 /* Set attributes for the paragraphs. These will change once they become dynamic */
@@ -237,8 +243,17 @@ nav .active {
     text-align: center;
     font-weight: bold;
     transition: font-size 0.5s ease;
+    margin: 0 auto;
 }
 
+body .home-events {
+    text-align: center;
+    display: block; /* Overrides flex in larger.css */
+}
+
+#weather-info span {
+    font-size: 1.2rem;
+}
 
 .discover-pics img {
     max-width: 100%; /* Prevents the images from overflowing their container */
@@ -519,7 +534,19 @@ footer img {
         margin-right: 1rem;
     }
 
+    #weather-info span {
+        font-size: 1.2rem;
+    }
 
+    .home-events {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .home-events-p {
+        text-align: center; /* Centers the text inside this block */
+        width: 100%; /* Ensures it spans the full width for proper centering */
+    }
 
     .discover-pics img {
         max-width: 100%; /* Prevents the images from overflowing their container */
