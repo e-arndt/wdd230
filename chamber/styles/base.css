@@ -576,6 +576,10 @@ footer img {
         width: 100%; /* Ensures it spans the full width for proper centering */
     }
 
+    #fee-table caption {
+        font-size: .8rem;
+    }
+
 
     th, td {
         width: 175px; /* Adjust column width */

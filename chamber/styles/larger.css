@@ -149,6 +149,10 @@ header {
         background-color: var(--primary-color);
     }
 
+    #fee-table caption {
+        font-size: .9rem;
+    }
+
     .card .card-header {
         background-color: var(--secondary-color); /* Background color for the header */
         padding: 20px; /* Padding inside the header */
