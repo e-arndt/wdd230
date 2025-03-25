@@ -341,7 +341,7 @@ main h1 {
 
 .map {
     width: 100%; /* Full width */
-    padding: 0 60px; /* Match <main> padding, if needed */
+    padding: 0 20px; /* Match <main> padding, if needed */
     min-height: 400px; /* Ensure it’s at least 400px tall */
     height: auto; /* Allow it to scale as needed */
 }
