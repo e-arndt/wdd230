@@ -228,11 +228,11 @@ header img {
 @media (max-width: 1450px) {
     .card span {
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .card a {
-        font-size: .75rem;
+        font-size: 1rem;
     }
 
     .card p {

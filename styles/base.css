@@ -231,13 +231,13 @@ nav .active {
 
 /* Set font size of the links */
 .card a {
-    font-size: .85rem;
+    font-size: .9rem;
     text-decoration: none;
     transition: font-size .5s ease;
 }
 
 .card a:visited {
-    font-size: .85rem;
+    font-size: .9rem;
     color: rgb(136, 8, 136);
     text-decoration: none;
 }
@@ -287,7 +287,7 @@ nav .active {
 
 
 .main {
-    padding: 0 60px; /* Padding on left and right */
+    padding: 0 20px; /* Padding on left and right */
     
 }
 
@@ -434,11 +434,11 @@ footer img {
 
     .card span {
         font-weight: bold;
-        font-size: .9rem;
+        font-size: 1rem;
     }
 
     .card a {
-        font-size: .8rem;
+        font-size: 1rem;
         text-decoration: none;
     }
 
@@ -479,7 +479,7 @@ footer img {
 
     footer p {
         color: var(--text-color-light);
-        font-size: .7rem;
+        font-size: .8rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -543,11 +543,11 @@ footer img {
 
     .card span {
         font-weight: bold;
-        font-size: .75rem;
+        font-size: .9rem;
     }
 
     .card a {
-        font-size: .7rem;
+        font-size: .9rem;
         text-decoration: none;
     }
 
