@@ -168,6 +168,31 @@ nav .active {
     background-color: var(--tertiary-color);
 }
 
+th, td {
+    width: 175px; /* Adjust column width */
+    height: 40px; /* Adjust row height */
+    text-align: center; /* Center-align text */
+    vertical-align: middle; /* Vertically center-align text */
+    padding: 5px; /* Add padding inside the cells */
+    border: 1px solid var(--darkMode-shadow); /* Add a border for clarity */
+    font-size: 14px; /* Adjust font size */
+    color: var(--dark-border-color);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--primary-color);
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: var(--background-color-light);
+  }
+
+
+table {
+    border-collapse: collapse; /* Avoid double borders */
+    width: 100%; /* Adjust table width to fit container */
+}
+
 /* Set style of card ul items */
 .card ul {
     list-style-type: none; /* Remove bullet points */
@@ -549,6 +574,32 @@ footer img {
     .home-events-p {
         text-align: center; /* Centers the text inside this block */
         width: 100%; /* Ensures it spans the full width for proper centering */
+    }
+
+
+    th, td {
+        width: 175px; /* Adjust column width */
+        height: 40px; /* Adjust row height */
+        text-align: center; /* Center-align text */
+        vertical-align: middle; /* Vertically center-align text */
+        padding: 5px; /* Add padding inside the cells */
+        border: 1px solid var(--darkMode-shadow); /* Add a border for clarity */
+        font-size: 14px; /* Adjust font size */
+        color: var(--dark-border-color);
+    }
+    
+    tbody tr:nth-child(odd) {
+        background-color: var(--primary-color);
+      }
+      
+      tbody tr:nth-child(even) {
+        background-color: var(--background-color-light);
+      }
+    
+    
+    table {
+        border-collapse: collapse; /* Avoid double borders */
+        width: 100%; /* Adjust table width to fit container */
     }
 
     .discover-pics img {

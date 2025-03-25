@@ -61,6 +61,11 @@ header {
     margin-bottom: 10px;
 }
 
+
+
+
+
+
 .footer-content .f_logo,
 .footer-content .f_name {
     display: inline-flex; /* Makes these elements align horizontally */
@@ -172,7 +177,7 @@ header {
     .card-column {
         display: flex; /* Define a new flex container */
         flex-direction: column; /* Stack Card 2 and Card 3 vertically */
-        gap: 10px; /* Add spacing between Card 2 and Card 3 */
+        gap: 12px; /* Add spacing between Card 2 and Card 3 */
         width: calc(45% - 10px); /* Occupy the remaining one-third of the row */
         padding: 10px;
         box-sizing: border-box;
@@ -195,7 +200,7 @@ header {
     
     
     .row2 {
-        display: flex; /* Arrange cards horizontally */
+        
         gap: 5px; /* Different spacing for this row */
         justify-content: center; /* Center the cards */
         padding: 5px; /* Optional padding */
@@ -571,6 +576,18 @@ header {
         transition: width 0.5s ease;
     }
 
+
+    th, td {
+        width: 175px; /* Adjust column width */
+        height: 40px; /* Adjust row height */
+        text-align: center; /* Center-align text */
+        vertical-align: middle; /* Vertically center-align text */
+        padding: 5px; /* Add padding inside the cells */
+        border: 1px solid var(--darkMode-shadow); /* Add a border for clarity */
+        font-size: 16px; /* Adjust font size */
+        color: var(--dark-border-color);
+    }
+
     
 
     .discover-pics img {
@@ -833,7 +850,7 @@ header {
     .card-column {
         display: flex; /* Define a new flex container */
         flex-direction: column; /* Stack Card 2 and Card 3 vertically */
-        gap: 10px; /* Add spacing between Card 2 and Card 3 */
+        gap: 24px; /* Add spacing between Card 2 and Card 3 */
         width: calc(45% - 10px); /* Occupy the remaining one-third of the row */
         padding: 10px;
         box-sizing: border-box;
@@ -1030,6 +1047,16 @@ header {
         margin-left: 30px;
         padding-bottom: 10px;
         font-size: .9rem;
+    }
+
+    th td {
+        width: 150px; /* Adjust column width */
+        height: 90px; /* Adjust row height */
+        text-align: center; /* Center-align text */
+        vertical-align: middle; /* Vertically center-align text */
+        padding: 10px; /* Add padding inside the cells */
+        border: 1px solid #ccc; /* Add a border for clarity */
+        font-size: 16px; /* Adjust font size */
     }
     
     .welcome-card-content h3 {
