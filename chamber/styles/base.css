@@ -187,17 +187,20 @@ nav .active {
 
 /* Set font size of the links */
 .card a {
-    font-size: .85rem;
+    font-size: 1rem;
+    text-decoration: none;
     transition: font-size .5s ease;
 }
 
 .card a:visited {
     font-size: .85rem;
     color: rgb(136, 8, 136);
+    text-decoration: none;
 }
 
 .card a:hover {
     color: #d55118; /* Hover color */
+    text-decoration: none;
 }
 
 /* Set the cards attributes */

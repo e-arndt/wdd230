@@ -142,15 +142,17 @@ header img {
 
 .dark-mode .card a {
     color: var(--darkMode-noVisit); /* Example color for links in dark mode (adjust as needed) */
-    
+    text-decoration: none;
 }
 
 .dark-mode .card a:visited {
     color: var(--darkMode-visited); /* Visited link color */
+    text-decoration: none;
 }
 
 .dark-mode .card a:hover {
     color: var(--darkMode-hover); /* Example hover color for links in dark mode (adjust as needed) */
+    text-decoration: none;
 }
 
 .dark-mode .card {
@@ -230,16 +232,19 @@ nav .active {
 /* Set font size of the links */
 .card a {
     font-size: .85rem;
+    text-decoration: none;
     transition: font-size .5s ease;
 }
 
 .card a:visited {
     font-size: .85rem;
     color: rgb(136, 8, 136);
+    text-decoration: none;
 }
 
 .card a:hover {
     color: #d55118; /* Hover color */
+    text-decoration: none;
 }
 
 /* Set the cards attributes */
@@ -434,6 +439,7 @@ footer img {
 
     .card a {
         font-size: .8rem;
+        text-decoration: none;
     }
 
     footer p {
@@ -542,6 +548,7 @@ footer img {
 
     .card a {
         font-size: .7rem;
+        text-decoration: none;
     }
 
     .card p {

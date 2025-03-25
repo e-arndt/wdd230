@@ -277,16 +277,19 @@ header {
     /* Set font size of the links */
     .card a {
         font-size: .85rem;
+        text-decoration: none;
         transition: font-size .5s ease;
     }
 
     .card a:visited {
         font-size: .85rem;
         color: rgb(136, 8, 136);
+        text-decoration: none;
     }
 
     .card a:hover {
         color: #d55118; /* Hover color */
+        text-decoration: none;
     }
 
     /* Set the cards attributes */
@@ -513,9 +516,21 @@ header {
     /* Set attributes for the paragraphs. These will change once they become dynamic */
     .card-content p {
         font-size: .9rem;
+        padding: 5px;
         text-align: center;
         font-weight: bold;
         transition: font-size 0.5s ease;
+    }
+
+    
+
+    .card-content a {
+        font-size: 1.2rem;
+        text-decoration: none; /* Example: Remove underline for visited */
+    }
+
+    .card-content a:visited {
+        text-decoration: none; /* Example: Remove underline for visited */
     }
 
 
@@ -748,6 +763,16 @@ header {
         font-weight: bold;
         transition: font-size 0.5s ease;
     }
+
+    .spot-img img {
+        max-width: 100%; /* Scale the image to fit the container */
+        height: auto; /* Maintain the aspect ratio */
+        display: block; /* Remove any inline spacing around images */
+        margin: 0 auto; /* Center the image (optional) */
+        transition: width 0.3s ease, max-width 0.3s ease; /* Smooth transition */
+
+    }
+    
 
 }
 
@@ -1054,7 +1079,8 @@ header {
     }
 
     .card-content p {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        padding: 10px;
         text-align: center;
         font-weight: bold;
         transition: font-size 0.5s ease;
@@ -1069,7 +1095,8 @@ header {
     }
 
     .card a {
-        font-size: .75rem;
+        font-size: 1rem;
+        text-decoration: none;
     }
 }
 
