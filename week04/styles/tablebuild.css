@@ -32,7 +32,7 @@ thead th {
     font-size: 1.5rem; /* Makes the text extra large */
     height: 20px; /* Increases row height */
     padding: 15px; /* Adds extra padding for spacing */
-    background-color: #202020; /* Optional: Adds a background color for emphasis */
+    background-color: rgb(136, 0, 0); 
     text-align: center; /* Centers text within header cells */
     font-family: var(--heading-font);
     color: ghostwhite;
@@ -43,7 +43,6 @@ tbody th {
     font-size: 1.25rem; /* Makes the text extra large */
     height: 20px; /* Increases row height */
     padding: 10px; /* Adds extra padding for spacing */
-    background-color: #f4f4f4; /* Optional: Adds a background color for emphasis */
     text-align: center; /* Centers text within header cells */
 }
 
@@ -51,12 +50,23 @@ tbody td {
     font-size: 1.25rem; /* Makes the text extra large */
     height: 20px; /* Increases row height */
     padding: 10px; /* Adds extra padding for spacing */
-    background-color: #f4f4f4; /* Optional: Adds a background color for emphasis */
     text-align: center; /* Centers text within header cells */
 }
 
 thead th[scope="col"]:not([colspan="4"]) {
-    background-color: #494949; /* Example: Light gray background */
+    background-color: #b83636; /* Example: Light gray background */
+}
+
+
+tbody tr:nth-child(odd) th,
+tbody tr:nth-child(odd) td {
+    background-color: #f4f4f4; /* Light gray for odd rows */
+}
+
+
+tbody tr:nth-child(even) th,
+tbody tr:nth-child(even) td {
+    background-color: #ffcccc; /* Light red for even rows */
 }
 
 
