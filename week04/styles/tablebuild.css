@@ -1,0 +1,68 @@
+
+
+:root {
+    --primary-font: 'Arial', sans-serif;
+    --secondary-font: 'Georgia', serif;
+    --heading-font: 'Varela Round', sans-serif;
+}
+
+
+body {
+    font-family: var(--primary-font);
+    padding: 20px; /* Adds space between the body content and the edges of the page */
+}
+
+h1, h2, h3 th {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--secondary-font);
+}
+
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 75%;
+    margin: 50px auto; /* Centers the table horizontally and adds top/bottom margin */
+}
+
+thead th {
+    font-size: 1.5rem; /* Makes the text extra large */
+    height: 20px; /* Increases row height */
+    padding: 15px; /* Adds extra padding for spacing */
+    background-color: #202020; /* Optional: Adds a background color for emphasis */
+    text-align: center; /* Centers text within header cells */
+    font-family: var(--heading-font);
+    color: ghostwhite;
+    border: none;
+}
+
+tbody th {
+    font-size: 1.25rem; /* Makes the text extra large */
+    height: 20px; /* Increases row height */
+    padding: 10px; /* Adds extra padding for spacing */
+    background-color: #f4f4f4; /* Optional: Adds a background color for emphasis */
+    text-align: center; /* Centers text within header cells */
+}
+
+tbody td {
+    font-size: 1.25rem; /* Makes the text extra large */
+    height: 20px; /* Increases row height */
+    padding: 10px; /* Adds extra padding for spacing */
+    background-color: #f4f4f4; /* Optional: Adds a background color for emphasis */
+    text-align: center; /* Centers text within header cells */
+}
+
+thead th[scope="col"]:not([colspan="4"]) {
+    background-color: #494949; /* Example: Light gray background */
+}
+
+
+
+
+caption {
+    caption-side: bottom;
+    padding: 5px;
+}

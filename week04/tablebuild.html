@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles/tablebuild.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Arndt - WDD 230 - Table Build Activity</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Week04 Table Build Activity ">
+    <meta name="author" content="Eric Arndt">
+</head>
+<body>
+    <table border="1">
+        <caption>Table 1: Account Feature Comparison</caption>
+        
+        <thead>
+            
+            <tr>
+                <!-- ACME Wildwest Services spans across all 4 columns -->
+                <th scope="col" colspan="4">ACME Wildwest Services</th>
+            </tr>
+            <tr>
+                <!-- Blank "Feature" column cell is merged vertically with ACME -->
+                <th scope="row" rowspan="2"></th> <!-- Creates the "jog" -->
+                <th scope="col">Basic</th> <!-- Column header for column 2 -->
+                <th scope="col">Premium</th> <!-- Column header for column 3 -->
+                <th scope="col">Deluxe</th> <!-- Column header for column 4 -->
+            </tr>
+        </thead>
+        
+        <tbody>
+            <!-- Data rows -->
+            <tr>
+                <th scope="row">Feature 1</th>
+                <td>✔️</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <th scope="row">Feature 2</th>
+                <td>❌</td>
+                <td>✔️</td>
+                <td>✔️</td>
+            </tr>
+            <tr>
+                <th scope="row">Feature 3</th>
+                <td>❌</td>
+                <td>❌</td>
+                <td>✔️</td>
+            </tr>
+            
+        </tbody>
+    </table>
+</body>
+</html>
