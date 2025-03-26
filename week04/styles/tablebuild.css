@@ -60,7 +60,7 @@ thead th[scope="col"]:not([colspan="4"]) {
 
 tbody tr:nth-child(odd) th,
 tbody tr:nth-child(odd) td {
-    background-color: #f4f4f4; /* Light gray for odd rows */
+    background-color: ghostwhite;
 }
 
 
