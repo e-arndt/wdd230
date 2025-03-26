@@ -70,9 +70,50 @@ tbody tr:nth-child(even) td {
 }
 
 
-
-
 caption {
     caption-side: bottom;
     padding: 5px;
+}
+
+/* Set default attributes for the footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Set flex so <p> and <img> show inline */
+footer p {
+    color: black; /* Set text color for <p> */
+    text-shadow: 3px 3px 4px rgb(55, 55, 55);
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 10px; /* Space between text and image */
+    transition: font-size 0.5s ease;
+}
+
+footer img {
+    width: 75px; /* Set the width of the img */
+    height: auto; /* Ensures the height adjusts proportionally */
+    margin-left: 10px; /* Set space between text and image */
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    transition: width 0.5s ease;
+}
+
+.f_name p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: font-size 0.5s ease;
+}
+
+footer a {
+    color: rgb(166, 0, 42); /* Set text color for <p> */
+    text-shadow: 3px 3px 4px rgb(40, 39, 39);
+    font-size: 1rem;
 }
