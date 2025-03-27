@@ -36,16 +36,16 @@
             <li class="active"><a href="form.html">Form</a></li>
         </ul>
     </nav>
-    <main>
+    <main class="form">
         <h1>Create Student Account</h1>
-        <form method="get" action="thanks.html" class="wf1">
+        <form method="get" action="record.html" class="wf1">
             <fieldset>
                 <legend>Student Information</legend>
                 <label>Username* <input type="text" id="username" name="uname" required title="Enter a username"></label>
                 <label>New Password* <input type="password" id="pass1" name="pass1" required pattern="[a-zA-Z0-9]{8,}" title="Must be 8+ characters long and letters and numbers only"></label>
                 <label>Confirm Password* <input type="password" id="pass2" name="pass2" required pattern="[a-zA-Z0-9]{8,}" title="Must be 8+ characters long and letters and numbers only"></label>
                 <label>Email* <input type="email" name="email" id="email" placeholder="someone@byui.edu" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Only a byui.edu email is valid"></label>
-                <label>Page Rating <input type="range" id="rating" name="rating" min="1" max="10" step="1" list="rangevalues"><span id="rating-value">5</span></label>
+                <label class="rating-label">Page Rating: <span id="rating-value">5</span><input type="range" id="rating" name="rating" min="1" max="10" step="1" list="rangevalues"></label>
                 <datalist id="rangevalues">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -62,44 +62,10 @@
             </fieldset>
 
             <fieldset>
-                <legend>Course Information</legend>
-                <div>Audience</div>
-                <label><input type="radio" name="audience" value="beginner"> Beginner</label>
-                <label><input type="radio" name="audience" value="intermediate"> Intermediate</label>
-                <label><input type="radio" name="audience" value="advanced"> Advanced</label>
-
-                <div>Software Needed</div>
-                <label><input type="checkbox" name="editing" value="yes"> Photo Editing</label>
-                <label><input type="checkbox" name="code" value="yes"> Coding</label>
-                <label><input type="checkbox" name="process" value="yes"> Preprocessor</label>
-                <label><input type="checkbox" name="client" value="yes"> FTP Client</label>
-                
+                <button type="submit">Create My Account</button>
             </fieldset>
 
-            <fieldset>
-            <legend>Funding</legend>
-            <label>Anticipated Completion Date <input type="date" name="completedDate"></label>
-            <label>Course Subject
-                <select name="subject">
-                    <option value="">Please Select &#9663</option>
-                    <option value="software">Software Development</option>
-                    <option value="creative">Creative Professional</option>
-                    <option value="info">Information Technology</option>
-                    <option value="data">Data Professional</option>
-                    <option value="construction">Construction</option>
-                    <option value="manufacturing">Manufacturing</option>
-                    <option value="business">Business Professional</option>
-                    <option value="security">Cyber Security</option>
-                </select>
-
-            </label>
-
-            <label>How many authors <input type="number" name="authors"></label>
-
-            </fieldset>
-
-            <input type="submit" value="Propose My Course">
-
+            
         </form>
         
     </main>

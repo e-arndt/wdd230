@@ -59,6 +59,7 @@ function validatePassword() {
 
         // Clear the input field
         pass1.value = "";
+        pass1.focus();
     }
 }
 
