@@ -86,6 +86,7 @@ main.form label {
     flex-direction: column; /* Stack label text and input vertically */
     font-size: 1rem; /* Set font size */
     margin-bottom: 10px; /* Add space below each label */
+    padding-bottom: 10px;
 }
 
 
@@ -457,6 +458,7 @@ footer img {
         flex-direction: column; /* Stack label text and input vertically */
         font-size: 1rem; /* Set font size */
         margin-bottom: 10px; /* Add space below each label */
+        padding-bottom: 10px;
     }
 
     
