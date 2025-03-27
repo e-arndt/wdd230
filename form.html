@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles/form.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Arndt - WDD 230 - Web Frontend Development Form</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Course Portal Form ">
+    <meta name="author" content="Eric Arndt">
+
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="scripts/form.js" defer></script>
+    
+</head>
+<body>
+    <header class="head-wrapper">
+        <div id="dMode">
+            <img id="modeIcon" src="images/dark-reader-icon.png" alt="Dark Reader Icon">
+            <span id="modeText">Go Dark</span>
+        </div>
+        <img src="images/profile.png" alt="Eric Arndt Profile pic">
+        <div class="header-title"><span>Eric E. Arndt</span></div>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav id="nav" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://e-arndt.github.io/wdd230/chamber/index.html">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Create Student Account</h1>
+        <form method="get" action="thanks.html" class="wf1">
+            <fieldset>
+                <legend>Student Information</legend>
+                <label>Username* <input type="text" id="username" name="uname" required title="Enter a username"></label>
+                <label>New Password* <input type="password" id="pass1" name="pass1" required pattern="[a-zA-Z0-9]{8,}" title="Must be 8+ characters long and letters and numbers only"></label>
+                <label>Confirm Password* <input type="password" id="pass2" name="pass2" required pattern="[a-zA-Z0-9]{8,}" title="Must be 8+ characters long and letters and numbers only"></label>
+                <label>Email* <input type="email" name="email" id="email" placeholder="someone@byui.edu" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Only a byui.edu email is valid"></label>
+                <label>Page Rating <input type="range" id="rating" name="rating" min="1" max="10" step="1" list="rangevalues"><span id="rating-value">5</span></label>
+                <datalist id="rangevalues">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Information</legend>
+                <div>Audience</div>
+                <label><input type="radio" name="audience" value="beginner"> Beginner</label>
+                <label><input type="radio" name="audience" value="intermediate"> Intermediate</label>
+                <label><input type="radio" name="audience" value="advanced"> Advanced</label>
+
+                <div>Software Needed</div>
+                <label><input type="checkbox" name="editing" value="yes"> Photo Editing</label>
+                <label><input type="checkbox" name="code" value="yes"> Coding</label>
+                <label><input type="checkbox" name="process" value="yes"> Preprocessor</label>
+                <label><input type="checkbox" name="client" value="yes"> FTP Client</label>
+                
+            </fieldset>
+
+            <fieldset>
+            <legend>Funding</legend>
+            <label>Anticipated Completion Date <input type="date" name="completedDate"></label>
+            <label>Course Subject
+                <select name="subject">
+                    <option value="">Please Select &#9663</option>
+                    <option value="software">Software Development</option>
+                    <option value="creative">Creative Professional</option>
+                    <option value="info">Information Technology</option>
+                    <option value="data">Data Professional</option>
+                    <option value="construction">Construction</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="business">Business Professional</option>
+                    <option value="security">Cyber Security</option>
+                </select>
+
+            </label>
+
+            <label>How many authors <input type="number" name="authors"></label>
+
+            </fieldset>
+
+            <input type="submit" value="Propose My Course">
+
+        </form>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> 🌲 Eric E. Arndt 🌲 Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
+        </div>
+        <p class="last-modified"> Last Modified on: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>

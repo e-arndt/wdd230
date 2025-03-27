@@ -1,0 +1,360 @@
+/* base.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Define color variables */
+:root {
+    --primary-color: #26516A;
+    --accent-color: rgb(255, 138, 70);
+    --text-color-light: ghostwhite;
+    --text-color-dark: black;
+    --background-color-light: #f4f4f4;
+    --hover-background-color: rgba(255,255,255, 0.2); 
+    --active-background-color: rgb(255, 156, 85); 
+    --border-color: steelblue;
+    --shadow-color: gray;
+    --dark-border-color: black;
+    --darkMode-color: rgb(30, 30, 30);
+    --darkMode-shadow: rgb(62, 62, 62);
+    --darkMode-hover: #ff7749;
+    --darkMode-visited: rgb(133, 200, 254);
+    --darkMode-noVisit: rgb(100, 237, 161);
+}
+
+/* Set default font, color, background and margin */
+body {
+    font-family: 'Varela Round', sans-serif;
+    color: var(--text-color-dark); 
+    background-color: var(--background-color-light); 
+    margin: 0; /* Remove the default margin */
+}
+
+
+.confirm {
+    background-color: var(--accent-color);
+    padding: 15px;
+    text-align: center;
+    color: var(--text-color-light);
+    text-shadow: 2px 3px 2px var(--dark-border-color);
+}
+
+.confirm h2 {
+    display: inline-block; /* Shrink the border to fit the text size */
+    margin: 0; /* Remove any default margins */
+    padding: 15px; /* Add spacing inside the border */
+    border: 6px double rgb(109, 42, 0); /* Add the border directly to the h2 */
+    background-color: var(--accent-color); /* Match the background of the h2 with the div */
+    font-size: 1.2rem;
+}
+
+h1.record {
+    font-size: 1.3rem;
+}
+
+
+
+/* Mobile View Hamburger Menu */
+#menu {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: var(--primary-color); /* Matches primary color */
+    color: var(--text-color-light); /* Matches text color light */
+    border: 2px solid var(--dark-border-color);
+    border-radius: 15px;
+    cursor: pointer; /* Changes cursor to pointer when hovering */
+}
+
+#menu::before {
+    content: "≡";
+    color: var(--text-color-light); /* Matches text color light */
+}
+
+
+
+.show li {
+    display: block;
+    width: auto;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Hide navigation by default */
+.navigation {
+    display: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.navigation.show {
+    display: block; /* Show when the 'show' class is added */
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+
+
+
+/* Define header. Use flex and flex-direction to display stacked when in small or mobile display  */
+header {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Apply border, shadow, width, ect to the profile image */
+header img {
+    width: 225px; 
+    height: auto;
+    margin-left: 2rem;
+    border: 3px solid var(--border-color); 
+    box-shadow: 0 0 45px var(--shadow-color);
+    margin-bottom: 1rem;
+}
+
+/* Apply atributes to the name in the span */
+.header-title span {
+    font-size: 2rem; 
+    font-weight: bold;
+    color: var(--text-color-light);
+    margin: 0;
+    transition: font-size 0.5s ease;
+}
+
+#dMode {
+    position: absolute;
+	top: 1rem;
+	left: 1px;
+	cursor: pointer;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#dMode img {
+    width: 48px; 
+    height: auto;
+    border: 2px solid var(--border-color); 
+    box-shadow: none;
+}
+
+#dMode span {
+    font-size: .7rem;
+    margin-top: -.6rem;
+    margin-left: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: var(--darkMode-color);
+    color: var(--text-color-light);
+}
+
+.dark-mode .card a {
+    color: var(--darkMode-noVisit); /* Example color for links in dark mode (adjust as needed) */
+    text-decoration: none;
+}
+
+.dark-mode .card a:visited {
+    color: var(--darkMode-visited); /* Visited link color */
+    text-decoration: none;
+}
+
+.dark-mode .card a:hover {
+    color: var(--darkMode-hover); /* Example hover color for links in dark mode (adjust as needed) */
+    text-decoration: none;
+}
+
+.dark-mode .card {
+    box-shadow: 0 0 35px var(--darkMode-shadow);
+}
+
+/* Apply a background color to the nav bar */
+nav {
+    background-color: var(--accent-color); /* Same background color as the header */
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* Apply flex and flex column to the nav bar just like the header when in mobile mode */
+nav ul {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+nav ul li {
+    flex: 1; /* Make each link take equal space */
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* Use block disply for the nav items. Set font color, size, center text and remove underline */
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-color-dark);
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* When hovering over nav items, change background color and make text bold */
+nav ul li a:hover {
+    background-color: var(--hover-background-color);
+    border: 2px solid var(--dark-border-color);
+    font-weight: bold;
+}
+
+/* Change the color of the active nav link */
+nav .active {
+    background-color: var(--active-background-color);
+}
+
+
+/* Set default attributes for the footer */
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Set flex so <p> and <img> show inline */
+footer p {
+    color: var(--text-color-light); /* Set text color for <p> */
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 10px; /* Space between text and image */
+    transition: font-size 0.5s ease;
+}
+
+footer img {
+    width: 75px; /* Set the width of the img */
+    height: auto; /* Ensures the height adjusts proportionally */
+    margin-left: 10px; /* Set space between text and image */
+    transition: width 0.5s ease;
+}
+
+/* Displays below, but centered */
+.last-modified {
+    text-align: center;
+    margin-top: 10px; /* Space above the last modified line */
+}
+
+
+
+
+
+
+@media (min-width: 1100px) {
+    #menu {
+        display: none; /* Hide hamburger menu */
+    }
+
+    .header-title span {
+        font-size: 3rem; 
+        color: var(--text-color-light);
+    }
+
+    header img {
+        width: 225px; 
+        height: auto;
+        border: 3px solid var(--border-color); 
+        box-shadow: 0 0 45px var(--shadow-color);
+        margin-right: 2rem;
+        transition: width 0.5s ease;
+    }
+
+    .confirm {
+        background-color: var(--accent-color);
+        padding: 15px;
+        text-align: center;
+        color: var(--text-color-light);
+        text-shadow: 2px 3px 2px var(--dark-border-color);
+    }
+    
+    .confirm h2 {
+        display: inline-block; /* Shrink the border to fit the text size */
+        margin: 0; /* Remove any default margins */
+        padding: 15px; /* Add spacing inside the border */
+        border: 6px double rgb(109, 42, 0); /* Add the border directly to the h2 */
+        background-color: var(--accent-color); /* Match the background of the h2 with the div */
+        font-size: 1.75rem;
+    }
+
+    h1.record {
+        font-size: 2.5rem;
+    }
+
+    .navigation {
+        display: flex; /* Show navigation */
+        justify-content: center; /* Center the ul within the nav */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%; /* Ensure the navigation spans the full width */
+        
+    }
+
+
+    nav ul {
+        display: flex; /* Make ul a flex container */
+        flex-direction: row; /* Arrange links horizontally */
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure ul spans the full width of the navigation */
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
+        
+    }
+
+    nav ul li {
+        flex: 1; /* Ensure equal spacing between list items */
+        text-align: center; /* Center align text */
+        
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 1rem;
+        color: var(--text-color-light);
+        font-size: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        transition: width 0.5s ease;
+    }
+
+    #dMode span {
+        font-size: .7rem;
+        margin-top: -.6rem;
+        margin-left: -1px;
+        color: white;
+        font-weight: bold;
+    }
+
+    #rangevalues {
+        display: flex;
+        margin: 0 0 0 25px;
+        width: 50px;
+    }
+
+}
