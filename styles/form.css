@@ -53,7 +53,6 @@ footer {
 main.form {
     background-color: rgb(220, 220, 220);
     display: block; /* Resets from the global flexbox settings */
-    padding: 20px; /* Adds space inside the container */
     width: 100%; /* Ensures it takes up the full width of its parent */
     text-align: left; /* Aligns content to the left */
 }

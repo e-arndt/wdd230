@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Arndt - WDD 230 - Join Chamber of Commerce</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Chamber of Commerce Join Page ">
+    <meta name="author" content="Eric Arndt">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Eric Arndt - WDD 230 - Web Frontend Development - Chamber of Commerce Join Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://e-arndt.github.io/wdd230/federal-way-pano1.png">
+    <meta property="og:url" content="https://e-arndt.github.io/wdd230/index.html">
+    
+    <link rel="icon" href="images/favicon_chamber.png" type="image/x-icon">
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/fw-wx.js" defer></script>
+</head>
+<body>
+    <header class="head-wrapper">
+        <img src="images/chamberLogo.png" alt="Logo FW Chamber of Commerce">
+        <div class="header-title"><h1><span>Join The Greater Federal Way</span>
+            <span>Chamber of Commerce</span></h1></div>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav id="nav" class="navigation">
+        <ul>
+            <li><a href="https://e-arndt.github.io/wdd230/index.html">Home</a></li>
+            <li class="active"><a href="#">Join the Chamber</a></li>
+            <li><a href="#">Business Directory</a></li>
+            <li><a href="https://e-arndt.github.io/wdd230/chamber/discover.html">Discover</a></li>
+        </ul>
+    </nav>
+    <main class="form">
+        <h1>Create Student Account</h1>
+        <form method="get" action="record.html" class="wf1">
+            <fieldset>
+                <legend>Student Information</legend>
+                <label>Username* <input type="text" id="username" name="uname" required title="Enter a username"></label>
+                <label>New Password* <input type="password" id="pass1" name="pass1" required pattern="[a-zA-Z0-9]{8,}" title="Must be 8+ characters long and letters and numbers only"></label>
+                <label>Confirm Password* <input type="password" id="pass2" name="pass2" required pattern="[a-zA-Z0-9]{8,}" title="Must be 8+ characters long and letters and numbers only"></label>
+                <label>Email* <input type="email" name="email" id="email" placeholder="someone@byui.edu" required pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Only a byui.edu email is valid"></label>
+                <label class="rating-label">Page Rating: <span id="rating-value">5</span><input type="range" id="rating" name="rating" min="1" max="10" step="1" list="rangevalues"></label>
+                <datalist id="rangevalues">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+                
+            </fieldset>
+
+            <fieldset>
+                <button type="submit">Create My Account</button>
+            </fieldset>
+
+            
+        </form>
+        
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> 🌲 Eric E. Arndt 🌲 Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
+        </div>
+        <p class="last-modified"> Last Modified on: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>
