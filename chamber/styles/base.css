@@ -115,6 +115,115 @@ h1 {
     margin: -5px;
 }
 
+body.join main.form > h1 {
+    text-align: center; /* Center the h1 text */
+    margin: 20px 0 10px; /* Space above and below the h1 */
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+
+body.join main.form fieldset:first-of-type legend {
+    font-weight: bold; /* Make legend text bold */
+    color: var(--text-color-dark); /* Custom text color */
+    font-size: 1.25rem; /* Adjust font size */
+}
+
+body.join main.form fieldset:first-of-type input[type="text"],
+body.join main.form fieldset:first-of-type input[type="email"],
+body.join main.form fieldset:first-of-type input[type="tel"] {
+    font-size: 20px;
+    height: 45px;
+    width: 70%; /* Limits the width of the input boxes */
+    max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+    text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
+    margin: 0; /* Keeps the input flush with the left edge */
+    margin-bottom: 20px; /* Space between input boxes */
+    border-radius: 8px;
+    border: 1px solid var(--text-color-dark);
+    padding-left: 5px;
+}
+
+body.join main.form fieldset:nth-of-type(2) input[type="text"] {
+    font-size: 20px;
+    height: 45px;
+    width: 75%; /* Limits the width of the input boxes */
+    max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+    text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
+    margin: 0; /* Keeps the input flush with the left edge */
+    margin-bottom: 20px; /* Space between input boxes */
+    border-radius: 8px;
+    border: 1px solid var(--text-color-dark);
+    padding-left: 5px;
+}
+
+body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
+    line-height: 1.5;
+    width: 55vw; /* Sets width relative to viewport */
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid var(--text-color-dark);
+    padding-left: 5px;
+}
+
+body.join main.form fieldset:nth-of-type(3) label:has(input[type="radio"]) {
+    display: flex; /* Keeps Flexbox for layout control */
+    flex-direction: row; /* Maintains horizontal layout of the button and text */
+    align-items: center; /* Aligns elements in the label */
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid var(--text-color-dark); /* Adds a border around the label */
+    border-radius: 5px; /* Optional: Rounds the corners of the border */
+    background-color: var(--background-color-light);
+    font-size: .85rem;
+}
+
+body.join main.form #member-table td {
+    padding: 10px;
+    text-align: left;
+    background-color: var(--text-color-light);
+    font-size: .85rem;
+    border-top: 1px solid #000000;
+}
+
+body.join main.form fieldset:nth-of-type(3) {
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: row; /* Aligns children (radio buttons and table) in columns */
+    justify-content: space-between; /* Adds space between the two columns */
+    align-items: stretch; /* Ensures both columns align at the top */
+    border: 2px solid var(--text-color-dark); 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: var(--background-color-salmon);
+    gap: 20px; /* Adds spacing between the radio buttons and table */
+}
+
+body.join main.form > form {
+    max-width: 99%; /* Restricts the form width */
+    margin: 0 auto; /* Centers the form horizontally */
+}
+
+body.join main.form fieldset:nth-of-type(2) legend {
+    font-weight: bold; /* Make legend text bold */
+    color: var(--text-color-dark); /* Custom text color */
+    font-size: 1.25rem; /* Adjust font size */
+}
+
+body.join main.form fieldset:nth-of-type(3) label > input[type="radio"] {
+    display: inline-block; /* Ensure the radio button is inline with the label text */
+    transform: scale(1.75); /* Adjust the scale value as needed */
+    margin: 8px 5px 10px 0; /* Adds spacing around the scaled button */
+    height: auto; /* Ensure height scales proportionally */
+    width: auto; /* Ensure width scales proportionally */
+
+}
+
+body.join main.form fieldset:nth-of-type(3) legend {
+    font-weight: bold; /* Make legend text bold */
+    color: var(--text-color-dark); /* Custom text color */
+    font-size: 1.25rem; /* Adjust font size */
+}
+
 /* Apply atributes to the name in the span */
 .header-title span {
     font-size: 1.5rem; 
@@ -179,12 +288,12 @@ nav .active {
     color: var(--dark-border-color);
 }
 
-tbody tr:nth-child(odd) {
-    background-color: var(--primary-color);
+    tbody tr:nth-child(odd) {
+        background-color: var(--primary-color);
   }
   
   tbody tr:nth-child(even) {
-    background-color: var(--background-color-light);
+        background-color: var(--background-color-light);
   }
 
 
@@ -561,6 +670,63 @@ footer img {
         box-shadow: 0 0 45px var(--shadow-color);
         margin-right: 1rem;
     }
+
+    body.join main.form > h1 {
+        text-align: center; /* Center the h1 text */
+        margin: 20px 0 10px; /* Space above and below the h1 */
+        font-size: 1.25rem;
+        padding-bottom: 15px;
+    }
+
+    body.join main.form fieldset:first-of-type legend {
+        font-weight: bold; /* Make legend text bold */
+        color: var(--text-color-dark); /* Custom text color */
+        font-size: 1.25rem; /* Adjust font size */
+    }
+
+    body.join main.form fieldset:first-of-type input[type="text"],
+    body.join main.form fieldset:first-of-type input[type="email"],
+    body.join main.form fieldset:first-of-type input[type="tel"] {
+    font-size: 20px;
+    height: 45px;
+    width: 85%; /* Limits the width of the input boxes */
+    max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+    text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
+    margin: 0; /* Keeps the input flush with the left edge */
+    margin-bottom: 20px; /* Space between input boxes */
+    border-radius: 8px;
+    border: 1px solid var(--text-color-dark);
+    padding-left: 5px;
+}
+
+body.join main.form fieldset:nth-of-type(2) input[type="text"] {
+    font-size: 20px;
+    height: 45px;
+    width: 95%; /* Limits the width of the input boxes */
+    max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+}
+
+
+body.join main.form fieldset:nth-of-type(3) {
+    flex-direction: column; /* Stacks items vertically */
+    gap: 30px; /* Adds spacing between rows */
+}
+
+body.join main.form fieldset:nth-of-type(3) .rbuttons, 
+body.join main.form fieldset:nth-of-type(3) #member-table {
+    width: 100%; /* Each column takes the full width in single-column layout */
+}
+
+
+body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
+    line-height: 1.5;
+    width: 84vw; /* Sets width relative to viewport */
+    text-align: left;
+    border-radius: 8px;
+    border: 1px solid var(--text-color-dark);
+    padding-left: 5px;
+}
+
 
     #weather-info span {
         font-size: 1.2rem;

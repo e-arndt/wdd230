@@ -63,6 +63,227 @@ header {
 }
 
 
+body.join main.form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Align closer to the top */
+    align-items: center; /* Centers horizontally */
+    margin: 0 auto; /* Center main form horizontally */
+    padding: 0;
+}
+
+
+
+
+
+body.join main.form .member-table {
+    margin-top: 20px; /* Adds space between the form and the table */
+    width: 100%; /* Ensure the table adjusts to fit the form */
+}
+
+
+body.join main.form .member-table table {
+    border-collapse: collapse; /* Combines table borders for cleaner visuals */
+    width: 100%; /* Table spans full width of its container */
+}
+
+
+body.join main.form .member-table th,
+body.join main.form .member-table td {
+width: auto; /* Adjusts column width dynamically */
+padding: 10px; /* Adds padding inside cells */
+text-align: center; /* Centers text horizontally */
+vertical-align: middle; /* Centers text vertically */
+border: 1px solid #ccc; /* Adds a border for each cell */
+font-size: 16px; /* Adjusts font size */
+}
+
+
+body.join main.form fieldset:first-of-type {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--text-color-dark); 
+    padding: 20px; /* Space inside the fieldset */
+    border-radius: 8px; 
+    background-color: var(--background-color-salmon);
+    margin-bottom: 15px;
+}
+
+body.join main.form fieldset:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--text-color-dark); 
+    padding: 20px; /* Space inside the fieldset */
+    border-radius: 8px; 
+    background-color: var(--background-color-salmon); 
+}
+
+
+
+
+
+body.join main.form fieldset:first-of-type label {
+    display: flex; /* Enables Flexbox inside each label */
+    flex-direction: column; /* Stack label text above the input field */
+    font-size: 1rem; /* Adjust label text size if needed */
+    margin-bottom: 5px; /* Add space below label text */
+}
+
+
+
+
+body.join main.form fieldset:nth-of-type(2) label {
+display: flex; /* Enables Flexbox for label content */
+flex-direction: column; /* Stacks the label above the input/textarea */
+font-size: 1rem; /* Adjust label text size */
+margin-bottom: 5px; /* Adds space below the label text */
+}
+
+
+body.join main.form fieldset:nth-of-type(2) p {
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+body.join main.form fieldset:nth-of-type(2) label:nth-of-type(2) {
+    width: 80%; /* Adjust width as needed */
+    text-align: left; 
+    margin-bottom: 10px; /* Adds spacing below the label */
+}
+
+
+body.join main.form fieldset:nth-of-type(2) label > input[type="radio"] {
+    display: inline-block; /* Ensure the radio button is inline with the label text */
+    transform: scale(2); /* Adjust the scale value as needed */
+    margin: 0 5px 10px 0; /* Adds spacing around the scaled button */
+    height: auto; /* Ensure height scales proportionally */
+    width: auto; /* Ensure width scales proportionally */
+    
+}
+
+body.join main.form fieldset:nth-of-type(2) label:has(input[type="radio"]) {
+    display: flex; /* Enables Flexbox for radio button labels */
+    flex-direction: row; /* Places the radio button and text in a row */
+    align-items: center; /* Aligns the radio button and label text vertically */
+    gap: 10px; /* Adds spacing between the radio button and label text */
+    margin: 5px 0 30px 10px;
+    
+}
+
+
+
+body.join main.form fieldset:nth-of-type(3) {
+    display: flex; /* Enables Flexbox layout */
+    flex-direction: row; /* Aligns children (radio buttons and table) in columns */
+    justify-content: space-between; /* Adds space between the two columns */
+    align-items: stretch; /* Ensures both columns align at the top */
+    border: 2px solid var(--text-color-dark); 
+    padding: 20px; 
+    border-radius: 8px; 
+    background-color: var(--background-color-salmon);
+    gap: 20px; /* Adds spacing between the radio buttons and table */
+}
+
+
+
+
+
+
+
+
+
+
+body.join main.form #member-table th {
+    background-color: var(--text-color-light);
+    font-size: .9rem;
+    font-weight: bold; 
+    text-align: center; 
+    padding: 7px;
+
+}
+
+body.join main.form #member-table th.non-profit {
+    background-color: #b7deff; /* Light blue for non-profit */
+}
+
+body.join main.form #member-table th.bronze {
+    background-color: #ffb4a3; /* Light red for bronze */
+}
+
+body.join main.form #member-table th.silver {
+    background-color: #cdcdcd; /* Light gray for silver */
+}
+
+body.join main.form #member-table th.gold {
+    background-color: #ffdf2c; /* Yellow for gold */
+}
+
+
+body.join main.form #member-table tbody {
+    margin-bottom: 20px; /* Adds space between groups */
+    border: 1px solid var(--background-color-salmon); /* Optional: border around each group */
+}
+
+body.join main.form #member-table th {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--highlight-color);
+}
+
+
+
+
+body.join main.form fieldset:nth-of-type(3) .rbuttons {
+    width: 40%; /* Keep the left column width */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: space-around; /* Distribute buttons evenly in the column */
+    /* margin-top: 20px; */
+    height: auto; /* Ensure the container grows with its content */
+}
+
+
+body.join main.form fieldset:nth-of-type(3) div#member-table {
+    width: 60%; /* Assigns 55% width to the right column */
+    margin-left: 10px; /* Adds spacing between the table and the column */
+    margin-top: 20px;
+}
+
+body.join main.form #member-table tbody {
+    display: block; /* Forces tbody to behave like a block element */
+    margin-bottom: 30px; /* Adds spacing below each tbody */
+    border: 2px black;
+}
+
+body.join main.form button {
+    background-color: var(--background-color-salmon); /* Button background color */
+    color: var(--text-color-dark); /* Button text color */
+    border: none;
+    cursor: pointer;
+    text-align: center; /* Center text within the button */
+    font-size: 1.5rem;
+    padding: 10px 15px; /* Button padding for clickability */
+    border-radius: 4px; /* Rounded corners for aesthetics */
+    border: 2px solid black;
+    display: block; /* Makes the button behave as a block-level element */
+    margin: 20px auto; /* Centers the button horizontally and adds vertical spacing */
+}
+
+
+
+body.join main.form button:hover {
+    font-weight: 600;
+    background-color: rgb(255, 198, 175);
+}
+
 
 
 
@@ -148,6 +369,12 @@ header {
     }
     
 
+    body.join main.form fieldset:first-of-type legend {
+        font-weight: bold; /* Make legend text bold */
+        color: var(--text-color-dark); /* Custom text color */
+        font-size: 1.25rem; /* Adjust font size */
+    }
+
     .main {
         display: flex; /* Use flexbox for easy layout control */
         flex-direction: column; /* Stack rows vertically */
@@ -156,6 +383,11 @@ header {
         position: relative; /* Makes sure all rows are positioned inside */
         overflow: hidden;
         background-color: var(--primary-color);
+    }
+
+    body.join main.form > form {
+        max-width: 60%; /* Restricts the form width */
+        margin: 0 auto; /* Centers the form horizontally */
     }
 
     #fee-table caption {
@@ -552,6 +784,28 @@ header {
     }
 
 
+    body.join main.form fieldset:nth-of-type(3) label:has(input[type="radio"]) {
+        display: flex; /* Keeps Flexbox for layout control */
+        flex-direction: row; /* Maintains horizontal layout of the button and text */
+        align-items: center; /* Aligns elements in the label */
+        gap: 10px; /* Spacing between the radio button and text */
+        margin: 5px 0 30px 10px; /* Space around the label */
+        padding: 15px; /* Adds spacing inside the label */
+        border: 2px solid var(--text-color-dark); /* Adds a border around the label */
+        border-radius: 5px; /* Optional: Rounds the corners of the border */
+        background-color: var(--background-color-light);
+        font-size: .8rem;
+    }
+
+    body.join main.form #member-table td {
+        padding: 10px;
+        text-align: left;
+        background-color: var(--text-color-light);
+        border-top: 1px solid #000000;
+        font-size: .9rem;
+    }
+
+
     .f_name p {
         font-size: 1.25rem;
         font-weight: bold;
@@ -802,6 +1056,8 @@ header {
         transition: width 0.3s ease, max-width 0.3s ease; /* Smooth transition */
 
     }
+
+    
     
 
 }
@@ -1217,7 +1473,7 @@ header {
         border-radius: 8px;
         border: 1px solid var(--text-color-dark);
         padding-left: 5px;
-}
+    }
 
 
 body.join main.form fieldset:nth-of-type(2) label {
@@ -1225,12 +1481,12 @@ body.join main.form fieldset:nth-of-type(2) label {
     flex-direction: column; /* Stacks the label above the input/textarea */
     font-size: 1rem; /* Adjust label text size */
     margin-bottom: 5px; /* Adds space below the label text */
-}
+    }
 
 
     body.join main.form fieldset:nth-of-type(2) p {
         margin: 10px 0;
-}
+    }
 
 
     body.join main.form fieldset:nth-of-type(2) input[type="text"] {
@@ -1244,7 +1500,7 @@ body.join main.form fieldset:nth-of-type(2) label {
         border-radius: 8px;
         border: 1px solid var(--text-color-dark);
         padding-left: 5px;
-}
+    }
 
     body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
         line-height: 1.5;
@@ -1253,7 +1509,7 @@ body.join main.form fieldset:nth-of-type(2) label {
         border-radius: 8px;
         border: 1px solid var(--text-color-dark);
         padding-left: 5px;
-}
+    }
 
 
 
@@ -1261,7 +1517,7 @@ body.join main.form fieldset:nth-of-type(2) label {
         width: 80%; /* Adjust width as needed */
         text-align: left; 
         margin-bottom: 10px; /* Adds spacing below the label */
-}
+    }
 
 
     body.join main.form fieldset:nth-of-type(2) label > input[type="radio"] {
@@ -1271,7 +1527,7 @@ body.join main.form fieldset:nth-of-type(2) label {
         height: auto; /* Ensure height scales proportionally */
         width: auto; /* Ensure width scales proportionally */
         
-}
+    }
 
     body.join main.form fieldset:nth-of-type(2) label:has(input[type="radio"]) {
         display: flex; /* Enables Flexbox for radio button labels */
@@ -1280,24 +1536,28 @@ body.join main.form fieldset:nth-of-type(2) label {
         gap: 10px; /* Adds spacing between the radio button and label text */
         margin: 5px 0 30px 10px;
         
-}
+    }
 
 
 
     body.join main.form fieldset:nth-of-type(3) {
-        display: flex;
-        flex-direction: column;
+        display: flex; /* Enables Flexbox layout */
+        flex-direction: row; /* Aligns children (radio buttons and table) in columns */
+        justify-content: space-between; /* Adds space between the two columns */
+        align-items: stretch; /* Ensures both columns align at the top */
         border: 2px solid var(--text-color-dark); 
-        padding: 20px; /* Space inside the fieldset */
+        padding: 20px; 
         border-radius: 8px; 
-        background-color: var(--background-color-salmon); 
-}
+        background-color: var(--background-color-salmon);
+        gap: 20px; /* Adds spacing between the radio buttons and table */
+    }
+    
 
     body.join main.form fieldset:nth-of-type(3) legend {
         font-weight: bold; /* Make legend text bold */
         color: var(--text-color-dark); /* Custom text color */
         font-size: 1.5rem; /* Adjust font size */
-}
+    }
 
     body.join main.form fieldset:nth-of-type(3) label > input[type="radio"] {
         display: inline-block; /* Ensure the radio button is inline with the label text */
@@ -1306,16 +1566,20 @@ body.join main.form fieldset:nth-of-type(2) label {
         height: auto; /* Ensure height scales proportionally */
         width: auto; /* Ensure width scales proportionally */
     
-}
+    }
 
     body.join main.form fieldset:nth-of-type(3) label:has(input[type="radio"]) {
-        display: flex; /* Enables Flexbox for radio button labels */
-        flex-direction: row; /* Places the radio button and text in a row */
-        align-items: center; /* Aligns the radio button and label text vertically */
-        gap: 10px; /* Adds spacing between the radio button and label text */
-        margin: 5px 0 30px 10px;
+        display: flex; /* Keeps Flexbox for layout control */
+        flex-direction: row; /* Maintains horizontal layout of the button and text */
+        align-items: center; /* Aligns elements in the label */
+        gap: 10px; /* Spacing between the radio button and text */
+        margin: 5px 0 30px 10px; /* Space around the label */
+        padding: 25px; /* Adds spacing inside the label */
+        border: 2px solid var(--text-color-dark); /* Adds a border around the label */
+        border-radius: 5px; /* Optional: Rounds the corners of the border */
+        background-color: var(--background-color-light);
+    }
     
-}
 
 
     body.join main.form #member-table th {
@@ -1325,41 +1589,94 @@ body.join main.form fieldset:nth-of-type(2) label {
         text-align: center; 
         padding: 7px;
 
-}
+    }
 
-    body.join main.form #member-table th:first-of-type {
-        background-color: #b7deff; /* Use a different color for the first th */
-        font-weight: bold; 
-        text-align: center; 
-        padding: 9px;
-}
-
-    body.join main.form #member-table th:nth-of-type(2) {
-        background-color: #ffb4a3; /* Use a different color for the first th */
-        
-}
-
-    body.join main.form #member-table th:nth-of-type(3) {
-        background-color: #cdcdcd; /* Use a different color for the first th */
-        
-}
-
-    body.join main.form #member-table th:nth-of-type(4) {
-        background-color: #ffdf2c; /* Use a different color for the first th */
-        
-}
-
-
-    body.join main.form #member-table td,
-    body.join main.form #member-table tr {
-        background-color: var(--text-color-light);
-}   
-
-    body.join main.form #member-table tr {
-        background-color: var(--text-color-light);
-}   
-
+    body.join main.form #member-table th.non-profit {
+        background-color: #b7deff; /* Light blue for non-profit */
+    }
     
+    body.join main.form #member-table th.bronze {
+        background-color: #ffb4a3; /* Light red for bronze */
+    }
+    
+    body.join main.form #member-table th.silver {
+        background-color: #cdcdcd; /* Light gray for silver */
+    }
+    
+    body.join main.form #member-table th.gold {
+        background-color: #ffdf2c; /* Yellow for gold */
+    }
+    
+
+    body.join main.form #member-table tbody {
+        margin-bottom: 20px; /* Adds space between groups */
+        border: 1px solid var(--background-color-salmon); /* Optional: border around each group */
+    }
+    
+    body.join main.form #member-table th {
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        background-color: var(--highlight-color);
+    }
+    
+    body.join main.form #member-table td {
+        padding: 10px;
+        text-align: left;
+        background-color: var(--text-color-light);
+        border-top: 1px solid #000000;
+    }
+
+    body.join main.form fieldset:nth-of-type(3) #member-table tbody tr {
+        border: 1px solid black;
+        
+    }
+    
+    
+    
+    body.join main.form fieldset:nth-of-type(3) .rbuttons {
+        width: 40%; /* Keep the left column width */
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        justify-content: space-evenly; /* Distribute buttons evenly in the column */
+        margin-top: 20px;
+        height: auto; /* Ensure the container grows with its content */
+    }
+    
+    
+    body.join main.form fieldset:nth-of-type(3) div#member-table {
+        width: 60%; /* Assigns 55% width to the right column */
+        margin-left: 10px; /* Adds spacing between the table and the column */
+        margin-top: 20px;
+    }
+    
+    body.join main.form #member-table tbody {
+        display: block; /* Forces tbody to behave like a block element */
+        margin-bottom: 30px; /* Adds spacing below each tbody */
+        border: 2px black;
+    }
+    
+    body.join main.form button {
+        background-color: var(--background-color-salmon); /* Button background color */
+        color: var(--text-color-dark); /* Button text color */
+        border: none;
+        cursor: pointer;
+        text-align: center; /* Center text within the button */
+        font-size: 1.5rem;
+        padding: 10px 15px; /* Button padding for clickability */
+        border-radius: 4px; /* Rounded corners for aesthetics */
+        border: 2px solid black;
+        display: block; /* Makes the button behave as a block-level element */
+        margin: 20px auto; /* Centers the button horizontally and adds vertical spacing */
+    }
+    
+    
+
+    body.join main.form button:hover {
+        font-weight: 600;
+        background-color: rgb(255, 198, 175);
+    }
 
     
 

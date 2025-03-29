@@ -74,57 +74,86 @@
             </fieldset>
             <fieldset>
                 <legend>Membership Information</legend>
-                <label>
-                    <input type="radio" id="npMem" name="membershipLevel" value="NP Membership">
-                    NP Membership (non-profit)
-                  </label>
-                <label>
-                    <input type="radio" id="bronzeMem" name="membershipLevel" value="Bronze Membership">
-                    Bronze Membership
-                </label>
-                <label>
-                    <input type="radio" id="silverMem" name="membershipLevel" value="Silver Membership">
-                    Silver Membership
-                </label>
-                <label>
-                    <input type="radio" id="goldMem" name="membershipLevel" value="Gold Membership">
-                    Gold Membership
-                </label>
-
+                <div class="rbuttons">
+                    <label>
+                        <input type="radio" id="npMem" name="membershipLevel" value="NP Membership">
+                        Non Profit Membership
+                    </label>
+                    <label>
+                        <input type="radio" id="bronzeMem" name="membershipLevel" value="Bronze Membership">
+                        Bronze Membership
+                    </label>
+                    <label>
+                        <input type="radio" id="silverMem" name="membershipLevel" value="Silver Membership">
+                        Silver Membership
+                    </label>
+                    <label>
+                        <input type="radio" id="goldMem" name="membershipLevel" value="Gold Membership">
+                        Gold Membership
+                    </label>
+                </div>
                 <div id="member-table">
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th scope="col">Non Profit Membership</th> <!-- Column header -->
-                                <th scope="col">Bronze Membership</th> <!-- Column header -->
-                                <th scope="col">Silver Membership</th> <!-- Column header -->
-                                <th scope="col">Gold Membership</th> <!-- Column header -->
-                            </tr>
-                        </thead>
-                        
+                    <table>
                         <tbody>
-                            <!-- Data rows -->
                             <tr>
-                                <td>Fee: No cost.</td><!-- col 1 -->
-                                <td>Fee: $250/year.</td><!-- col 2 -->
-                                <td>Fee: $500/year.</td><!-- col 3 -->
-                                <td>Fee: $1,000/year.</td><!-- col 4 -->
+                                <th class="non-profit">Non-Profit Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: No cost.</td>
                             </tr>
                             <tr>
                                 <td>Description: Tailored for nonprofits to participate without financial obligations.</td>
-                                <td>Description: Entry-level plan ideal for small businesses starting out.</td>
-                                <td>Description: Designed for medium-sized organizations looking to expand their reach.</td>
-                                <td>Description: Premium benefits for businesses seeking maximum exposure and support.</td>
                             </tr>
                             <tr>
                                 <td>Benefits: Event discounts, Spotlight exposure, nonprofit-specific resources.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th class="bronze">Bronze Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: $250/year.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Entry-level plan ideal for small businesses starting out.</td>
+                            </tr>
+                            <tr>
                                 <td>Benefits: Event discounts, basic advertising opportunities, access to training.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th class="silver">Silver Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: $500/year.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Designed for medium-sized organizations looking to expand their reach.</td>
+                            </tr>
+                            <tr>
                                 <td>Benefits: Spotlight exposure, exclusive training, special event invitations, event discounts.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th class="gold">Gold Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: $1,000/year.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Premium benefits for businesses seeking maximum exposure and support.</td>
+                            </tr>
+                            <tr>
                                 <td>Benefits: VIP event access, priority spotlight, premium advertising, personalized business support and training.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                
+                
             </fieldset>
                   
             <fieldset>
