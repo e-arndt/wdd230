@@ -1649,6 +1649,7 @@ body.join main.form fieldset:nth-of-type(2) label {
         width: 60%; /* Assigns 55% width to the right column */
         margin-left: 10px; /* Adds spacing between the table and the column */
         margin-top: 20px;
+        
     }
     
     body.join main.form #member-table tbody {

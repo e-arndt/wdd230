@@ -300,6 +300,7 @@ nav .active {
 table {
     border-collapse: collapse; /* Avoid double borders */
     width: 100%; /* Adjust table width to fit container */
+    
 }
 
 /* Set style of card ul items */

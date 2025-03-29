@@ -19,12 +19,29 @@ const yearSpan = document.querySelector('#currentYear');
 yearSpan.innerText = currentDate.getFullYear();
 
 // Add functionality for the hidden timestamp input
-const timestampInput = document.getElementById("timestamp");
-if (timestampInput) {
-    timestampInput.value = currentDate.toISOString(); // Sets ISO 8601 format
-} else {
-    console.warn("Hidden timestamp input not found.");
-}
+document.addEventListener("DOMContentLoaded", function () {
+    // Ensure the logic runs only for join.html
+    if (window.location.pathname.endsWith("join.html")) {
+        const timestampInput = document.getElementById("timestamp"); // Get the hidden input element
+        let formTimestamp = sessionStorage.getItem("formTimestamp"); // Check if the timestamp already exists in sessionStorage
+
+        if (!formTimestamp) {
+            // If no timestamp exists, set a new one
+            formTimestamp = new Date().toISOString();
+            sessionStorage.setItem("formTimestamp", formTimestamp); // Store the timestamp in sessionStorage
+        }
+
+        if (timestampInput) {
+            timestampInput.value = formTimestamp; // Assign the timestamp to the hidden input field
+        }
+    } else {
+        console.log("Timestamp logic not triggered for this page.");
+    }
+});
+
+
+
+
 
 
 const form = document.querySelector('.wf2'); // Select the form by its class
@@ -33,22 +50,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.wf2'); // Select the form using its class
     if (form) {
         form.addEventListener('submit', function (event) {
-            const currentDate = new Date().toISOString(); // Get the timestamp in ISO 8601 format
-            sessionStorage.setItem('formTimestamp', currentDate); // Store the timestamp in sessionStorage
+            // Check if the timestamp already exists in sessionStorage
+            if (!sessionStorage.getItem('formTimestamp')) {
+                const currentDate = new Date().toISOString(); // Get the timestamp in ISO 8601 format
+                sessionStorage.setItem('formTimestamp', currentDate); // Store the timestamp in sessionStorage
+            } else {
+                console.log("Timestamp already exists in sessionStorage. Skipping save on submit.");
+            }
         });
     } else {
-        console.error("Form element with class 'wf2' not found");
+        console.error("Form element with class 'wf2' not found.");
     }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
     const formTimestamp = sessionStorage.getItem('formTimestamp'); // Retrieve the timestamp from sessionStorage
-    if (formTimestamp) {
-        document.getElementById("timestampDisplay").innerHTML = new Date(formTimestamp).toLocaleString(); // Display the timestamp itself
+    const timestampDisplay = document.getElementById("timestampDisplay"); // Get the element
+    if (formTimestamp && timestampDisplay) {
+        timestampDisplay.innerHTML = new Date(formTimestamp).toLocaleString(); // Display the timestamp
+    } else if (!timestampDisplay) {
+        console.warn("Element with ID 'timestampDisplay' not found.");
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Current Path:", window.location.pathname); // Logs the path of the current page
+});
+
+console.log("Current Path:", window.location.pathname); // Logs immediately when the script runs
 
 
 
@@ -97,6 +128,13 @@ if (emailInput) { // Only add the event listener if the element exists
     });
 }
 
+const bnameInput = document.getElementById("bname");
+
+if (bnameInput) {
+    bnameInput.addEventListener("focusout", validateBName);
+}
+
+
 
 // Pattern validation function for Title
 function validateTitle() {
@@ -128,6 +166,31 @@ function validateEmail() {
         emailInput.focus(); // Focus back on the email input
     }
 }
+
+function validateBName() {
+    const bnameInput = document.getElementById("bname"); // Select the business name input field
+    const pattern = /^[a-zA-Z0-9\s\+\-\/\(\)!',_]{3,}$/; // Pattern for validation
+
+    // Check if bnameInput is empty (length is 0)
+    if (bnameInput.value.length === 0) {
+        // Skip pattern validation for empty input
+        return;
+    }
+
+    // If the value doesn't match the pattern
+    if (!pattern.test(bnameInput.value)) {
+        // Remove the focusout listener to prevent looping
+        bnameInput.removeEventListener("focusout", validateBName);
+
+        // Show alert
+        alert("Business name must be at least 3 characters long, may contain alphanumeric characters, spaces, or + - / () ! ' , _.");
+
+        // Clear the input field
+        bnameInput.value = "";
+        bnameInput.focus();
+    }
+}
+
 
 
 
