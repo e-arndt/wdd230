@@ -573,33 +573,106 @@ padding: 30px; /* Adds some space inside the container */
     padding: 20px 0;
 }
 
-
-
-.footer-content .f_logo,
-.footer-content .f_name {
-    display: inline-flex; /* Makes these elements align horizontally */
-    align-items: center; /* Vertically aligns the image with the name text */
+/* Ensure the body takes up the full viewport height */
+body.thx5 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Ensure the body spans the entire viewport height */
+    margin: 0; /* Remove default margins */
+    background-color: var(--secondary-color); /* Set background color for body */
 }
 
-.footer-content .f_name {
-    margin-left: 15px; /* Adds spacing between the name and the logo */
-    text-align: left; /* Ensures proper alignment for text */
+/* Header styling */
+header.thx4 {
+    text-align: center;
+    background-color: var(--secondary-color); /* Optional header background */
+    padding: 15px;
+    color: var(--text-color-light); /* Match color scheme */
+    text-shadow: 2px 3px 2px var(--dark-border-color);
 }
 
-.footer-content .f_logo img {
-    max-width: 75px; /* Adjusts the size of the logo */
-    height: auto; /* Maintains aspect ratio */
+/* H1 styling */
+h1.thx1 {
+    margin: 0; /* Remove any default margins */
+    font-size: 3.5rem; /* Set font size for h1 */
+    color: var(--text-color-light); /* Define color for text */
 }
 
-.footer-content .f_address {
-    font-size: .9rem;
-    padding: 10px;
+/* Main content setup */
+main.thx {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    flex-grow: 1; /* Allow the main content to fill available space */
+    margin: 0; /* Prevent extra margins */
 }
 
-.footer-content .f_ph_email {
-    font-size: .9rem;
-    padding: 10px;
+/* Styling for .thx2 */
+.thx2 {
+    flex-grow: 0; /* Allow .thx2 to occupy only the space it needs */
+    background-color: var(--secondary-color); /* Background specific to .thx2 */
+    padding: 15px;
+    text-align: center;
+    color: var(--text-color-light);
+    text-shadow: 2px 3px 2px var(--dark-border-color); /* Apply text shadow */
 }
+
+.thx2 h2 {
+    margin: 0; /* Remove default margins */
+    margin-top: 6rem;
+    padding: 15px; /* Add spacing */
+    border: 6px double var(--accent-color1); /* Add decorative border */
+    background-color: var(--tertiary-color); /* Use tertiary background color */
+    font-size: 2.5rem; /* Set font size for h2 */
+}
+
+.thx2 > p {
+    padding-top: 3rem;
+    font-size: 1.5rem;
+}
+
+/* Styling for .thx3 */
+.thx3 {
+    flex-grow: 1; /* Expand .thx3 to fill the remaining space */
+    background-color: var(--secondary-color); /* Background color for differentiation */
+}
+
+/* Footer styles */
+footer.fthx {
+    flex-shrink: 0; /* Ensure the footer remains visible and doesn't shrink */
+    background-color: var(--tertiary-color); /* Matches the overall page theme */
+    text-align: center; /* Centers the text and content */
+    padding: 10px; /* Adds spacing around the footer */
+    color: var(--text-color-light); /* Footer text color */
+}
+
+footer.fthx .footer-content {
+    margin: 0; /* Removes default margins for alignment */
+    font-size: 1rem; /* Maintains a readable font size for footer text */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers items horizontally */
+}
+
+footer.fthx p {
+    color: var(--text-color-light); /* Ensures readability */
+    font-size: 1.2rem;
+    margin: 5px 0; /* Adds space around the text */
+}
+
+footer.fthx .footer-img {
+    width: 75px; /* Set image width */
+    height: auto; /* Ensure aspect ratio is maintained */
+    margin-left: 10px; /* Add spacing between text and image */
+}
+
+footer.fthx .last-modified {
+    font-size: 0.9rem;
+    margin-top: 10px; /* Adds space above the "Last Modified" text */
+}
+
+
+
+
 
 
 
@@ -970,7 +1043,26 @@ body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
         padding: 20px 0;
     }
 
-    
+    h1.thx1 {
+        margin: 0; /* Remove any default margins */
+        font-size: 2.5rem; /* Set font size for h1 */
+        
+    }
+
+    .thx2 h2 {
+        margin: 0; /* Remove default margins */
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .thx2 > p {
+        padding-top: 1rem;
+        font-size: 1.25rem;
+    }
+
+    footer.fthx p {
+        font-size: 1rem;
+    }
 
     footer p {
         flex-direction: column; /* Stack elements vertically */
