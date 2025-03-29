@@ -16,8 +16,16 @@ if (timestampInput) {
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function (event) {
-  const currentDate = new Date().toISOString(); // Get the timestamp in ISO 8601 format
-  localStorage.setItem('formTimestamp', currentDate); // Store the timestamp in localStorage
+    const currentDate = new Date().toISOString(); // Get the timestamp in ISO 8601 format
+    sessionStorage.setItem('formTimestamp', currentDate); // Store the timestamp in sessionStorage
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const formTimestamp = sessionStorage.getItem('formTimestamp'); // Retrieve the timestamp from sessionStorage
+    if (formTimestamp) {
+        const timestampElement = document.getElementById('timestampDisplay');
+        timestampElement.innerText = `Form submitted on: ${new Date(formTimestamp).toLocaleString()}`; // Format the timestamp
+    }
 });
 
 
