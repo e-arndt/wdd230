@@ -44,8 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const form = document.querySelector('.wf2'); // Select the form by its class
-
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.wf2'); // Select the form using its class
     if (form) {
@@ -59,9 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     } else {
-        console.error("Form element with class 'wf2' not found.");
+        // Replace console.error with console.log
+        console.log("Form element with class 'wf2' not found. This page may not use the wf2 class.");
     }
 });
+
 
 
 
