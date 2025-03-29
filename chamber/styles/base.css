@@ -168,7 +168,7 @@ nav .active {
     background-color: var(--tertiary-color);
 }
 
-th, td {
+.c-index th, .c-index td {
     width: 175px; /* Adjust column width */
     height: 40px; /* Adjust row height */
     text-align: center; /* Center-align text */
@@ -497,7 +497,7 @@ padding: 30px; /* Adds some space inside the container */
 
 /* Set default attributes for the footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--text-color-light);
     text-align: center;
     padding: 20px;
 }
@@ -581,7 +581,7 @@ footer img {
     }
 
 
-    th, td {
+    .c-index th, .c-index td {
         width: 175px; /* Adjust column width */
         height: 40px; /* Adjust row height */
         text-align: center; /* Center-align text */

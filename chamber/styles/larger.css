@@ -12,6 +12,7 @@
     --text-color-light: ghostwhite;
     --text-color-dark: #001959;
     --background-color-light: #f4f4f4;
+    --background-color-salmon: rgb(255, 213, 197);
     --hover-background-color: rgba(255,255,255, 0.2); 
     --active-background-color: rgb(255, 156, 85); 
     --border-color: steelblue;
@@ -138,6 +139,14 @@ header {
         margin-left: 50px; /* Adjust as needed */
         width: calc(100% - 20px); /* Adjust width based on margin-left */
     }
+
+    body.join main.form > h1 {
+        text-align: center; /* Center the h1 text */
+        margin: 20px 0 10px; /* Space above and below the h1 */
+        font-size: 2rem;
+        padding-bottom: 25px;
+    }
+    
 
     .main {
         display: flex; /* Use flexbox for easy layout control */
@@ -581,9 +590,9 @@ header {
     }
 
 
-    th, td {
+    .c-index th, .c-index td {
         width: 175px; /* Adjust column width */
-        height: 40px; /* Adjust row height */
+        height: 50px; /* Adjust row height */
         text-align: center; /* Center-align text */
         vertical-align: middle; /* Vertically center-align text */
         padding: 5px; /* Add padding inside the cells */
@@ -1053,9 +1062,9 @@ header {
         font-size: .9rem;
     }
 
-    th td {
+    .c-index th, c-index td {
         width: 150px; /* Adjust column width */
-        height: 90px; /* Adjust row height */
+        height: 45px; /* Adjust row height */
         text-align: center; /* Center-align text */
         vertical-align: middle; /* Vertically center-align text */
         padding: 10px; /* Add padding inside the cells */
@@ -1117,6 +1126,246 @@ header {
         transition: font-size 0.5s ease;
     }
 
+
+    body.join main.form {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: flex-start; /* Align closer to the top */
+        align-items: center; /* Centers horizontally */
+        margin: 0 auto; /* Center main form horizontally */
+        padding: 0;
+    }
+    
+    body.join main.form > form {
+        max-width: 60%; /* Restricts the form width */
+        margin: 0 auto; /* Centers the form horizontally */
+    }
+    
+    
+    
+    body.join main.form .member-table {
+        margin-top: 20px; /* Adds space between the form and the table */
+        width: 100%; /* Ensure the table adjusts to fit the form */
+    }
+    
+    
+    body.join main.form .member-table table {
+        border-collapse: collapse; /* Combines table borders for cleaner visuals */
+        width: 100%; /* Table spans full width of its container */
+    }
+    
+    
+    body.join main.form .member-table th,
+    body.join main.form .member-table td {
+    width: auto; /* Adjusts column width dynamically */
+    padding: 10px; /* Adds padding inside cells */
+    text-align: center; /* Centers text horizontally */
+    vertical-align: middle; /* Centers text vertically */
+    border: 1px solid #ccc; /* Adds a border for each cell */
+    font-size: 16px; /* Adjusts font size */
+    }
+
+    
+    body.join main.form fieldset:first-of-type {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--text-color-dark); 
+        padding: 20px; /* Space inside the fieldset */
+        border-radius: 8px; 
+        background-color: var(--background-color-salmon);
+        margin-bottom: 15px;
+    }
+
+    body.join main.form fieldset:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--text-color-dark); 
+        padding: 20px; /* Space inside the fieldset */
+        border-radius: 8px; 
+        background-color: var(--background-color-salmon); 
+    }
+    
+    body.join main.form fieldset:first-of-type legend {
+        font-weight: bold; /* Make legend text bold */
+        color: var(--text-color-dark); /* Custom text color */
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    body.join main.form fieldset:nth-of-type(2) legend {
+        font-weight: bold; /* Make legend text bold */
+        color: var(--text-color-dark); /* Custom text color */
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    body.join main.form fieldset:first-of-type label {
+        display: flex; /* Enables Flexbox inside each label */
+        flex-direction: column; /* Stack label text above the input field */
+        font-size: 1rem; /* Adjust label text size if needed */
+        margin-bottom: 5px; /* Add space below label text */
+    }
+
+    body.join main.form fieldset:first-of-type input[type="text"],
+    body.join main.form fieldset:first-of-type input[type="email"],
+    body.join main.form fieldset:first-of-type input[type="tel"] {
+        font-size: 20px;
+        height: 45px;
+        width: 40%; /* Limits the width of the input boxes */
+        max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+        text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
+        margin: 0; /* Keeps the input flush with the left edge */
+        margin-bottom: 20px; /* Space between input boxes */
+        border-radius: 8px;
+        border: 1px solid var(--text-color-dark);
+        padding-left: 5px;
+}
+
+
+body.join main.form fieldset:nth-of-type(2) label {
+    display: flex; /* Enables Flexbox for label content */
+    flex-direction: column; /* Stacks the label above the input/textarea */
+    font-size: 1rem; /* Adjust label text size */
+    margin-bottom: 5px; /* Adds space below the label text */
+}
+
+
+    body.join main.form fieldset:nth-of-type(2) p {
+        margin: 10px 0;
+}
+
+
+    body.join main.form fieldset:nth-of-type(2) input[type="text"] {
+        font-size: 20px;
+        height: 45px;
+        width: 40%; /* Limits the width of the input boxes */
+        max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+        text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
+        margin: 0; /* Keeps the input flush with the left edge */
+        margin-bottom: 20px; /* Space between input boxes */
+        border-radius: 8px;
+        border: 1px solid var(--text-color-dark);
+        padding-left: 5px;
+}
+
+    body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
+        line-height: 1.5;
+        width: 25vw; /* Sets width relative to viewport */
+        text-align: left;
+        border-radius: 8px;
+        border: 1px solid var(--text-color-dark);
+        padding-left: 5px;
+}
+
+
+
+    body.join main.form fieldset:nth-of-type(2) label:nth-of-type(2) {
+        width: 80%; /* Adjust width as needed */
+        text-align: left; 
+        margin-bottom: 10px; /* Adds spacing below the label */
+}
+
+
+    body.join main.form fieldset:nth-of-type(2) label > input[type="radio"] {
+        display: inline-block; /* Ensure the radio button is inline with the label text */
+        transform: scale(2); /* Adjust the scale value as needed */
+        margin: 0 5px 10px 0; /* Adds spacing around the scaled button */
+        height: auto; /* Ensure height scales proportionally */
+        width: auto; /* Ensure width scales proportionally */
+        
+}
+
+    body.join main.form fieldset:nth-of-type(2) label:has(input[type="radio"]) {
+        display: flex; /* Enables Flexbox for radio button labels */
+        flex-direction: row; /* Places the radio button and text in a row */
+        align-items: center; /* Aligns the radio button and label text vertically */
+        gap: 10px; /* Adds spacing between the radio button and label text */
+        margin: 5px 0 30px 10px;
+        
+}
+
+
+
+    body.join main.form fieldset:nth-of-type(3) {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid var(--text-color-dark); 
+        padding: 20px; /* Space inside the fieldset */
+        border-radius: 8px; 
+        background-color: var(--background-color-salmon); 
+}
+
+    body.join main.form fieldset:nth-of-type(3) legend {
+        font-weight: bold; /* Make legend text bold */
+        color: var(--text-color-dark); /* Custom text color */
+        font-size: 1.5rem; /* Adjust font size */
+}
+
+    body.join main.form fieldset:nth-of-type(3) label > input[type="radio"] {
+        display: inline-block; /* Ensure the radio button is inline with the label text */
+        transform: scale(2); /* Adjust the scale value as needed */
+        margin: 0 5px 10px 0; /* Adds spacing around the scaled button */
+        height: auto; /* Ensure height scales proportionally */
+        width: auto; /* Ensure width scales proportionally */
+    
+}
+
+    body.join main.form fieldset:nth-of-type(3) label:has(input[type="radio"]) {
+        display: flex; /* Enables Flexbox for radio button labels */
+        flex-direction: row; /* Places the radio button and text in a row */
+        align-items: center; /* Aligns the radio button and label text vertically */
+        gap: 10px; /* Adds spacing between the radio button and label text */
+        margin: 5px 0 30px 10px;
+    
+}
+
+
+    body.join main.form #member-table th {
+        background-color: var(--text-color-light);
+        font-size: .9rem;
+        font-weight: bold; 
+        text-align: center; 
+        padding: 7px;
+
+}
+
+    body.join main.form #member-table th:first-of-type {
+        background-color: #b7deff; /* Use a different color for the first th */
+        font-weight: bold; 
+        text-align: center; 
+        padding: 9px;
+}
+
+    body.join main.form #member-table th:nth-of-type(2) {
+        background-color: #ffb4a3; /* Use a different color for the first th */
+        
+}
+
+    body.join main.form #member-table th:nth-of-type(3) {
+        background-color: #cdcdcd; /* Use a different color for the first th */
+        
+}
+
+    body.join main.form #member-table th:nth-of-type(4) {
+        background-color: #ffdf2c; /* Use a different color for the first th */
+        
+}
+
+
+    body.join main.form #member-table td,
+    body.join main.form #member-table tr {
+        background-color: var(--text-color-light);
+}   
+
+    body.join main.form #member-table tr {
+        background-color: var(--text-color-light);
+}   
+
+    
+
+    
+
+}
+
+
 @media (max-width: 1450px) {
     
     
@@ -1131,7 +1380,9 @@ header {
     }
 }
 
-}
+
+
+
 
 @media (min-width: 1750px) {
     .discover-main {

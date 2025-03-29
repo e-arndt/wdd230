@@ -7,6 +7,20 @@ const yearSpan = document.querySelector('#currentYear');
 
 yearSpan.innerText = currentDate.getFullYear();
 
+// Add functionality for the hidden timestamp input
+const timestampInput = document.getElementById("timestamp");
+if (timestampInput) {
+  timestampInput.value = currentDate.toISOString(); // Sets ISO 8601 format (e.g., 2025-03-28T20:04:00Z)
+}
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (event) {
+  const currentDate = new Date().toISOString(); // Get the timestamp in ISO 8601 format
+  localStorage.setItem('formTimestamp', currentDate); // Store the timestamp in localStorage
+});
+
+
 
 const visitMsg = document.querySelector(".visit-msg"); // Target the <span> element
 
