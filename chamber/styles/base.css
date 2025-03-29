@@ -655,8 +655,9 @@ footer.fthx .footer-content {
 
 footer.fthx p {
     color: var(--text-color-light); /* Ensures readability */
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 5px 0; /* Adds space around the text */
+    gap: 0;
 }
 
 footer.fthx .footer-img {
