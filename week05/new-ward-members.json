@@ -1,0 +1,33 @@
+{
+    "familyName": "Ramelle",
+    "movedIn": "2016-04-16",
+    "numRecords": 5,
+    "bishopricVisit": true,
+    "familyMembers": [
+        {
+            "name": "James",
+            "gender": "Male",
+            "birthdate": "1980-06-15"
+        },
+        {
+            "name": "Sarah",
+            "gender": "Female",
+            "birthdate": "1983-03-22"
+        },
+        {
+            "name": "Michael",
+            "gender": "Male",
+            "birthdate": "2006-08-10"
+        },
+        {
+            "name": "Emily",
+            "gender": "Female",
+            "birthdate": "2010-11-05"
+        },
+        {
+            "name": "Sophie",
+            "gender": "Female",
+            "birthdate": "2012-07-25"
+        }
+    ]
+}
