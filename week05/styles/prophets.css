@@ -66,3 +66,35 @@ section {
     margin-top: 10px;
   }
   
+
+  /* Set default attributes for the footer */
+footer {
+    
+    text-align: center;
+    color: var(--text-color-dark);
+    padding: 1rem;
+    border: 1px solid var(--img-border-color);
+    display: block; 
+    width: 88%; 
+    margin: 0 auto; 
+    background: linear-gradient(to top,  
+        white 0%,  /* Light color at the top */
+        #fff1eb 50%, /* Keep it light until halfway */
+        #ffddce 100% /* Quickly transition to dark at the bottom */
+    );
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    padding-bottom: 2rem;
+}
+
+/* Set flex so <p> and <img> show inline */
+footer p {
+    color: var(--text-color-light); /* Set text color for <p> */
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 10px; /* Space between text and image */
+    transition: font-size 0.5s ease;
+}
