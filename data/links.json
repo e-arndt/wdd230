@@ -4,10 +4,6 @@
         "week": "Week 1",
         "links": [
           {
-            "url": "week01/holygrail.html",
-            "title": "HG Layout"
-          },
-          {
             "url": "./week01/chamber-site-plan.html",
             "title": "Chamber Plan"
           }
