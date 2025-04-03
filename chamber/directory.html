@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Arndt - WDD 230 - Chamber of Commerce Directory</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Chamber of Commerce Member Directory Page ">
+    <meta name="author" content="Eric Arndt">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Eric Arndt - WDD 230 - Web Frontend Development - Chamber of Commerce Member Directory Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://e-arndt.github.io/wdd230/federal-way-pano1.png">
+    <meta property="og:url" content="https://e-arndt.github.io/wdd230/index.html">
+    
+    <link rel="icon" href="images/favicon_chamber.png" type="image/x-icon">
+    <script src="scripts/chamber.js" defer></script>
+    
+</head>
+<body class="join">
+    <header class="head-wrapper">
+        <img src="images/chamberLogo.png" alt="Logo FW Chamber of Commerce">
+        <div class="header-title"><h1><span>The Greater Federal Way</span>
+            <span>Chamber of Commerce</span><span>Membership Directory</span></h1></div>
+        <a id="menu" href="#"></a>
+    </header>
+    <nav id="nav" class="navigation">
+        <ul>
+            <li><a href="./index.html">Chamber Home</a></li>
+            <li><a href="#">Join the Chamber</a></li>
+            <li class="active"><a href="#">Member Directory</a></li>
+            <li><a href="./discover.html">Discover</a></li>
+        </ul>
+    </nav>
+    <main class="form">
+        <h1>Chamber of Commerce</h1>
+        <form method="get" action="thankyou.html" class="wf2">
+            <fieldset>
+                <legend>Member Information</legend>
+                <label>First Name* <input type="text" id="fname" name="fname" required title="Enter your first name"></label>
+                <label>Last Name* <input type="text" id="lname" name="lname" required title="Enter your last name"></label>
+                <label>Title / Position <input type="text" id="title" name="title" title="Enter your professional title or position"></label>
+                <label>Email* <input type="email" name="email" id="email" placeholder="someone@gmail.com" required title="Enter a valid email address"></label>
+                <label>Mobile Phone* <input type="tel" id="phone" name="phone" required title="Enter your phone number"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Business / Organization Information</legend>
+                <label>Business Name* <input type="text" id="bname" name="bname" required title="Enter a brief description of your business, organization or institution"></label>
+                <label>Business Description:<textarea id="bdesc" name="bdesc" rows="2" title="Enter a brief description of your business, organization, or institution"></textarea></label>
+                <p>Organization Type:</p><label>
+                    <input type="radio" id="o-type-bus" name="category" value="Business">
+                    Business
+                  </label>
+                  <label>
+                    <input type="radio" id="o-type-org" name="category" value="Organization">
+                    Organization
+                  </label>
+                  <label>
+                    <input type="radio" id="o-type-ins" name="category" value="Institution">
+                    Institution
+                  </label>
+                  <label>
+                    <input type="radio" id="o-type-oth" name="category" value="Other">
+                    Other
+                  </label>
+            </fieldset>
+            <fieldset>
+                <legend>Membership Information</legend>
+                <div class="rbuttons">
+                    <label>
+                        <input type="radio" id="npMem" name="membershipLevel" value="NP Membership">
+                        Non Profit Membership
+                    </label>
+                    <label>
+                        <input type="radio" id="bronzeMem" name="membershipLevel" value="Bronze Membership">
+                        Bronze Membership
+                    </label>
+                    <label>
+                        <input type="radio" id="silverMem" name="membershipLevel" value="Silver Membership">
+                        Silver Membership
+                    </label>
+                    <label>
+                        <input type="radio" id="goldMem" name="membershipLevel" value="Gold Membership">
+                        Gold Membership
+                    </label>
+                </div>
+                <div id="member-table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="non-profit">Non-Profit Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: No cost.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Tailored for nonprofits to participate without financial obligations.</td>
+                            </tr>
+                            <tr>
+                                <td>Benefits: Event discounts, Spotlight exposure, nonprofit-specific resources.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th class="bronze">Bronze Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: $250/year.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Entry-level plan ideal for small businesses starting out.</td>
+                            </tr>
+                            <tr>
+                                <td>Benefits: Event discounts, basic advertising opportunities, access to training.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th class="silver">Silver Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: $500/year.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Designed for medium-sized organizations looking to expand their reach.</td>
+                            </tr>
+                            <tr>
+                                <td>Benefits: Spotlight exposure, exclusive training, special event invitations, event discounts.</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th class="gold">Gold Membership</th>
+                            </tr>
+                            <tr>
+                                <td>Fee: $1,000/year.</td>
+                            </tr>
+                            <tr>
+                                <td>Description: Premium benefits for businesses seeking maximum exposure and support.</td>
+                            </tr>
+                            <tr>
+                                <td>Benefits: VIP event access, priority spotlight, premium advertising, personalized business support and training.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+                  
+            <div>
+                <button type="submit">Create My Membership</button>
+            </div>
+
+            <label><input type="hidden" id="timestamp" name="timestamp"></label>
+        </form>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> 🌲 Eric E. Arndt 🌲 Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
+        </div>
+        <p class="last-modified"> Last Modified on: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>
