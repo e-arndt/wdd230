@@ -19,7 +19,7 @@ async function getLinks() {
 
 const displayLinks = (weeks) => {
     weeks.forEach((week, index) => {
-        const listItem = document.querySelector(`.wk0${index + 1}-link`); // Dynamically target <li> elements using classes (wk01-link, wk02-link, etc.)
+        const listItem = document.querySelector(`.wk0${index + 1}`); // Dynamically target <li> elements using classes (wk01, wk02..)
         if (listItem) {
             // Clear existing content in <li>
             listItem.innerHTML = `<span>${week.week}: </span>`; // Add the week label
