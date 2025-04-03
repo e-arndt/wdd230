@@ -1,0 +1,1 @@
+const baseURL = "https://e-arndt.github.io/wdd230/";

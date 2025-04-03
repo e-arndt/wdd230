@@ -1,0 +1,114 @@
+{
+    "weeks": [
+      {
+        "week": "Week 1",
+        "links": [
+          {
+            "url": "week01/holygrail.html",
+            "title": "HG Layout"
+          },
+          {
+            "url": "./week01/chamber-site-plan.html",
+            "title": "Chamber Plan"
+          }
+        ]
+      },
+      {
+        "week": "Week 2",
+        "links": [
+          {
+            "url": "./week02/design.html",
+            "title": "Web Design"
+          },
+          {
+            "url": "https://codepen.io/e-arndt/pen/JojrZqZ",
+            "title": "Code Pen"
+          },
+          {
+            "url": "./week02/bom.html",
+            "title": "BOM"
+          }
+        ]
+      },
+      {
+        "week": "Week 3",
+        "links": [
+          {
+            "url": "./week03/images/landscape.webp",
+            "title": "Webp"
+          },
+          {
+            "url": "./week03/lazyload.html",
+            "title": "Lazy"
+          },
+          {
+            "url": "./week03/responsive-images.html",
+            "title": "Responsive Img"
+          },
+          {
+            "url": "./week03/bom.html",
+            "title": "Local Store"
+          }
+        ]
+      },
+      {
+        "week": "Week 4",
+        "links": [
+          {
+            "url": "https://codepen.io/e-arndt/pen/qEByVoO",
+            "title": "Code Pen"
+          },
+          {
+            "url": "./week04/tablebuild.html",
+            "title": "Tables"
+          },
+          {
+            "url": "./week04/Form-start/index.html",
+            "title": "Forms"
+          }
+        ]
+      },
+      {
+        "week": "Week 5",
+        "links": [
+          {
+            "url": "https://codepen.io/e-arndt/pen/yyLQWWO",
+            "title": "Code Pen"
+          },
+          {
+            "url": "./week05/new-ward-members.json",
+            "title": "JSON"
+          },
+          {
+            "url": "./week05/prophets.html",
+            "title": "Prophets"
+          },
+          {
+            "url": "./week05/weather.html",
+            "title": "Weather"
+          }
+        ]
+      },
+      {
+        "week": "Week 6",
+        "links": [
+          {
+            "url": "https:",
+            "title": ""
+          },
+          {
+            "url": "./week",
+            "title": ""
+          },
+          {
+            "url": "./week",
+            "title": ""
+          },
+          {
+            "url": "./week",
+            "title": ""
+          }
+        ]
+      }
+    ]
+  }
