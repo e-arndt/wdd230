@@ -2,7 +2,7 @@
     "members": [
       {
         "name": "City of Federal Way",
-        "address": "33325 8th Avenue South, Federal Way, WA 98003",
+        "address": "33325 8th Avenue S, Federal Way, WA 98003",
         "phone": "253.835.7000",
         "email": "info@cityoffederalway.com",
         "website": "https://www.federalwaywa.gov",
@@ -32,10 +32,10 @@
       },
       {
         "name": "Courtyard by Marriott",
-        "address": "31910 Gateway Center Blvd South, Federal Way, WA 98003",
+        "address": "31910 Gateway Center Blvd S, Federal Way, WA 98003",
         "phone": "206-529-0200",
         "email": "fdseafw@gmail.com",
-        "website": "https://www.marriott.com/en-us/hotels/seafw-courtyard-seattle-federal-way/overview/",
+        "website": "https://shorturl.at/whEyQ",
         "icon": "images/courtyard-marriott.webp",
         "membershipLevel": "Silver",
         "memberSince": "2006-08-10"
@@ -46,13 +46,13 @@
         "phone": "253-927-1375",
         "email": "info@nshoregolf.com",
         "website": "https://www.nshoregolf.com",
-        "icon": "images/ns_logo.webp",
+        "icon": "images/ns-logo.webp",
         "membershipLevel": "Bronze",
         "memberSince": "2010-03-01"
       },
       {
         "name": "Costco",
-        "address": "35100 Enchanted Parkway South, Federal Way, WA 98003",
+        "address": "35100 Enchanted Parkway S, Federal Way, WA 98003",
         "phone": "253-874-8560",
         "email": "n/a",
         "website": "https://www.costco.com",

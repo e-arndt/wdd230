@@ -115,6 +115,129 @@ h1 {
     margin: -5px;
 }
 
+
+/* Style specifically for the .dir class in main */
+main.dir {
+    display: flex;
+    flex-direction: column; /* Aligns toggle-menu and article vertically */
+    align-items: center; /* Centers everything horizontally */
+}
+
+/* Center the toggle-menu for this .dir main */
+main.dir .toggle-menu {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    margin-bottom: 1rem; /* Adds spacing below the buttons */
+}
+
+main.dir grid {
+    gap: 1rem;
+}
+
+
+.toggle-menu button {
+    width: 75px; /* Adjust button width */
+    height: 75px; /* Adjust button height */
+    padding: 0; /* Removes any default padding */
+    margin: 0.25rem 0.25rem;
+}
+
+.toggle-menu button img {
+    width: 100%; /* Ensures the image fills the button */
+    height: 100%; /* Ensures the image height matches the button */
+    object-fit: contain; /* Maintains image aspect ratio */
+}
+
+.toggle-menu button {
+    position: relative; /* Ensures the pseudo-element is positioned relative to the button */
+    overflow: hidden; /* Prevents the pseudo-element from spilling out of the button */
+}
+
+.toggle-menu button::after {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(256, 256, 256, .4); /* Semi-transparent black overlay */
+    opacity: 0; /* Starts invisible */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+.toggle-menu button:hover::after {
+    opacity: 1; /* Makes the overlay visible on hover */
+}
+
+.toggle-menu button:focus {
+    border: 3px solid #FEFD13;
+}
+
+.grid section {
+    border: 2px solid var(--dark-border-color);
+    padding: 10px;
+    border: 2px solid var(--dark-border-color);
+    padding: 10px;
+    display: flex; /* Enables flexbox layout for centering */
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center;
+    background-color: #FAF9F6;
+    margin-bottom: .5rem;
+}
+
+main.dir .list section {
+    border: 2px solid var(--dark-border-color);
+    padding: 10px;
+    border: 2px solid var(--dark-border-color);
+    padding: 10px;
+    justify-content: center;
+    background-color: #FAF9F6;
+    margin-bottom: 5px;
+}
+
+.grid section img {
+    width: 100%;
+    max-width: 200px; /* Start smaller */
+    height: auto;
+    display: block;
+    transition: width 0.3s ease, max-width 0.3s ease;
+    margin: 0 auto 1rem;
+    
+}
+
+main.dir .list img {
+    display: none; /* Hide images in list view */
+}
+
+.grid section p,
+.grid section a {
+    padding: 5px 5px;
+    color: var(--text-color-dark);
+    font-size: .85rem;
+    }
+
+.grid section h3 {
+    padding: 5px 15px;
+    color: var(--text-color-dark);
+    font-size: 1.5rem;
+    }
+
+.list section p,
+.list section a {
+    padding: 5px 5px;
+    color: var(--text-color-dark);
+    font-size: .85rem;
+}
+
+.list section h3 {
+    padding: 5px 3px;
+    color: var(--text-color-dark);
+    font-size: 1.25rem;
+}
+
+
+
 body.join main.form > h1 {
     text-align: center; /* Center the h1 text */
     margin: 20px 0 10px; /* Space above and below the h1 */
@@ -744,6 +867,23 @@ footer img {
         border: 3px solid var(--border-color); 
         box-shadow: 0 0 45px var(--shadow-color);
         margin-right: 1rem;
+    }
+
+    main.dir .grid {
+        grid-template-columns: 1fr; /* Change to a single column */
+    }
+
+    .list section p,
+    .list section a {
+        padding: 5px 5px;
+        color: var(--text-color-dark);
+        font-size: .85rem;
+    }
+
+    .list section h3 {
+        padding: 5px 3px;
+        color: var(--text-color-dark);
+        font-size: 1.25rem;
     }
 
     body.join main.form > h1 {
