@@ -8,7 +8,9 @@
         "website": "https://www.federalwaywa.gov",
         "icon": "images/fw_logo.webp",
         "membershipLevel": "Gold",
-        "memberSince": "2000-03-11"
+        "memberSince": "2000-03-11",
+        "width": "150",
+        "height": "32.5"
       },
       {
         "name": "Lakehaven Water & Sewer",
@@ -18,7 +20,9 @@
         "website": "https://www.lakehaven.org",
         "icon": "images/lhws.webp",
         "membershipLevel": "Gold",
-        "memberSince": "1998-05-15"
+        "memberSince": "1998-05-15",
+        "width": "150",
+        "height": "48.2"
       },
       {
         "name": "South King Fire",
@@ -28,7 +32,9 @@
         "website": "https://southkingfire.org",
         "icon": "images/skc-ems.webp",
         "membershipLevel": "Gold",
-        "memberSince": "2002-11-23"
+        "memberSince": "2002-11-23",
+        "width": "150",
+        "height": "159.5"
       },
       {
         "name": "Courtyard by Marriott",
@@ -38,7 +44,9 @@
         "website": "https://shorturl.at/whEyQ",
         "icon": "images/courtyard-marriott.webp",
         "membershipLevel": "Silver",
-        "memberSince": "2006-08-10"
+        "memberSince": "2006-08-10",
+        "width": "150",
+        "height": "96.27"
       },
       {
         "name": "North Shore Golf Course",
@@ -48,7 +56,9 @@
         "website": "https://www.nshoregolf.com",
         "icon": "images/ns-logo.webp",
         "membershipLevel": "Bronze",
-        "memberSince": "2010-03-01"
+        "memberSince": "2010-03-01",
+        "width": "150",
+        "height": "121.5"
       },
       {
         "name": "Costco",
@@ -58,7 +68,9 @@
         "website": "https://www.costco.com",
         "icon": "images/costco-logo.webp",
         "membershipLevel": "Silver",
-        "memberSince": "2011-07-12"
+        "memberSince": "2011-07-12",
+        "width": "150",
+        "height": "73.845"
       },
       {
         "name": "Azteca Restaurant",
@@ -68,7 +80,9 @@
         "website": "https://www.aztecamex.com",
         "icon": "images/azteca-logo.webp",
         "membershipLevel": "Bronze",
-        "memberSince": "2017-04-27"
+        "memberSince": "2017-04-27",
+        "width": "150",
+        "height": "108.44"
       },
       {
         "name": "South King Tool Library",
@@ -78,7 +92,9 @@
         "website": "https://www.southkingtools.org",
         "icon": "images/sktl-logo.webp",
         "membershipLevel": "Nonprofit",
-        "memberSince": "2018-04-27"
+        "memberSince": "2018-04-27",
+        "width": "150",
+        "height": "142.59"
       }
     ]
   }

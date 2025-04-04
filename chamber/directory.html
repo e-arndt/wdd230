@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preload" href="styles/normalize.css" as="style">
+    <link rel="preload" href="styles/base.css" as="style">
+    <link rel="preload" href="styles/larger.css" as="style">
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="styles/base.css" rel="stylesheet">
     <link href="styles/larger.css" rel="stylesheet">
+    <link rel="preload" href="images/flag-of-usa.png" as="image">
+    <link rel="preload" href="images/fw_logo.webp" as="image">
+    <link rel="preload" href="images/lhws.webp" as="image">
+
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&family=Open+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Arndt - WDD 230 - Chamber of Commerce Directory</title>
     <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Chamber of Commerce Member Directory Page ">
@@ -55,18 +60,7 @@
     </main>
     <footer>
         <div class="footer-content">
-            <div class="f_logo">
-            <img src="images/chamberLogo.png" alt="Logo FW Chamber of Commerce"></div>
-            <div class="f_name">
-            <p>Greater Federal Way Chamber of Commerce</p></div>
-            <div class="f_address">
-            <p>The Chamber of Commerce Building</p>
-            <p>31919 1st Avenue South, Suite 202.</p>
-            <p>Federal Way, WA 98003</p></div>
-            <div class="f_ph_email">
-            <p>📧info@fedwaychamber.com</p>
-            <p>📞253.838.2605</p></div>
-            <p>&copy;<span id="currentYear"></span> 🏙️ Eric E. Arndt 🏙️ WDD-230 🏙️ Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
+            <p>&copy; <span id="currentYear"></span> 🌲 Eric E. Arndt 🌲 Washington, USA <img src="images/flag-of-usa.png" alt="USA Flag pic" class="footer-img"></p>
         </div>
         <p class="last-modified"> Last Modified on: <span id="lastModified"></span></p>
     </footer>

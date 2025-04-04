@@ -19,6 +19,9 @@ const yearSpan = document.querySelector('#currentYear');
 yearSpan.innerText = currentDate.getFullYear();
 
 
+
+
+
 // JavaScript to fetch and display JSON data
 document.addEventListener("DOMContentLoaded", () => {
     const articleElement = document.querySelector("article.grid");
@@ -31,9 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
             data.members.forEach(member => {
                 const section = document.createElement("section");
 
+                const placeholder = document.createElement("div");
+                placeholder.className = "placeholder";
+                placeholder.style.width = "150px"; // Fixed width for all images
+                placeholder.style.aspectRatio = `${member.width} / ${member.height}`; // Dynamic aspect ratio
+                placeholder.style.backgroundColor = "#f0f0f0"; // Neutral color placeholder
+
                 const img = document.createElement("img");
                 img.src = member.icon;
                 img.alt = member.name;
+                img.style.width = `${member.width}px`; // Responsive width
+                img.style.height = `${member.height}px`; // Prevents oversizing
+                img.style.objectFit = "cover"; // Ensures consistent scaling without distortion
+                img.loading = "lazy";
 
                 const h3 = document.createElement("h3");
                 h3.textContent = member.name;
