@@ -1,0 +1,84 @@
+{
+    "members": [
+      {
+        "name": "City of Federal Way",
+        "address": "33325 8th Avenue South, Federal Way, WA 98003",
+        "phone": "253.835.7000",
+        "email": "info@cityoffederalway.com",
+        "website": "https://www.federalwaywa.gov",
+        "icon": "images/fw_logo.webp",
+        "membershipLevel": "Gold",
+        "memberSince": "2000-03-11"
+      },
+      {
+        "name": "Lakehaven Water & Sewer",
+        "address": "31627A 1st Ave. S., Federal Way, WA 98063",
+        "phone": "253-941-1516",
+        "email": "lakehaven@lakehaven.org",
+        "website": "https://www.lakehaven.org",
+        "icon": "images/lhws.webp",
+        "membershipLevel": "Gold",
+        "memberSince": "1998-05-15"
+      },
+      {
+        "name": "South King Fire",
+        "address": "31617 1st Ave S., Federal Way, WA 98003",
+        "phone": "253-839-6234",
+        "email": "cao.web@southkingfire.org",
+        "website": "https://southkingfire.org",
+        "icon": "images/skc-ems.webp",
+        "membershipLevel": "Gold",
+        "memberSince": "2002-11-23"
+      },
+      {
+        "name": "Courtyard by Marriott",
+        "address": "31910 Gateway Center Blvd South, Federal Way, WA 98003",
+        "phone": "206-529-0200",
+        "email": "fdseafw@gmail.com",
+        "website": "https://www.marriott.com/en-us/hotels/seafw-courtyard-seattle-federal-way/overview/",
+        "icon": "images/courtyard-marriott.webp",
+        "membershipLevel": "Silver",
+        "memberSince": "2006-08-10"
+      },
+      {
+        "name": "North Shore Golf Course",
+        "address": "4101 Northshore Blvd NE Tacoma WA 98422",
+        "phone": "253-927-1375",
+        "email": "info@nshoregolf.com",
+        "website": "https://www.nshoregolf.com",
+        "icon": "images/ns_logo.webp",
+        "membershipLevel": "Bronze",
+        "memberSince": "2010-03-01"
+      },
+      {
+        "name": "Costco",
+        "address": "35100 Enchanted Parkway South, Federal Way, WA 98003",
+        "phone": "253-874-8560",
+        "email": "n/a",
+        "website": "https://www.costco.com",
+        "icon": "images/costco-logo.webp",
+        "membershipLevel": "Silver",
+        "memberSince": "2011-07-12"
+      },
+      {
+        "name": "Azteca Restaurant",
+        "address": "2020 S 320th St Ste L, Federal Way, WA 98003",
+        "phone": "253-839-6693",
+        "email": "contact@aztecamex.com",
+        "website": "https://www.aztecamex.com/",
+        "icon": "images/azteca-logo.webp",
+        "membershipLevel": "Bronze",
+        "memberSince": "2017-04-27"
+      },
+      {
+        "name": "South King Tool Library",
+        "address": "1700 S 340th St, Federal Way, WA 98003",
+        "phone": "253-237-2290",
+        "email": "info@southkingtools.org",
+        "website": "https://www.southkingtools.org",
+        "icon": "images/sktl-logo.webp",
+        "membershipLevel": "Nonprofit",
+        "memberSince": "2018-04-27"
+      }
+    ]
+  }
