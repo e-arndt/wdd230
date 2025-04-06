@@ -75,22 +75,24 @@ function guessCurrentCondition(observation, currentHour) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Snowfall" : "🌧️ Drizzling";
     } else if (precipRate > .04 && precipRate <= .07) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Snowfall" : "🌧️ Light Rain";
-    } else if (precipRate > .07 && precipRate <= .20) {
+    } else if (precipRate > .07 && precipRate <= .25) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Moderate Snow" : "🌧️ Raining";
-    } else if (precipRate > .20 && precipRate <= .30) {
+    } else if (precipRate > .25 && precipRate <= .35) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Heavy Snow" : "🌧️ Moderate Rain";
-    } else if (precipRate > .30 && precipRate <= .40) {
+    } else if (precipRate > .35 && precipRate <= .50) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Very Heavy Snow" : "🌧️ Heavy Rain";
-    } else if (precipRate > .40 && precipRate <= .50) {
+    } else if (precipRate > .50 && precipRate <= .65) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Near Blizzard Snow" : "🌧️ Very Heavy Rain";
-    } else if (precipRate > .50 && precipRate <= .60) {
+    } else if (precipRate > .65 && precipRate <= .75) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Blizzard Snow" : "🌧️ Downpour";
-    } else if (precipRate > .60 && precipRate <= .70) {
+    } else if (precipRate > .75 && precipRate <= .85) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Heavy Blizzard Snow" : "🌧️ Heavy Downpour";
-    } else if (precipRate > .70 && precipRate <= .80) {
+    } else if (precipRate > .85 && precipRate <= 1.0) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Heavy Blizzard Snow" : "🌧️ Torrential Downpour";
-    } else if (precipRate > .80) {
+    } else if (precipRate > 1.0 && precipRate <= 1.5) {
         condition = (temperature <= 33 && humidity >= 75) ? "❄️ Whiteout Snow" : "🌧️ Heavy Torrential Downpour";
+    } else if (precipRate > 1.5) {
+        condition = (temperature <= 33 && humidity >= 75) ? "❄️ Whiteout Snow" : "🌧️ Extreme Torrential Downpour";
     } else if (windSpeed > 30) {
         condition = "💨 Gale Force Winds";
     } else if (windSpeed > 25 && windSpeed <= 30) {
@@ -138,12 +140,12 @@ function guessCurrentCondition(observation, currentHour) {
     } else if (solarRadiation <= 0 && (currentHour >= 16 || currentHour < 7)) {
         condition = "🌃 Night";    
     } else {
-        condition = "Calm";
+        condition = "😌 Calm";
     }
 
     const temperatureDescriptor = getTemperatureDescriptor(temperature);
+    console.log("Temperature Descriptor: ", temperatureDescriptor); // Log temperature descriptor
     return `${condition} & ${temperatureDescriptor}`;
-
 }
 
 function getTemperatureDescriptor(temp) {
@@ -152,7 +154,7 @@ function getTemperatureDescriptor(temp) {
     if (temp >= 25 && temp < 34) return "Freezing";
     if (temp >= 34 && temp < 55) return "Cold";
     if (temp >= 55 && temp < 65) return "Cool";
-    if (temp >= 65 && temp < 75) return "Comfortable";
+    if (temp >= 65 && temp < 75) return "Mild";
     if (temp >= 75 && temp < 82) return "Warm";
     if (temp >= 82 && temp < 90) return "Hot";
     if (temp >= 90 && temp < 96) return "Very Hot";
