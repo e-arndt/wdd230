@@ -104,7 +104,7 @@ header img {
 
     .card span {
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.35rem;
     }
 
     .card a {
@@ -241,6 +241,23 @@ header img {
 
     .herolabel p {
         font-size: 1.75rem;
+    }
+
+    #forecast-container figcaption {
+        font-size: .85rem;
+        
+      }
+
+    .forecast-item figcaption span {
+        font-size: .75rem;
+        font-weight: normal;
+    }
+    
+    .forecast-item img {
+        width: 30%; /* Adjust percentage as needed for scaling */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 150px; /* Optional: Set a maximum width to prevent them from becoming too large */
+        object-fit: contain; /* Ensure proper aspect ratio for the image */
     }
 
 }

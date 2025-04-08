@@ -33,6 +33,8 @@ body {
 
 
 
+
+
 /* Mobile View Hamburger Menu */
 #menu {
     font-size: 1.2rem;
@@ -226,7 +228,8 @@ nav .active {
 
 /* Put space between list items */
 .card li {
-    padding-bottom: .75rem;
+    padding-bottom: 1.5rem;
+
 }
 
 /* Set font size of the links */
@@ -273,7 +276,10 @@ nav .active {
 }
 
 .card-content {
-    padding: 20px; /* Padding for the card content */
+    overflow: hidden;
+    max-width: 100%;
+    padding: 10px; /* Padding for the card content */
+    box-sizing: border-box;
 }
 
 /* Set attributes for the paragraphs. These will change once they become dynamic */
@@ -281,6 +287,7 @@ nav .active {
     font-size: 1.3rem;
     text-align: center;
     font-weight: bold;
+    margin: 12px;
     transition: font-size 0.5s ease;
 }
 
@@ -350,6 +357,49 @@ main h1 {
     width: 100%;
     height: 400px; 
 }
+
+#forecast-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduce the gap between items */
+    margin: 0;
+    margin-bottom: 25px; /* Adjust spacing above the container */
+    flex-wrap: nowrap; /* Allow items to wrap if they exceed the container width */
+    row-gap: 15px;
+}
+
+
+#forecast-container figcaption {
+  font-size: 1.1rem;
+  
+}
+
+.forecast-item {
+    text-align: center;
+    flex: 1 1 125px; /* Allow items to grow/shrink dynamically with a base size of 125px */
+    max-width: 150px; /* Set a maximum width to maintain consistency */
+    box-sizing: border-box; /* Include padding and borders in size calculation */
+    margin: 0;
+    padding: 5px;
+    border: 2px solid var(--border-color);
+    box-shadow: 3px 3px 3px var(--shadow-color);
+    background-color: rgba(133, 200, 254, 0.5);
+    border-radius: 8px;
+}
+
+
+.forecast-item figcaption span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.forecast-item img {
+    width: 40%; /* Adjust percentage as needed for scaling */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Optional: Set a maximum width to prevent them from becoming too large */
+    object-fit: contain; /* Ensure proper aspect ratio for the image */
+}
+
 
 
 /* Set default attributes for the footer */
@@ -474,6 +524,23 @@ footer img {
         font-size: 1.2rem; /* Adjusts size as needed */
         margin: 0 10px 20px 10px;
         width: calc(100% - 20px); /* Full width minus the margins */
+    }
+
+    #forecast-container figcaption {
+        font-size: .95rem;
+        
+      }
+
+    .forecast-item figcaption span {
+        font-size: .85rem;
+        font-weight: normal;
+    }
+    
+    .forecast-item img {
+        width: 35%; /* Adjust percentage as needed for scaling */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 150px; /* Optional: Set a maximum width to prevent them from becoming too large */
+        object-fit: contain; /* Ensure proper aspect ratio for the image */
     }
 
 

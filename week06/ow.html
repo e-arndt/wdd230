@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="styles/weather.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Arndt - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development 1 - Eric Arndt - Weather Activity ">
+    <meta name="author" content="Eric Arndt">
+
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="scripts/weather.js" defer></script>
+</head>
+<body>
+    <h1>OpenWeatherMap.org API Test</h1>
+    <main>
+        <!-- Current weather (centered at the top) -->
+        <p>The current temperature in Federal Way, WA is <span id="current-temp"></span></p>
+        <figure>
+            <img id="weather-icon" src="https://openweathermap.org/img/w/01d.png" alt="current weather icon">
+            <figcaption></figcaption>
+        </figure>
+        
+        <!-- Forecast section -->
+        <p>3-Day forecast highs for Federal Way, WA:</p>
+        <div id="forecast-container">
+            <!-- Forecast for Day 1 -->
+            <figure class="forecast-item">
+                <img id="forecast-icon1" src="https://openweathermap.org/img/w/01d.png" alt="forecast weather icon">
+                <figcaption id="forecast-caption1"></figcaption>
+            </figure>
+            <!-- Forecast for Day 2 -->
+            <figure class="forecast-item">
+                <img id="forecast-icon2" src="https://openweathermap.org/img/w/01d.png" alt="forecast weather icon">
+                <figcaption id="forecast-caption2"></figcaption>
+            </figure>
+            <!-- Forecast for Day 3 -->
+            <figure class="forecast-item">
+                <img id="forecast-icon3" src="https://openweathermap.org/img/w/01d.png" alt="forecast weather icon">
+                <figcaption id="forecast-caption3"></figcaption>
+            </figure>
+        </div>
+    </main>
+    
+    <footer>
+        Eric Arndt | OpenWeatherMap.org | CC BY-SA 4.0
+    </footer>
+</body>
+</html>
