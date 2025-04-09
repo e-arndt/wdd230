@@ -2,6 +2,10 @@ const apiKey = '032b36ea99f94242ab36ea99f93242eb';
 const stationId = "KWAFEDER5";
 const baseUrl = `https://api.weather.com/v2/pws/observations/current?stationId=${stationId}&format=json&units=e&apiKey=${apiKey}`;
 
+const forecastApiKey = '65d0e9402f1db45c754b9f6c31b07398';
+const forecastBaseUrl = 'https://pro.openweathermap.org/data/2.5/forecast/daily?lat=47.309&lon=-122.379&cnt=7&units=imperial&appid=' + forecastApiKey;
+
+
 let updateTimer;
 
 async function fetchWeatherData() {
@@ -39,6 +43,41 @@ async function fetchWeatherData() {
     }
     
 }
+
+
+
+async function fetch3DayForecast() {
+    try {
+        const response = await fetch(forecastBaseUrl);
+        console.log("Forecast API Response: ", response);
+        if (response.ok) {
+            const data = await response.json();
+            console.log("Parsed Forecast Data: ", data);
+            update3DayForecast(data.list.slice(0, 3)); // Process and update the forecast for 3 days
+        } else {
+            console.error('Error fetching forecast data from API. Status: ', response.statusText);
+        }
+    } catch (error) {
+        console.error('Unexpected error occurred during forecast API fetch:', error.message);
+    }
+}
+
+
+function update3DayForecast(forecastData) {
+    forecastData.forEach((day, index) => {
+        const forecastDate = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+        const maxTemp = day.temp.max.toFixed(0); // Corrected for the actual data structure
+        const minTemp = day.temp.min.toFixed(0); // Corrected for the actual data structure
+        const forecastIcon = `https://openweathermap.org/img/w/${day.weather[0].icon}.png`;
+        const forecastDesc = `${forecastDate}: <span style="color: red;">High ${maxTemp}&deg;F</span>, <span style="color: blue;">Low ${minTemp}&deg;F</span>`;
+
+        // Dynamically update HTML content
+        document.querySelector(`#forecast-icon${index + 1}`).setAttribute('src', forecastIcon);
+        document.querySelector(`#forecast-icon${index + 1}`).setAttribute('alt', day.weather[0].description);
+        document.querySelector(`#forecast-caption${index + 1}`).innerHTML = forecastDesc;
+    });
+}
+
 
 
 function guessCurrentCondition(observation, currentHour) {
@@ -165,13 +204,17 @@ function getTemperatureDescriptor(temp) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchWeatherData(); // Fetch weather data immediately when the page loads
+    fetchWeatherData(); // Fetch current weather data immediately
+    fetch3DayForecast(); // Fetch 3-day forecast data immediately
 
-    // Periodically fetch weather data every 60 seconds
+    // Update current weather every minute
     setInterval(() => {
         fetchWeatherData();
-    }, 60000); // Fetch every 60,000 milliseconds (1 minute)
+    }, 60000); // 60,000 milliseconds (1 minute)
 
-
+    // Update forecast every 10 minutes
+    setInterval(() => {
+        fetch3DayForecast();
+    }, 600000); // 600,000 milliseconds (10 minutes)
 });
 

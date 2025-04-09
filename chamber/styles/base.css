@@ -842,6 +842,58 @@ footer img {
     margin-top: 10px; /* Space above the last modified line */
 }
 
+hr {
+    border: none; /* Remove Normalize.css influence */
+    height: 2px; /* Set desired thickness */
+    background-color: #000; /* Set a visible color */
+    width: 100%; /* Ensure it spans the container */
+    margin: 20px 0; /* Add spacing */
+}
+
+
+
+#forecast-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduce the gap between items */
+    margin: 0;
+    margin-bottom: 25px; /* Adjust spacing above the container */
+    flex-wrap: nowrap; /* Allow items to wrap if they exceed the container width */
+    row-gap: 15px;
+}
+
+
+#forecast-container figcaption {
+  font-size: 1.1rem;
+  
+}
+
+.forecast-item {
+    text-align: center;
+    flex: 1 1 125px; /* Allow items to grow/shrink dynamically with a base size of 125px */
+    max-width: 150px; /* Set a maximum width to maintain consistency */
+    box-sizing: border-box; /* Include padding and borders in size calculation */
+    margin: 0;
+    padding: 3px;
+    border: 2px solid var(--border-color);
+    box-shadow: 3px 3px 3px var(--shadow-color);
+    background-color: rgba(133, 200, 254, 0.5);
+    border-radius: 8px;
+}
+
+
+.forecast-item figcaption span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.forecast-item img {
+    width: 40%; /* Adjust percentage as needed for scaling */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Optional: Set a maximum width to prevent them from becoming too large */
+    object-fit: contain; /* Ensure proper aspect ratio for the image */
+}
+
 
 /* Media query for screens smaller than 700px */
 @media (max-width: 725px) {
@@ -902,44 +954,44 @@ footer img {
     body.join main.form fieldset:first-of-type input[type="text"],
     body.join main.form fieldset:first-of-type input[type="email"],
     body.join main.form fieldset:first-of-type input[type="tel"] {
-    font-size: 20px;
-    height: 45px;
-    width: 85%; /* Limits the width of the input boxes */
-    max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
-    text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
-    margin: 0; /* Keeps the input flush with the left edge */
-    margin-bottom: 20px; /* Space between input boxes */
-    border-radius: 8px;
-    border: 1px solid var(--text-color-dark);
-    padding-left: 5px;
+        font-size: 20px;
+        height: 45px;
+        width: 85%; /* Limits the width of the input boxes */
+        max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
+        text-align: left; /* Optional: Ensures text inside the input stays left-aligned */
+        margin: 0; /* Keeps the input flush with the left edge */
+        margin-bottom: 20px; /* Space between input boxes */
+        border-radius: 8px;
+        border: 1px solid var(--text-color-dark);
+        padding-left: 5px;
 }
 
-body.join main.form fieldset:nth-of-type(2) input[type="text"] {
-    font-size: 20px;
-    height: 45px;
-    width: 95%; /* Limits the width of the input boxes */
-    max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
-}
-
-
-body.join main.form fieldset:nth-of-type(3) {
-    flex-direction: column; /* Stacks items vertically */
-    gap: 30px; /* Adds spacing between rows */
-}
-
-body.join main.form fieldset:nth-of-type(3) .rbuttons, 
-body.join main.form fieldset:nth-of-type(3) #member-table {
-    width: 100%; /* Each column takes the full width in single-column layout */
+    body.join main.form fieldset:nth-of-type(2) input[type="text"] {
+        font-size: 20px;
+        height: 45px;
+        width: 95%; /* Limits the width of the input boxes */
+        max-width: 100%; /* Ensures the input doesn't overflow on smaller screens */
 }
 
 
-body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
-    line-height: 1.5;
-    width: 84vw; /* Sets width relative to viewport */
-    text-align: left;
-    border-radius: 8px;
-    border: 1px solid var(--text-color-dark);
-    padding-left: 5px;
+    body.join main.form fieldset:nth-of-type(3) {
+        flex-direction: column; /* Stacks items vertically */
+        gap: 30px; /* Adds spacing between rows */
+}
+
+    body.join main.form fieldset:nth-of-type(3) .rbuttons, 
+    body.join main.form fieldset:nth-of-type(3) #member-table {
+        width: 100%; /* Each column takes the full width in single-column layout */
+}
+
+
+    body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
+        line-height: 1.5;
+        width: 84vw; /* Sets width relative to viewport */
+        text-align: left;
+        border-radius: 8px;
+        border: 1px solid var(--text-color-dark);
+        padding-left: 5px;
 }
 
 
@@ -1090,16 +1142,16 @@ body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
       
     
     .events-card-content {
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center; /* Horizontally centers items */
-    justify-content: center; /* Vertically centers items (if height is specified) */
-    text-align: center; /* Ensures text within <h3> and <p> is centered */
-    padding: 30px; /* Adds some space inside the container */
+        display: flex; /* Enables Flexbox */
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Horizontally centers items */
+        justify-content: center; /* Vertically centers items (if height is specified) */
+        text-align: center; /* Ensures text within <h3> and <p> is centered */
+        padding: 30px; /* Adds some space inside the container */
     }
 
     .events-card-content h3 {
-    font-size: 1.2rem;
+        font-size: 1.2rem;
     }
 
     .byu {
@@ -1110,11 +1162,11 @@ body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
     
     
     .event-p {
-    display: grid; /* Use Grid for column layout */
-    grid-template-columns: 1fr; /* Creates two equal-width columns */
-    text-align: center; /* Centers text within each column */
-    padding: 20px;
-    font-size: 1.2rem;
+        display: grid; /* Use Grid for column layout */
+        grid-template-columns: 1fr; /* Creates two equal-width columns */
+        text-align: center; /* Centers text within each column */
+        padding: 20px;
+        font-size: 1.2rem;
     }
 
     .events-card-content p {
@@ -1129,12 +1181,12 @@ body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
 
 
     .attract-card-content {
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center; /* Horizontally centers items */
-    justify-content: center; /* Vertically centers items (if height is specified) */
-    text-align: center; /* Ensures text within <h3> and <p> is centered */
-    padding: 30px; /* Adds some space inside the container */
+        display: flex; /* Enables Flexbox */
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Horizontally centers items */
+        justify-content: center; /* Vertically centers items (if height is specified) */
+        text-align: center; /* Ensures text within <h3> and <p> is centered */
+        padding: 30px; /* Adds some space inside the container */
     }
 
     .attract-card-content p {
@@ -1200,6 +1252,24 @@ body.join main.form fieldset:nth-of-type(2) textarea[name="bdesc"] {
     .thx2 > p {
         padding-top: 1rem;
         font-size: 1.25rem;
+    }
+
+
+    #forecast-container figcaption {
+        font-size: .95rem;
+        
+      }
+
+    .forecast-item figcaption span {
+        font-size: .85rem;
+        font-weight: normal;
+    }
+    
+    .forecast-item img {
+        width: 40%; /* Adjust percentage as needed for scaling */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 150px; /* Optional: Set a maximum width to prevent them from becoming too large */
+        object-fit: contain; /* Ensure proper aspect ratio for the image */
     }
 
     footer.fthx p {
