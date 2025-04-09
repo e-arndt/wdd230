@@ -39,6 +39,40 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the close button and banner
+    const closeButton = document.getElementById("close-banner");
+    const banner = document.querySelector(".banner");
+
+    // Get the current day of the week
+    const currentDay = new Date().getDay();
+
+    // Only display the banner on Mon (1), Tue (2), or Wed (3)
+    if (currentDay >= 1 && currentDay <= 3) {
+        const bannerHidden = sessionStorage.getItem("bannerHidden");
+        if (bannerHidden === "true") {
+            banner.style.display = "none"; // Hide the banner if previously closed
+        } else {
+            banner.style.display = "block"; // Show the banner
+        }
+
+        // Add click event listener to hide the banner and save state
+        if (closeButton) {
+            closeButton.addEventListener("click", () => {
+                banner.style.display = "none"; // Hide the banner
+                sessionStorage.setItem("bannerHidden", "true"); // Save the state
+            });
+        } else {
+            console.warn("Close button not found.");
+        }
+    } else {
+        // Hide the banner entirely if not Mon, Tue, or Wed
+        if (banner) {
+            banner.style.display = "none";
+        }
+    }
+});
+
 
 
 

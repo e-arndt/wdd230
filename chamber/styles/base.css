@@ -884,6 +884,8 @@ hr {
   
 }
 
+
+
 .forecast-item {
     text-align: center;
     flex: 1 1 125px; /* Allow items to grow/shrink dynamically with a base size of 125px */
@@ -908,6 +910,35 @@ hr {
     height: auto; /* Maintain aspect ratio */
     max-width: 150px; /* Optional: Set a maximum width to prevent them from becoming too large */
     object-fit: contain; /* Ensure proper aspect ratio for the image */
+}
+
+.banner {
+    width: 100%; /* Ensures the banner spans the full width of the screen */
+    background-color: var(--accent-color2); /* Example background color (adjust as needed) */
+    color: #ffffff; /* Text color for contrast */
+    text-align: center; /* Centers the text horizontally */
+    padding: 10px 0; /* Adds vertical spacing inside the banner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow below the banner */
+    font-size: 1.2rem; /* Adjusts text size */
+    transition: font-size 0.5s ease; /* Adds smooth transition to font size */
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 50%; /* Vertically center the button */
+    right: 1rem; /* Position the button near the right edge */
+    transform: translateY(-50%); /* Adjust for proper centering */
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--accent-color2); /* Matches your theme */
+    color: var(--text-color-light);
+    border: 2px solid var(--dark-border-color);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Optional hover effect */
 }
 
 
@@ -935,6 +966,43 @@ hr {
         border: 3px solid var(--border-color); 
         box-shadow: 0 0 45px var(--shadow-color);
         margin-right: 1rem;
+    }
+
+    .banner {
+        width: 100%; /* Ensures the banner spans the full width of the screen */
+        background-color: var(--accent-color2); /* Example background color (adjust as needed) */
+        color: #ffffff; /* Text color for contrast */
+        text-align: center; /* Centers the text horizontally */
+        padding: 10px 0; /* Adds vertical spacing inside the banner */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow below the banner */
+        font-size: 1.75rem; /* Adjusts text size */
+        transition: font-size 0.5s ease; /* Adds smooth transition to font size */
+        position: relative;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 50%; /* Vertically center the button */
+        right: 1rem; /* Position the button near the right edge */
+        transform: translateY(-50%); /* Adjust for proper centering */
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.2rem 0.3rem;
+        background-color: var(--accent-color2); /* Matches your theme */
+        color: var(--text-color-light);
+        border: 2px solid var(--dark-border-color);
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Optional hover effect */
+    }
+    
+    .close-button:hover {
+        background-color: rgb(146, 0, 0); /* Darken on hover */
+    }
+
+    body.c-index .banner {
+        font-size: .75rem; /* Slightly smaller text for small screens */
     }
 
     main.dir .grid {

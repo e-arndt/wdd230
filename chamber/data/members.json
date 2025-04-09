@@ -6,11 +6,11 @@
         "phone": "253.835.7000",
         "email": "info@cityoffederalway.com",
         "website": "https://www.federalwaywa.gov",
-        "icon": "images/fw_logo.webp",
+        "icon": "images/fw_logo1.webp",
         "membershipLevel": "Gold",
         "memberSince": "2000-03-11",
         "width": "150",
-        "height": "32.5"
+        "height": "85"
       },
       {
         "name": "Lakehaven Water & Sewer",
@@ -18,11 +18,11 @@
         "phone": "253-941-1516",
         "email": "lakehaven@lakehaven.org",
         "website": "https://www.lakehaven.org",
-        "icon": "images/lhws.webp",
+        "icon": "images/lhws1.webp",
         "membershipLevel": "Gold",
         "memberSince": "1998-05-15",
         "width": "150",
-        "height": "48.2"
+        "height": "100"
       },
       {
         "name": "South King Fire",
@@ -42,11 +42,11 @@
         "phone": "206-529-0200",
         "email": "fdseafw@gmail.com",
         "website": "https://shorturl.at/whEyQ",
-        "icon": "images/courtyard-marriott.webp",
+        "icon": "images/courtyard-marriott1.webp",
         "membershipLevel": "Silver",
         "memberSince": "2006-08-10",
         "width": "150",
-        "height": "96.27"
+        "height": "120"
       },
       {
         "name": "North Shore Golf Course",
@@ -61,13 +61,13 @@
         "height": "121.5"
       },
       {
-        "name": "Costco",
+        "name": "Costco Wholesale",
         "address": "35100 Enchanted Parkway S, Federal Way, WA 98003",
         "phone": "253-874-8560",
         "email": "n/a",
         "website": "https://www.costco.com",
         "icon": "images/costco-logo.webp",
-        "membershipLevel": "Silver",
+        "membershipLevel": "Gold",
         "memberSince": "2011-07-12",
         "width": "150",
         "height": "73.845"
@@ -78,11 +78,11 @@
         "phone": "253-839-6693",
         "email": "contact@aztecamex.com",
         "website": "https://www.aztecamex.com",
-        "icon": "images/azteca-logo.webp",
-        "membershipLevel": "Bronze",
+        "icon": "images/azteca-logo1.webp",
+        "membershipLevel": "Silver",
         "memberSince": "2017-04-27",
         "width": "150",
-        "height": "108.44"
+        "height": "140"
       },
       {
         "name": "South King Tool Library",

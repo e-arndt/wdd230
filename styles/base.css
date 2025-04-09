@@ -389,7 +389,7 @@ hr {
     max-width: 150px; /* Set a maximum width to maintain consistency */
     box-sizing: border-box; /* Include padding and borders in size calculation */
     margin: 0;
-    padding: 5px;
+    padding: 2px;
     border: 2px solid var(--border-color);
     box-shadow: 3px 3px 3px var(--shadow-color);
     background-color: rgba(133, 200, 254, 0.5);

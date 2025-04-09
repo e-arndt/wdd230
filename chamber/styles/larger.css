@@ -8,6 +8,10 @@
 /* Define color variables */
 :root {
     --primary-color: #97C6EC;
+    --secondary-color: #3981FE;
+    --tertiary-color: #001959;
+    --accent-color1: #FEFD13;
+    --accent-color2: #F60201;
     --accent-color: rgb(255, 138, 70);
     --text-color-light: ghostwhite;
     --text-color-dark: #001959;
@@ -34,6 +38,9 @@ header {
     justify-content: center;
     padding: 1rem 2rem;
 }
+
+
+
 
 .hero {
     display: block; /* Ensures proper centering */
@@ -1191,6 +1198,36 @@ body.join main.form button:hover {
 
     }
 
+
+    .banner {
+        width: 100%; /* Ensures the banner spans the full width of the screen */
+        background-color: var(--accent-color2); /* Example background color (adjust as needed) */
+        color: #ffffff; /* Text color for contrast */
+        text-align: center; /* Centers the text horizontally */
+        padding: 10px 0; /* Adds vertical spacing inside the banner */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow below the banner */
+        font-size: 1.5rem; /* Adjusts text size */
+        transition: font-size 0.5s ease; /* Adds smooth transition to font size */
+        position: relative;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 50%; /* Vertically center the button */
+        right: 1rem; /* Position the button near the right edge */
+        transform: translateY(-50%); /* Adjust for proper centering */
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        background-color: var(--accent-color2); /* Matches your theme */
+        color: var(--text-color-light);
+        border: 2px solid var(--dark-border-color);
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Optional hover effect */
+    }
+
     
     
 
@@ -1213,6 +1250,40 @@ body.join main.form button:hover {
         box-shadow: 0 0 45px var(--shadow-color);
         margin-right: 2rem;
         transition: width 0.5s ease;
+    }
+
+
+    .banner {
+        width: 100%; /* Ensures the banner spans the full width of the screen */
+        background-color: var(--accent-color2); /* Example background color (adjust as needed) */
+        color: #ffffff; /* Text color for contrast */
+        text-align: center; /* Centers the text horizontally */
+        padding: 10px 0; /* Adds vertical spacing inside the banner */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow below the banner */
+        font-size: 1.95rem; /* Adjusts text size */
+        transition: font-size 0.5s ease; /* Adds smooth transition to font size */
+        position: relative;
+    }
+    
+    .close-button {
+        position: absolute;
+        top: 50%; /* Vertically center the button */
+        right: 1rem; /* Position the button near the right edge */
+        transform: translateY(-50%); /* Adjust for proper centering */
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        background-color: var(--accent-color2); /* Matches your theme */
+        color: var(--text-color-light);
+        border: 2px solid var(--dark-border-color);
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Optional hover effect */
+    }
+    
+    .close-button:hover {
+        background-color: rgb(146, 0, 0); /* Darken on hover */
     }
 
     
