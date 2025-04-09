@@ -496,6 +496,7 @@ table {
     justify-content: center; /* Centers child elements vertically if needed */
     width: 100%; /* Ensures full-width behavior */
     text-align: center; /* Ensures text alignment within the container */
+
 }
 
 /* Set attributes for the paragraphs. These will change once they become dynamic */
@@ -510,6 +511,16 @@ table {
 body .home-events {
     text-align: center;
     display: block; /* Overrides flex in larger.css */
+    border: 2px solid var(--border-color); /* Add border */
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 3px 3px 3px var(--shadow-color);
+    background-color: rgba(133, 200, 254, 0.5);
+    border-radius: 8px;
+}
+
+body .home-events .location-info {
+    padding-bottom: 15px;
 }
 
 #weather-info span {
@@ -847,8 +858,12 @@ hr {
     height: 2px; /* Set desired thickness */
     background-color: #000; /* Set a visible color */
     width: 100%; /* Ensure it spans the container */
-    margin: 20px 0; /* Add spacing */
+    margin: 5px 0; /* Add spacing */
 }
+
+
+
+
 
 
 
@@ -857,6 +872,7 @@ hr {
     justify-content: center;
     gap: 10px; /* Reduce the gap between items */
     margin: 0;
+    margin-top: 5px;
     margin-bottom: 25px; /* Adjust spacing above the container */
     flex-wrap: nowrap; /* Allow items to wrap if they exceed the container width */
     row-gap: 15px;
