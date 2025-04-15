@@ -817,7 +817,7 @@ footer.fthx .last-modified {
 footer {
     background-color: var(--text-color-light);
     text-align: center;
-    padding: 20px;
+    padding: 20px 5px;
 }
 
 /* Set flex so <p> and <img> show inline */
@@ -1370,8 +1370,7 @@ hr {
     }
 
     .f_name p {
-        font-size: .9rem;
-        
+        font-size: .85rem;
         font-weight: bold;
         margin-bottom: 5px;
         transition: font-size 0.5s ease;
