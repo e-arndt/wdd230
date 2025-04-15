@@ -271,6 +271,5 @@ if (hambutton && mainnav) {
     console.warn("Hamburger button or navigation menu not found on this page.");
 }
 
-console.log(document.querySelector('#menu')); // Should not be null
-console.log(document.querySelector('.navigation')); // Should not be null
+
 
