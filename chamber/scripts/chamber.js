@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Check if we are on index.html by examining the current URL
+    if (!window.location.pathname.endsWith("index.html")) {
+        console.log("Not on index.html, skipping banner logic.");
+        return; // Exit the function if we're not on index.html
+    }
+
     // Select the close button and banner
     const closeButton = document.getElementById("close-banner");
     const banner = document.querySelector(".banner");
@@ -49,21 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Only display the banner on Mon (1), Tue (2), or Wed (3)
     if (currentDay >= 1 && currentDay <= 3) {
-        const bannerHidden = sessionStorage.getItem("bannerHidden");
-        if (bannerHidden === "true") {
-            banner.style.display = "none"; // Hide the banner if previously closed
-        } else {
-            banner.style.display = "block"; // Show the banner
-        }
+        if (banner) { // Ensure the banner element exists
+            const bannerHidden = sessionStorage.getItem("bannerHidden");
+            if (bannerHidden === "true") {
+                banner.style.display = "none"; // Hide the banner if previously closed
+            } else {
+                banner.style.display = "block"; // Show the banner
+            }
 
-        // Add click event listener to hide the banner and save state
-        if (closeButton) {
-            closeButton.addEventListener("click", () => {
-                banner.style.display = "none"; // Hide the banner
-                sessionStorage.setItem("bannerHidden", "true"); // Save the state
-            });
+            // Add click event listener to hide the banner and save state
+            if (closeButton) { // Ensure the close button exists
+                closeButton.addEventListener("click", () => {
+                    banner.style.display = "none"; // Hide the banner
+                    sessionStorage.setItem("bannerHidden", "true"); // Save the state
+                });
+            } else {
+                console.warn("Close button not found.");
+            }
         } else {
-            console.warn("Close button not found.");
+            console.warn("Banner element not found.");
         }
     } else {
         // Hide the banner entirely if not Mon, Tue, or Wed
@@ -72,6 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+
 
 
 
@@ -100,14 +112,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const formTimestamp = sessionStorage.getItem('formTimestamp'); // Retrieve the timestamp from sessionStorage
+    // Check if we are on thankyou.html by examining the current URL
+    if (!window.location.pathname.endsWith("thankyou.html")) {
+        console.log("Not on thankyou.html, skipping timestamp logic.");
+        return; // Exit the function if we're not on thankyou.html
+    }
+
+    // Retrieve the timestamp from sessionStorage
+    const formTimestamp = sessionStorage.getItem('formTimestamp');
     const timestampDisplay = document.getElementById("timestampDisplay"); // Get the element
+
     if (formTimestamp && timestampDisplay) {
         timestampDisplay.innerHTML = new Date(formTimestamp).toLocaleString(); // Display the timestamp
     } else if (!timestampDisplay) {
         console.warn("Element with ID 'timestampDisplay' not found.");
     }
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Current Path:", window.location.pathname); // Logs the path of the current page
